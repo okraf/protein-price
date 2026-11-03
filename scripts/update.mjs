@@ -50,7 +50,8 @@ for (const [sourceId, store] of Object.entries(catalog.stores)) {
       failed++;
       console.error(`échec ${entry.id.padEnd(22)} ${err.message}`);
     }
-    await sleep(4000); // rythme doux : l'anti-bot bannit l'IP au-delà
+    // Rythme lent et irrégulier (20 à 40 s) : au-delà, l'anti-bot d'Intermarché bannit l'IP.
+    await sleep(20000 + Math.random() * 20000);
   }
   await transport.close();
 }

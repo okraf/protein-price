@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T14:14:22.413Z",
+  "generatedAt": "2026-11-03T14:47:02.044Z",
   "sources": {
     "intermarche": {
       "label": "Intermarché",
@@ -17,64 +17,101 @@
       "id": "filet-de-poulet",
       "category": "Filet de poulet",
       "source": "intermarche",
-      "url": "https://www.intermarche.com/produit/filet-de-poulet/5413458060185",
+      "url": "https://www.intermarche.com/produit/filet-de-poulet/5413458017578",
       "name": "Filet de poulet",
       "brand": "Notre Sélection",
-      "image": "https://cdn.intermarche.com/fr/Content/images/boitmal/produit/zoom/1188EEB4DAD5C4ED9A30F6F6BA24E53B.jpg",
-      "packaging": "la barquette de 2,5 kg",
-      "price": 18.9,
-      "unitPrice": 7.56,
+      "image": "https://assets-big.cdn-mousquetaires.com/medias/domain11815/media132953/9885916-vxhu89jpt2-ecommint.jpg",
+      "packaging": "la barquette de 1 kg",
+      "price": 10.95,
+      "unitPrice": 10.95,
       "unit": "kg",
-      "pricePerKg": 7.56,
-      "netWeightG": 2500,
+      "pricePerKg": 10.95,
+      "netWeightG": 1000,
       "available": true,
-      "nutriScore": null,
+      "nutriScore": "A",
       "estimate": null,
       "nutrition": {
-        "energyKcal": null,
-        "fat": 2.4,
-        "saturatedFat": 0.9,
+        "energyKcal": 106,
+        "fat": 1.7,
+        "saturatedFat": 0.6,
         "carbs": 0.5,
         "sugars": 0.5,
-        "fiber": null,
-        "protein": 22,
-        "salt": 0.2
+        "fiber": 0.9,
+        "protein": 23,
+        "salt": 0.09
       },
       "nutritionTable": [
         {
+          "label": "Energie",
+          "value": "449.0 kj (106.0 kcal)"
+        },
+        {
           "label": "Matière Grasse",
-          "value": "2,40g"
+          "value": "1.7"
         },
         {
           "label": "Dont acide gras saturé",
-          "value": "0,9g"
+          "value": "0.6"
+        },
+        {
+          "label": "Dont acide gras polyinsaturé",
+          "value": "0.6"
         },
         {
           "label": "Glucides",
-          "value": "<0,5g"
+          "value": "0.5"
         },
         {
           "label": "Dont sucre",
-          "value": "<0,5g"
+          "value": "0.5"
         },
         {
           "label": "Protéines",
-          "value": "22g"
+          "value": "23"
         },
         {
           "label": "Sel",
-          "value": "0,20g"
+          "value": "0.09"
+        },
+        {
+          "label": "Fibres Alimentaires",
+          "value": "0.9"
         }
       ],
-      "ingredients": "100% poulet.",
-      "allergens": null,
+      "ingredients": "100 % poulet",
+      "allergens": "cacahuètes / arachides (Absence), céleri (Absence), céréales contenant du gluten (Absence), crustacés (Absence), dioxyde de soufre et sulfites (Absence), fruit à coque (Absence), graines de sésame (Absence), lait (Absence), lupin (Absence), mollusques (Absence), moutarde (Absence), oeufs (Absence), poisson (Absence), poulet (Absence), soja (Absence)",
       "sections": [
         {
           "title": "Caractéristiques",
           "items": [
             {
               "label": "Conservation",
-              "value": "A conserver au frais à +4°C max."
+              "value": "Tenir au frais entre 0°C et 4 °C."
+            }
+          ]
+        },
+        {
+          "title": "En savoir plus",
+          "items": [
+            {
+              "label": "Dénomination légale de vente",
+              "value": "Filet de poulet 1 kg e"
+            },
+            {
+              "label": "Avantages",
+              "value": "utilisable dans plusieures domaines (brochettes, wok, vol-au-vent, produit pané...)"
+            },
+            {
+              "label": "Détails du produit",
+              "value": "Provenance des ingrédients : Belgium\nPays de transformation : BELGIQUE"
+            },
+            {
+              "label": "Informations fabricant",
+              "value": "Plukon Maasmechelen NV - Slakweidestraat 25 - Maasmechelen - 3630 - +32/89 77 95 00 - www.plukonfoodgroup.com"
+            },
+            {
+              "label": "Renseignements pratiques",
+              "value": "Cuire dans la poêle, four ou grill.\nBien cuire à coeur avant consommation."
             }
           ]
         },
@@ -88,7 +125,7 @@
           ]
         }
       ],
-      "fetchedAt": "2026-11-03T14:12:18.773Z"
+      "fetchedAt": "2026-11-03T14:42:20.720Z"
     },
     {
       "id": "blanc-de-dinde",
@@ -177,47 +214,47 @@
     },
     {
       "id": "steak-hache",
-      "category": "Steak haché",
+      "category": "Steak haché 5 %",
       "source": "intermarche",
-      "url": "https://www.intermarche.com/produit/steaks-haches-20%25-mg/3410280022871",
-      "name": "Steaks hachés 20% MG",
-      "brand": "Top Budget",
-      "image": "https://assets-big.cdn-mousquetaires.com/medias/domain11815/media121567/6470277-w7n881fdbh-ecommint.jpg",
-      "packaging": "la boite de 10 - 1 kg",
-      "price": 11.22,
-      "unitPrice": 11.22,
+      "url": "https://www.intermarche.com/produit/steaks-haches-pur-bœuf-5%25-mg/3250390016342",
+      "name": "Steaks hachés pur bœuf 5% MG",
+      "brand": "Jean Rozé, une marque Intermarché",
+      "image": "https://assets-big.cdn-mousquetaires.com/medias/domain11815/media140902/12270858-y831em4hkm-ecommint.jpg",
+      "packaging": "les 2 pièces de 125g - 250g",
+      "price": 4.85,
+      "unitPrice": 19.4,
       "unit": "kg",
-      "pricePerKg": 11.22,
-      "netWeightG": 1000,
+      "pricePerKg": 19.4,
+      "netWeightG": 250,
       "available": true,
-      "nutriScore": "D",
+      "nutriScore": "A",
       "estimate": null,
       "nutrition": {
-        "energyKcal": 252,
-        "fat": 20,
-        "saturatedFat": 8.7,
+        "energyKcal": 130,
+        "fat": 5,
+        "saturatedFat": 2.1,
         "carbs": 0.5,
         "sugars": 0.5,
         "fiber": 0.5,
-        "protein": 18,
-        "salt": 0.2
+        "protein": 21,
+        "salt": 0.17
       },
       "nutritionTable": [
         {
           "label": "Energie",
-          "value": "1046.0 kj (252.0 kcal)"
+          "value": "548.0 kj (130.0 kcal)"
         },
         {
           "label": "Matière Grasse",
-          "value": "20"
+          "value": "5"
         },
         {
           "label": "Dont acide gras saturé",
-          "value": "8,7g"
+          "value": "2,1g"
         },
         {
           "label": "Dont acide gras polyinsaturé",
-          "value": "8.7"
+          "value": "2.1"
         },
         {
           "label": "Glucides",
@@ -229,18 +266,18 @@
         },
         {
           "label": "Protéines",
-          "value": "18"
+          "value": "21"
         },
         {
           "label": "Sel",
-          "value": "0.2"
+          "value": "0.17"
         },
         {
           "label": "Fibres Alimentaires",
           "value": "0.5"
         }
       ],
-      "ingredients": "100% viande bovine. Viande d'origine UE. Pourcentage de matières grasses inférieur à 20%. Rapport collagène sur protéines de viande inférieur à 15%.",
+      "ingredients": "viande bovine hachée [origine : France] Rapport collagène sur protéines de viande inférieur à 12%",
       "allergens": null,
       "sections": [
         {
@@ -248,7 +285,7 @@
           "items": [
             {
               "label": "Conservation",
-              "value": "Avant ouverture: **compartiment à glace (-12°c) du réfrigérateur : 3 jours ***congélateur (-18°c°) : jusqu'à la date indiquée sur le côté de l'emballage - après ouverture: **compartiment à glace (-12°c) du réfrigérateur : 3 jours ***congélateur (-18°c°) : jusqu'à la date indiquée sur le côté de l'emballage - spécifique: ne pas recongeler apres decongelation"
+              "value": "Avant ouverture: a conserver entre 0°c et +2°c - après ouverture: a consommer rapidement après ouverture"
             }
           ]
         },
@@ -257,11 +294,15 @@
           "items": [
             {
               "label": "Dénomination légale de vente",
-              "value": "Steaks haches pur boeuf - surgeles"
+              "value": "2 steaks hachés"
+            },
+            {
+              "label": "Avantages",
+              "value": "Fabriqué dans nos ateliers en France"
             },
             {
               "label": "Détails du produit",
-              "value": "Provenance des ingrédients : viande d'origine UE"
+              "value": "Provenance des ingrédients : Elaboré en France # viande bovine hachée [origine : France] # Viande bovine Française"
             },
             {
               "label": "Informations fabricant",
@@ -269,7 +310,7 @@
             },
             {
               "label": "Renseignements pratiques",
-              "value": "à la poêle : Avec ou sans matière grasse sans décongélation préalable. Préchauffer la poêle ou le grill. Saisir à feu vif les steaks 1 minute sur chaque face. Terminer la cuisson à feu doux 5 à 6 minutes en les retournant de temps en temps jusqu'à la cuisson complète - conseil de sécurité : A CONSOMMER CUIT A COEUR"
+              "value": "Consigne de sécurité : A consommer cuit à coeur"
             }
           ]
         },
@@ -278,12 +319,16 @@
           "items": [
             {
               "label": "Compléments d'informations",
-              "value": "viande d'origine UE Ne pas recongeler après décongélation."
+              "value": "Elaboré en France viande bovine hachée origine : France Viande bovine Française"
+            },
+            {
+              "label": "Mentions obligatoires complémentaires :",
+              "value": "conditionné sous atmosphère protectrice"
             }
           ]
         }
       ],
-      "fetchedAt": "2026-11-03T14:12:38.175Z"
+      "fetchedAt": "2026-11-03T14:42:51.573Z"
     },
     {
       "id": "jambon-blanc",
@@ -401,18 +446,18 @@
     },
     {
       "id": "oeufs",
-      "category": "Œufs",
+      "category": "Œufs plein air",
       "source": "intermarche",
-      "url": "https://www.intermarche.com/produit/œufs-frais-de-poules-elevees-au-sol/3410280142357",
-      "name": "Œufs frais de poules élevées au sol",
-      "brand": "Top Budget",
-      "image": "https://cdn.intermarche.com/fr/Content/images/pim/03410280142357/72c067661d054d33855a0764a9478b58.jpg",
-      "packaging": "la boîte de 10 œufs",
-      "price": 1.82,
-      "unitPrice": 1.82,
-      "unit": "pi",
-      "pricePerKg": 3.64,
-      "netWeightG": 500,
+      "url": "https://www.intermarche.com/produit/œufs-de-poules-elevees-en-plein-air-engage/3700864005209",
+      "name": "Œufs de poules élevées en plein air engagé",
+      "brand": "l'Œuf de nos Villages",
+      "image": "https://assets-big.cdn-mousquetaires.com/medias/domain11815/media138141/11442354-w207f7tkd3-ecommint.jpg",
+      "packaging": "la boite de 20",
+      "price": 5.08,
+      "unitPrice": 0.26,
+      "unit": "unit",
+      "pricePerKg": 5.08,
+      "netWeightG": 1000,
       "available": true,
       "nutriScore": "A",
       "estimate": "Œufs vendus à la pièce : calibre non précisé, poids estimé à 50 g mangeables par œuf (calibre moyen : 53 à 63 g coquille comprise).",
@@ -422,14 +467,14 @@
         "saturatedFat": 2.6,
         "carbs": 0.5,
         "sugars": 0.5,
-        "fiber": 0.5,
+        "fiber": null,
         "protein": 13,
         "salt": 0.31
       },
       "nutritionTable": [
         {
           "label": "Energie",
-          "value": "584.0 kj (140.0 kcal)"
+          "value": "583.0 kj (140.0 kcal)"
         },
         {
           "label": "Matière Grasse",
@@ -437,7 +482,7 @@
         },
         {
           "label": "Dont acide gras saturé",
-          "value": "2,6g"
+          "value": "2.6"
         },
         {
           "label": "Dont acide gras polyinsaturé",
@@ -458,13 +503,9 @@
         {
           "label": "Sel",
           "value": "0.31"
-        },
-        {
-          "label": "Fibres Alimentaires",
-          "value": "0.5"
         }
       ],
-      "ingredients": "OEUFS frais",
+      "ingredients": "Ingrédients : OEUF, 100% oeufs",
       "allergens": "oeufs (Presence)",
       "sections": [
         {
@@ -472,7 +513,7 @@
           "items": [
             {
               "label": "Conservation",
-              "value": "Avant ouverture: a conserver au réfrigérateur après achat"
+              "value": "A conserver au frais après achat."
             }
           ]
         },
@@ -481,19 +522,19 @@
           "items": [
             {
               "label": "Dénomination légale de vente",
-              "value": "10 oeufs de poules élevées au sol"
+              "value": "OEUF VILLAGE ENGAGE PLEIN AIR x 20"
             },
             {
               "label": "Avantages",
-              "value": "Poules élevées au sol, œufs de France."
+              "value": "Les oeufs « Nous, éleveurs engagés », proviennent d'exploitations familiales implantées au coeur des régions. Nos éleveurs s'engagent pour la protection de la biodiversité aux côtés d'Un Toit Pour Les Abeilles."
             },
             {
               "label": "Détails du produit",
-              "value": "Provenance des ingrédients : Œufs de France"
+              "value": "Provenance des ingrédients : France\nPays de transformation : FRANCE"
             },
             {
               "label": "Informations fabricant",
-              "value": "ITM Alimentaire International - 24 rue Auguste Chabrières - Paris - 75015"
+              "value": "ODNV - Rue Maryse BASTIE - BRUZ CEDEX - 35172 - odnv@oeufdenosvillages.fr - 0223360180"
             }
           ]
         },
@@ -501,57 +542,61 @@
           "title": "Autres informations légales",
           "items": [
             {
-              "label": "Mentions obligatoires complémentaires :",
-              "value": "A consommer de préférence avant la date de consommation recommandée (dcr) = voir sur le dessus de la boîte. 2 = sol - fr = france, 3 lettres = identification de l'élevage, 2 chiffres = n° du bâtiment. pour accompagner la conversion des élevages, les œufs contenus dans cette boîte peuvent être issus de poules élevées en plein air (code 1 sur l’œuf). imp : itm alimentaire belgium sa-b-1348 louvain-la-neuve"
+              "label": "PME+ (Pour un Monde Plus Engagé) est le label RSE des entreprises indépendantes françaises à taille humaine, engagées dans une démarche de progrès pour l’humain, leur territoire, l’emploi et l’environnement\nLe label PME+, créé et soutenu par la FEEF (Fédération des Entreprises et Entrepreneurs de France) depuis 2014, est attribué après un audit annuel effectué par Ecocert Environnement (organisme tiers indépendant), selon un référentiel inspiré de la norme ISO 26000 et adapté à la structure des PME-ETI.\nAcheter un produit issu d’une entreprise PME+ est une preuve de votre soutien envers des entreprises françaises engagées.",
+              "value": "PME+"
+            },
+            {
+              "label": "Compléments d'informations",
+              "value": "Message d'information : Nous vous informons que les poules élevées en plein air (code O et 1) peuvent être momentanément soumises à des mesures de confinement à la demande des autorités. Ces mesures s’inscrivent dans le cadre d’une démarche de lutte contre la grippe aviaire. Les produits élaborés contenant des œufs issus de poules élevées en plein air sont également susceptibles d’être concernés. Merci de votre compréhension, La Direction."
             }
           ]
         }
       ],
-      "fetchedAt": "2026-11-03T14:12:53.247Z"
+      "fetchedAt": "2026-11-03T14:43:29.774Z"
     },
     {
       "id": "thon",
       "category": "Thon au naturel",
       "source": "intermarche",
-      "url": "https://www.intermarche.com/produit/morceaux-de-thon-listao-au-naturel/3410280066066",
-      "name": "Morceaux de thon Listao au naturel",
-      "brand": "Top Budget",
-      "image": "https://assets-big.cdn-mousquetaires.com/medias/domain11815/media130550/9165299-ywrxehqu7p-ecommint.jpg",
-      "packaging": "l'unité de 280g net égoutté",
-      "price": 2.09,
-      "unitPrice": 7.46,
+      "url": "https://www.intermarche.com/produit/thon-albacore-en-tranches-au-naturel/3250391875535",
+      "name": "Thon albacore en tranches au naturel",
+      "brand": "Odyssée, une marque Intermarché",
+      "image": "https://assets-big.cdn-mousquetaires.com/medias/domain11815/media141052/12315789-cfx5rnr40m-ecommint.jpg",
+      "packaging": "les 3 boites de 93g net égoutté - 279g",
+      "price": 4.03,
+      "unitPrice": 10.1,
       "unit": "kg",
-      "pricePerKg": 7.46,
-      "netWeightG": 280,
+      "pricePerKg": 14.44,
+      "netWeightG": 279,
       "available": true,
       "nutriScore": "A",
       "estimate": null,
       "nutrition": {
-        "energyKcal": 100,
-        "fat": 0.9,
-        "saturatedFat": 0.4,
+        "energyKcal": 125,
+        "fat": 1.9,
+        "saturatedFat": 0.7,
         "carbs": 0.5,
         "sugars": 0.5,
         "fiber": 0.5,
-        "protein": 23,
-        "salt": 0.84
+        "protein": 27,
+        "salt": 0.87
       },
       "nutritionTable": [
         {
           "label": "Energie",
-          "value": "424.0 kj (100.0 kcal)"
+          "value": "529.0 kj (125.0 kcal)"
         },
         {
           "label": "Matière Grasse",
-          "value": "0.9"
+          "value": "1.9"
         },
         {
           "label": "Dont acide gras saturé",
-          "value": "0.4"
+          "value": "0,7g"
         },
         {
           "label": "Dont acide gras polyinsaturé",
-          "value": "0.4"
+          "value": "0.7"
         },
         {
           "label": "Glucides",
@@ -563,18 +608,18 @@
         },
         {
           "label": "Protéines",
-          "value": "23"
+          "value": "27"
         },
         {
           "label": "Sel",
-          "value": "0.84"
+          "value": "0.87"
         },
         {
           "label": "Fibres Alimentaires",
           "value": "0.5"
         }
       ],
-      "ingredients": "Thon listao* (Katsuwonus pelamis), eau, sel. *POISSONS. Thon pêché à la senne coulissante.",
+      "ingredients": "Thon albacore* (Thunnus albacares), eau, sel *POISSONS Thon pêché à la senne coulissante",
       "allergens": "poisson (Presence)",
       "sections": [
         {
@@ -582,7 +627,7 @@
           "items": [
             {
               "label": "Conservation",
-              "value": "Avant ouverture: à conserver à l'abri de la chaleur et de l'humidité. - après ouverture: à conserver au réfrigérateur dans un récipient hermétique et à consommer sous 48h."
+              "value": "Avant ouverture: a conserver dans un endroit sec et tempéré - après ouverture: a conserver au réfrigérateur dans un récipient alimentaire fermé hermétiquement et à consommer dans les 2 jours."
             }
           ]
         },
@@ -591,11 +636,15 @@
           "items": [
             {
               "label": "Dénomination légale de vente",
-              "value": "Thon listao au naturel en morceaux"
+              "value": "Thon albacore en tranches au naturel, emboîté à cru"
+            },
+            {
+              "label": "Avantages",
+              "value": "Thon albacore en tranches, au naturel, pêché à la senne coulissante."
             },
             {
               "label": "Détails du produit",
-              "value": "Provenance des ingrédients : /"
+              "value": "Provenance des ingrédients : Zone de pêche : voir sur l'un des fonds de la boite."
             },
             {
               "label": "Informations fabricant",
@@ -612,16 +661,16 @@
           "items": [
             {
               "label": "Compléments d'informations",
-              "value": "Mentions complémentaires obligatoires : Poids net: 400g Poids net égoutté: 280g"
+              "value": "De la gélatine peut apparaître en surface : elle est naturelle et liée à l'emboîtage à cru."
             },
             {
               "label": "Mentions obligatoires complémentaires :",
-              "value": "Mentions complémentaires obligatoires : Poids net: 400g Poids net égoutté: 280g"
+              "value": "Poids net égoutté: 93 g"
             }
           ]
         }
       ],
-      "fetchedAt": "2026-11-03T14:13:00.272Z"
+      "fetchedAt": "2026-11-03T14:44:08.808Z"
     },
     {
       "id": "sardines",
@@ -1169,70 +1218,66 @@
     },
     {
       "id": "emmental",
-      "category": "Emmental",
+      "category": "Emmental râpé",
       "source": "intermarche",
-      "url": "https://www.intermarche.com/produit/emmental/3410280140643",
-      "name": "Emmental",
-      "brand": "Top Budget",
-      "image": "https://assets-big.cdn-mousquetaires.com/medias/domain11815/media133541/10062421-2dspaum30d-ecommint.jpg",
-      "packaging": "le sachet de 500 g",
-      "price": 3.66,
-      "unitPrice": 7.32,
+      "url": "https://www.intermarche.com/produit/emmental-francais-rape/3250392224981",
+      "name": "Emmental français râpé",
+      "brand": "Pâturages, une marque Intermarché",
+      "image": "https://assets-big.cdn-mousquetaires.com/medias/domain11815/media137903/11371197-djgwuqxlha-ecommint.jpg",
+      "packaging": "le sachet de 1 kg",
+      "price": 7.89,
+      "unitPrice": 7.89,
       "unit": "kg",
-      "pricePerKg": 7.32,
-      "netWeightG": 500,
+      "pricePerKg": 7.89,
+      "netWeightG": 1000,
       "available": true,
       "nutriScore": "D",
       "estimate": null,
       "nutrition": {
-        "energyKcal": 372,
-        "fat": 29,
+        "energyKcal": 368,
+        "fat": 28,
         "saturatedFat": 20,
-        "carbs": 0.7,
-        "sugars": 0.5,
-        "fiber": 0.5,
-        "protein": 27,
-        "salt": 0.6
+        "carbs": 1,
+        "sugars": 1,
+        "fiber": null,
+        "protein": 28,
+        "salt": 0.69
       },
       "nutritionTable": [
         {
           "label": "Energie",
-          "value": "1544.0 kj (372.0 kcal)"
+          "value": "1529.0 kj (368.0 kcal)"
         },
         {
           "label": "Matière Grasse",
-          "value": "29"
+          "value": "28"
         },
         {
           "label": "Dont acide gras saturé",
-          "value": "20"
+          "value": "20g"
         },
         {
           "label": "Dont acide gras polyinsaturé",
-          "value": "20"
+          "value": "19"
         },
         {
           "label": "Glucides",
-          "value": "0.7"
+          "value": "1"
         },
         {
           "label": "Dont sucre",
-          "value": "0.5"
+          "value": "1"
         },
         {
           "label": "Protéines",
-          "value": "27"
+          "value": "28"
         },
         {
           "label": "Sel",
-          "value": "0.6"
-        },
-        {
-          "label": "Fibres Alimentaires",
-          "value": "0.5"
+          "value": "0.69"
         }
       ],
-      "ingredients": "LAIT de vache pasteurisé (origine : UE), sel, ferments lactiques (dont LAIT), enzyme coagulante",
+      "ingredients": "LAIT de vache pasteurisé (origine : France), sel, ferments lactiques (dont LAIT), enzyme coagulante.",
       "allergens": "lait (Presence)",
       "sections": [
         {
@@ -1240,7 +1285,7 @@
           "items": [
             {
               "label": "Conservation",
-              "value": "Avant ouverture: a conserver entre +2°c et +8°c - après ouverture: a conserver entre +2°c et +8°c. a consommer dans les 3 jours après ouverture"
+              "value": "Avant ouverture: a conserver entre + 4°c et + 8°c - après ouverture: a conserver entre + 4°c et + 8°c a consommer dans les 5 jours après ouverture"
             }
           ]
         },
@@ -1249,11 +1294,15 @@
           "items": [
             {
               "label": "Dénomination légale de vente",
-              "value": "Emmental, fromage à pâte pressée cuite"
+              "value": "Emmental - fromage à pâte pressée cuite"
+            },
+            {
+              "label": "Avantages",
+              "value": "Depuis sa création en 1974, Pâturages vous propose des produits gourmands de qualité, comme cet emmental râpé fabriqué à partir de lait collecté auprès d'éleveurs français. Grâce à sa texture fondante, faites de vos plats du quotidien un moment savoureux pour toute la famille ! Emmental français râpé, lait français."
             },
             {
               "label": "Détails du produit",
-              "value": "Provenance des ingrédients : lait de vache pasteurisé (origine : UE)\nPays de transformation : FRANCE"
+              "value": "Provenance des ingrédients : Fabriqué dans les Pays de la Loire. # Lait de vache pasteurisé origine France. # Lait Français."
             },
             {
               "label": "Informations fabricant",
@@ -1270,7 +1319,7 @@
           "items": [
             {
               "label": "Compléments d'informations",
-              "value": "Mentions complémentaires obligatoires : Conditionné sous atmosphère protectrice; Conditionné sous atmosphère protectrice"
+              "value": "Ce produit est préparé avec du lait français et fabriqué avec soin par notre partenaire producteur en France."
             },
             {
               "label": "Mentions obligatoires complémentaires :",
@@ -1279,59 +1328,59 @@
           ]
         }
       ],
-      "fetchedAt": "2026-11-03T14:13:42.269Z"
+      "fetchedAt": "2026-11-03T14:44:42.600Z"
     },
     {
       "id": "cacahuetes",
       "category": "Cacahuètes",
       "source": "intermarche",
-      "url": "https://www.intermarche.com/produit/cacahuetes-grillees-et-salees/3410280020150",
+      "url": "https://www.intermarche.com/produit/cacahuetes-grillees-et-salees/3327271203242",
       "name": "Cacahuètes grillées et salées",
-      "brand": "Top Budget",
-      "image": "https://assets-big.cdn-mousquetaires.com/medias/domain11815/media127820/8346155-81kk9m5cd4-ecommint.jpg",
-      "packaging": "le sachet de 250g",
-      "price": 0.69,
-      "unitPrice": 2.76,
+      "brand": "Menguy's",
+      "image": "https://cdn.intermarche.com/fr/Content/images/pim/03327271203242/2df607d8077e493fbaf1f3032a764500.png",
+      "packaging": "Le sachet de 900g",
+      "price": 5.13,
+      "unitPrice": 5.7,
       "unit": "kg",
-      "pricePerKg": 2.76,
-      "netWeightG": 250,
+      "pricePerKg": 5.7,
+      "netWeightG": 900,
       "available": true,
       "nutriScore": "B",
       "estimate": null,
       "nutrition": {
-        "energyKcal": 626,
-        "fat": 51,
-        "saturatedFat": 5.5,
-        "carbs": 12.4,
-        "sugars": 5.4,
-        "fiber": 7.1,
+        "energyKcal": 612,
+        "fat": 50,
+        "saturatedFat": 5.9,
+        "carbs": 10,
+        "sugars": 5.8,
+        "fiber": 9,
         "protein": 26,
         "salt": 0.87
       },
       "nutritionTable": [
         {
           "label": "Energie",
-          "value": "2592.0 kj (626.0 kcal)"
+          "value": "2534.0 kj (612.0 kcal)"
         },
         {
           "label": "Matière Grasse",
-          "value": "51"
+          "value": "50"
         },
         {
           "label": "Dont acide gras saturé",
-          "value": "5,5g"
+          "value": "5.9"
         },
         {
           "label": "Dont acide gras polyinsaturé",
-          "value": "6.7"
+          "value": "5.9"
         },
         {
           "label": "Glucides",
-          "value": "12.4"
+          "value": "10"
         },
         {
           "label": "Dont sucre",
-          "value": "5.4"
+          "value": "5.8"
         },
         {
           "label": "Protéines",
@@ -1343,18 +1392,18 @@
         },
         {
           "label": "Fibres Alimentaires",
-          "value": "7.1"
+          "value": "9"
         }
       ],
-      "ingredients": "CACAHUÈTES, huile de tournesol, sel. Traces éventuelles de : fruits à coque.",
-      "allergens": "amande et produits à base d'amande (Trace), cacahuètes / arachides (Presence), fruit à coque (Trace), noisette et produits à base de noisette (Trace), noix de cajou et produits à base de noix de cajou (Trace), noix de macadamia et produits à base de noix de macadamia (Trace), noix de pécan et produits à base de noix de pécan (Trace), noix du Brésil (Trace), noix et produits à base de noix (Trace), pistache (Trace)",
+      "ingredients": "CACAHUETES 96%, huile de tournesol, sel",
+      "allergens": "cacahuètes / arachides (Presence), céréales contenant du gluten (Traces), fruit à coque (Traces), soja (Traces)",
       "sections": [
         {
           "title": "Caractéristiques",
           "items": [
             {
               "label": "Conservation",
-              "value": "Avant ouverture: a conserver à l'abri de la chaleur et de l'humidité. - après ouverture: a conserver à l'abri de la chaleur et de l'humidité. - spécifique: conditionné sous atmosphère protectrice."
+              "value": "A conserver dans un lieu sec et frais. Après ouverture, bien refermer le paquet et le placer dans votre réfrigérateur."
             }
           ]
         },
@@ -1366,6 +1415,129 @@
               "value": "Cacahuètes grillées et salées"
             },
             {
+              "label": "Informations fabricant",
+              "value": "Menguy's - 13-15 rue Jean Monnet – BP 14246 Saint-Jean - L'UNION - 31242 - http://www.menguys.fr"
+            }
+          ]
+        },
+        {
+          "title": "Autres informations légales",
+          "items": [
+            {
+              "label": "PME+ (Pour un Monde Plus Engagé) est le label RSE des entreprises indépendantes françaises à taille humaine, engagées dans une démarche de progrès pour l’humain, leur territoire, l’emploi et l’environnement\nLe label PME+, créé et soutenu par la FEEF (Fédération des Entreprises et Entrepreneurs de France) depuis 2014, est attribué après un audit annuel effectué par Ecocert Environnement (organisme tiers indépendant), selon un référentiel inspiré de la norme ISO 26000 et adapté à la structure des PME-ETI.\nAcheter un produit issu d’une entreprise PME+ est une preuve de votre soutien envers des entreprises françaises engagées.",
+              "value": "PME+"
+            },
+            {
+              "label": "Compléments d'informations",
+              "value": "Mentions complémentaires obligatoires : A consommer de préférence avant le :"
+            },
+            {
+              "label": "Mentions obligatoires complémentaires :",
+              "value": "Mentions complémentaires obligatoires : A consommer de préférence avant le :"
+            }
+          ]
+        },
+        {
+          "title": "Autres informations",
+          "items": [
+            {
+              "label": "Information garantie",
+              "value": "Durée de garantie fournisseur 0"
+            }
+          ]
+        }
+      ],
+      "fetchedAt": "2026-11-03T14:45:25.308Z"
+    },
+    {
+      "id": "beurre-de-cacahuete",
+      "category": "Beurre de cacahuète",
+      "source": "intermarche",
+      "url": "https://www.intermarche.com/produit/beurre-de-cacahuete-cremeux/3250393461637",
+      "name": "Beurre de cacahuète crémeux",
+      "brand": "Ivoria, une marque Intermarché",
+      "image": "https://cdn.intermarche.com/fr/Content/images/pim/03250393461637/a4a4ed148e06409ebf08aff431e1ca8e.jpg",
+      "packaging": "le pot de 350 g",
+      "price": 2.85,
+      "unitPrice": 8.14,
+      "unit": "kg",
+      "pricePerKg": 8.14,
+      "netWeightG": 350,
+      "available": true,
+      "nutriScore": "B",
+      "estimate": null,
+      "nutrition": {
+        "energyKcal": 594,
+        "fat": 46,
+        "saturatedFat": 3.8,
+        "carbs": 12,
+        "sugars": 10,
+        "fiber": 14,
+        "protein": 26,
+        "salt": 0.85
+      },
+      "nutritionTable": [
+        {
+          "label": "Energie",
+          "value": "2460.0 kj (594.0 kcal)"
+        },
+        {
+          "label": "Matière Grasse",
+          "value": "46"
+        },
+        {
+          "label": "Dont acide gras saturé",
+          "value": "3,8g"
+        },
+        {
+          "label": "Dont acide gras polyinsaturé",
+          "value": "3.8"
+        },
+        {
+          "label": "Glucides",
+          "value": "12"
+        },
+        {
+          "label": "Dont sucre",
+          "value": "10"
+        },
+        {
+          "label": "Protéines",
+          "value": "26"
+        },
+        {
+          "label": "Sel",
+          "value": "0.85"
+        },
+        {
+          "label": "Fibres Alimentaires",
+          "value": "14"
+        }
+      ],
+      "ingredients": "Cacahuètes grillées (ARACHIDE) 92%, sucre, huile de tournesol, sel, huile de colza totalement hydrogénée.",
+      "allergens": "cacahuètes / arachides (Presence)",
+      "sections": [
+        {
+          "title": "Caractéristiques",
+          "items": [
+            {
+              "label": "Conservation",
+              "value": "Avant ouverture: à conserver au sec et à température ambiante. - après ouverture: à conserver au sec et à température ambiante. après ouverture, à consommer dans les 3 mois. - spécifique: il peut y avoir naturellement une séparation de l'huile et de la pâte. remuez le bien avant chaque utilisation."
+            }
+          ]
+        },
+        {
+          "title": "En savoir plus",
+          "items": [
+            {
+              "label": "Dénomination légale de vente",
+              "value": "Beurre de cacahuètes crémeux"
+            },
+            {
+              "label": "Avantages",
+              "value": "Sans huile de palme."
+            },
+            {
               "label": "Détails du produit",
               "value": "Provenance des ingrédients : /"
             },
@@ -1375,21 +1547,12 @@
             },
             {
               "label": "Renseignements pratiques",
-              "value": "Consigne de sécurité top budget vous recommande de ne pas donner ni laisser de graines à la portée des jeunes enfants ; ils risqueraient de les avaler sans les croquer."
-            }
-          ]
-        },
-        {
-          "title": "Autres informations légales",
-          "items": [
-            {
-              "label": "Mentions obligatoires complémentaires :",
-              "value": "Imp : itm alimentaire belgium sa-b-1348 louvain-la-neuve conditionné sous atmosphère protectrice"
+              "value": "Prêt à l’emploi"
             }
           ]
         }
       ],
-      "fetchedAt": "2026-11-03T14:13:49.251Z"
+      "fetchedAt": "2026-11-03T14:46:00.426Z"
     },
     {
       "id": "lentilles",
@@ -1714,6 +1877,124 @@
         }
       ],
       "fetchedAt": "2026-11-03T14:14:11.232Z"
+    },
+    {
+      "id": "pain-de-mie",
+      "category": "Pain de mie complet",
+      "source": "intermarche",
+      "url": "https://www.intermarche.com/produit/pain-de-mie-maxi-tranches-complet/3029330022428",
+      "name": "Pain de mie maxi tranches complet",
+      "brand": "Jacquet",
+      "image": "https://assets-big.cdn-mousquetaires.com/medias/domain11815/media140990/12297174-32m95p3wi1-ecommint.jpg",
+      "packaging": "Le paquet de 14 tranches - 550g",
+      "price": 1.55,
+      "unitPrice": 2.82,
+      "unit": "kg",
+      "pricePerKg": 2.82,
+      "netWeightG": 550,
+      "available": true,
+      "nutriScore": "A",
+      "estimate": null,
+      "nutrition": {
+        "energyKcal": 264,
+        "fat": 5.2,
+        "saturatedFat": 0.3,
+        "carbs": 42,
+        "sugars": 2.9,
+        "fiber": 7.5,
+        "protein": 8.5,
+        "salt": 1.1
+      },
+      "nutritionTable": [
+        {
+          "label": "Energie",
+          "value": "1111.0 kj (264.0 kcal)"
+        },
+        {
+          "label": "Matière Grasse",
+          "value": "5.2"
+        },
+        {
+          "label": "Dont acide gras saturé",
+          "value": "0.3"
+        },
+        {
+          "label": "Dont acide gras polyinsaturé",
+          "value": "0.4"
+        },
+        {
+          "label": "Glucides",
+          "value": "42"
+        },
+        {
+          "label": "Dont sucre",
+          "value": "2.9"
+        },
+        {
+          "label": "Protéines",
+          "value": "8.5"
+        },
+        {
+          "label": "Sel",
+          "value": "1.1"
+        },
+        {
+          "label": "Fibres Alimentaires",
+          "value": "7.5"
+        }
+      ],
+      "ingredients": "Ingrédients : farine complète de BLÉ ( 43%), eau, farine de BLÉ (20%), huile de colza, arôme naturel (contient alcool), levure, farine de maïs fermentée, sel, GLUTEN DE BLÉ, jus d'acérola en poudre. Présence possible de : LAIT, OEUFS, GRAINES DE SÉSAME.",
+      "allergens": "céréales contenant du gluten (Presence), graines de sésame (Trace), lait (Trace), oeufs (Trace)",
+      "sections": [
+        {
+          "title": "Caractéristiques",
+          "items": [
+            {
+              "label": "Conservation",
+              "value": "Pour préserver le moelleux de ce produit, refermez bien le sachet après ouverture et conservez-le à température ambiante à l'abri de la chaleur et de l'humidité."
+            }
+          ]
+        },
+        {
+          "title": "En savoir plus",
+          "items": [
+            {
+              "label": "Dénomination légale de vente",
+              "value": "Pain de mie à la farine complète sans sucres ajoutés(1)"
+            },
+            {
+              "label": "Avantages",
+              "value": "N/C"
+            },
+            {
+              "label": "Détails du produit",
+              "value": "Provenance des ingrédients : FRANCE"
+            },
+            {
+              "label": "Informations fabricant",
+              "value": "Jacquet - Biopole - Clermont Limagne 63360 - Saint Beauzire"
+            },
+            {
+              "label": "Renseignements pratiques",
+              "value": "N/C"
+            }
+          ]
+        },
+        {
+          "title": "Autres informations légales",
+          "items": [
+            {
+              "label": "Compléments d'informations",
+              "value": "Mentions complémentaires obligatoires : à conserver dans un endroit frais et sec. Bien refermer le paquet après ouverture"
+            },
+            {
+              "label": "Mentions obligatoires complémentaires :",
+              "value": "Mentions complémentaires obligatoires : à conserver dans un endroit frais et sec. Bien refermer le paquet après ouverture"
+            }
+          ]
+        }
+      ],
+      "fetchedAt": "2026-11-03T14:46:23.528Z"
     },
     {
       "id": "whey",
