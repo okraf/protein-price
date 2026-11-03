@@ -1,8 +1,8 @@
-// Met à jour data/products.json à partir de data/catalog.json.
-//   node scripts/update.mjs                      navigateur via OpenCLI (défaut, sur le Mac)
-//   node scripts/update.mjs --transport direct   requête HTTP simple (GitHub Action)
+// Met à jour data/products.json à partir de data/catalog.json, via un navigateur piloté par OpenCLI.
+//   node scripts/update.mjs                      tous les produits
 //   node scripts/update.mjs --only skyr,oeufs    seulement certains produits
 //   node scripts/update.mjs --profile <id>       navigateur OpenCLI précis (voir `opencli profile list`)
+// Un produit peut être relevé dans un autre magasin que celui de son enseigne (champ "store" du catalogue).
 // Un produit en échec garde ses dernières données. Code de sortie 1 si aucun produit n'a pu être lu.
 import { readFile, writeFile } from "node:fs/promises";
 import { sources } from "../sources/index.mjs";
@@ -13,7 +13,6 @@ const arg = (name, fallback) => {
   const i = process.argv.indexOf(`--${name}`);
   return i > 0 ? process.argv[i + 1] : fallback;
 };
-const transportName = arg("transport", "opencli");
 const only = arg("only", "")?.split(",").filter(Boolean);
 const profile = arg("profile");
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -33,13 +32,17 @@ for (const [sourceId, store] of Object.entries(catalog.stores)) {
   const todo = entries.filter((e) => !only.length || only.includes(e.id));
   if (!todo.length) continue;
 
-  let transport = createTransport(transportName, { profile });
-  const { cookies } = await source.prepare(transport, store);
-  if (cookies) transport = createTransport(transportName, { profile, cookies });
+  const transport = createTransport({ profile });
+  let currentStore = null;
 
   for (const entry of todo) {
+    const entryStore = entry.store ?? store;
     try {
-      const product = await source.fetchProduct(transport, entry, store);
+      if (currentStore?.ref !== entryStore.ref) {
+        await source.selectStore(transport, entryStore);
+        currentStore = entryStore;
+      }
+      const product = await source.fetchProduct(transport, entry, entryStore);
       // Une fiche à 0 g de protéines est une erreur de saisie de l'enseigne (vu sur des lentilles).
       if (!(product.nutrition.protein > 0)) throw new Error("protéines absentes ou nulles sur la fiche");
       if (product.available && !(product.pricePerKg > 0)) throw new Error("prix au kilo introuvable");

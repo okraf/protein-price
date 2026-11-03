@@ -11,12 +11,12 @@ function storeCookie(store) {
   return JSON.stringify({ ref: store.ref, isEcommerce: true, name: encodeURIComponent(store.name), city: store.city });
 }
 
-export async function prepare(transport, store) {
-  if (transport.name !== "opencli") return { cookies: { itm_pdv: storeCookie(store) } };
+// Choisit le magasin dont on veut les prix (à rappeler à chaque changement de magasin).
+export async function selectStore(transport, store) {
   await transport.open(homepage);
   const value = encodeURIComponent(storeCookie(store));
-  await transport.eval(`document.cookie = "itm_pdv=${value}; path=/; max-age=31536000"; "ok"`);
-  return {};
+  // Le site pose son propre cookie sur .intermarche.com : on l'efface puis on écrit au même domaine.
+  await transport.eval(`document.cookie = "itm_pdv=; path=/; max-age=0"; document.cookie = "itm_pdv=${value}; path=/; domain=.intermarche.com; max-age=31536000"; "ok"`);
 }
 
 export async function fetchProduct(transport, entry, store) {
@@ -174,6 +174,7 @@ export function parseProduct(html, entry, store) {
     netWeightG,
     available,
     nutriScore: /^[A-E]$/.test(nutriScore ?? "") ? nutriScore : null,
+    store: { name: store.name, city: store.city, postalCode: store.postalCode },
     estimate: entry.estimate ?? null,
     nutrition,
     nutritionTable,

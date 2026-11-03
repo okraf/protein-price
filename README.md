@@ -18,22 +18,21 @@ En ligne : https://okraf.github.io/protein-price/
 - `scripts/update.mjs` : relève les fiches du catalogue et réécrit `data/products.json`.
 
 ## Mettre à jour les prix
-Intermarché est protégé par un anti-bot et n'affiche les prix du magasin qu'à un vrai navigateur. La mise à jour passe donc par [OpenCLI](https://github.com/jackwener/opencli) (extension Browser Bridge connectée à Chrome) :
+Intermarché est protégé par un anti-bot (DataDome) et n'affiche les prix du magasin qu'à un vrai navigateur. Pas de mise à jour automatique : on relance à la main de temps en temps, via [OpenCLI](https://github.com/jackwener/opencli) (extension Browser Bridge).
 
 ```sh
 npm install
-npm run update            # tous les produits
-node scripts/update.mjs --only skyr,oeufs
-git commit -am "Update prices" && git push
+node scripts/update.mjs                      # tous les produits
+node scripts/update.mjs --only skyr,oeufs    # quelques produits
 ```
 
-La GitHub Action `update-prices.yml` tente la même chose chaque lundi en requête directe. Elle échoue en général (anti-bot, ou page servie sans magasin) et ne publie alors rien : le script refuse les prix qui ne viennent pas du magasin choisi.
+Le script attend 20 à 40 s entre deux fiches pour rester à un rythme raisonnable. Il refuse une page qui n'affiche pas le magasin attendu, recalcule le prix au kilo depuis le prix et le poids du paquet quand le chiffre du site est faux, et rejette une fiche sans protéines.
 
 ## Ajouter un produit
-Ajouter une entrée dans `data/catalog.json` (`id`, `category`, `source`, `url` de la fiche), puis `node scripts/update.mjs --only <id>`.
+Ajouter une entrée dans `data/catalog.json` (`id`, `category`, `source`, `url` de la fiche ; `store` pour un produit relevé dans un autre magasin que celui de l'enseigne), puis `node scripts/update.mjs --only <id>`.
 
 ## Ajouter une enseigne
-Créer `sources/<enseigne>.mjs` (exports `id`, `label`, `homepage`, `prepare`, `fetchProduct`), l'ajouter à `sources/index.mjs` et déclarer son magasin dans `stores` de `data/catalog.json`.
+Créer `sources/<enseigne>.mjs` (exports `id`, `label`, `homepage`, `selectStore`, `fetchProduct`), l'ajouter à `sources/index.mjs` et déclarer son magasin dans `stores` de `data/catalog.json`.
 
 ## Lancer en local
 `npm run serve` puis http://localhost:8000

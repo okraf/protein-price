@@ -363,6 +363,14 @@
     text-align: center;
   }
   footer .disclaimer { margin: 0 0 1rem; }
+  .report {
+    display: inline-block;
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 1rem;
+  }
+  .report:hover { text-decoration: underline; }
   footer .meta {
     display: flex;
     align-items: center;
@@ -397,6 +405,7 @@
   <main id="app"><p class="subtitle">Chargement…</p></main>
 
   <footer>
+    <a class="report" id="report-link" href="https://github.com/okraf/protein-price/issues/new" target="_blank" rel="noopener">Manque d'info ou erreur ? Signale-le ↗</a>
     <p class="disclaimer">Prix relevés sur le site du magasin, susceptibles de changer. Comparatif à visée pédagogique : le prix ne dit rien de la qualité nutritionnelle globale d'un aliment.</p>
     <div class="meta">
       <span>© 2026 Perceval</span>
@@ -445,13 +454,27 @@
       });
   }
 
+  // Magasin du relevé : celui du produit s'il a été relevé ailleurs, sinon celui de l'enseigne.
   function sourceLabel(p) {
     const s = DATA.sources[p.source];
-    return s ? `${s.label} ${s.store?.name ?? ""}`.trim() : p.source;
+    const store = p.store ?? s?.store;
+    return `${s?.label ?? p.source} ${store?.name ?? ""}${store?.postalCode ? ` (${store.postalCode})` : ""}`.trim();
+  }
+  const otherStore = (p) => p.store && p.store.name !== DATA.sources[p.source]?.store?.name;
+
+  // Lien « Manque d'info ou erreur » : ouvre une issue GitHub pré-remplie.
+  const ISSUES = "https://github.com/okraf/protein-price/issues/new";
+  function setReportLink(p) {
+    const link = document.getElementById("report-link");
+    if (!p) { link.href = ISSUES; return; }
+    const title = `Erreur ou info manquante : ${p.category} (${p.brand})`;
+    const body = `Produit : ${p.name} (${p.brand}, ${p.packaging})\nFiche : ${p.url}\nRelevé du ${formatDate(p.fetchedAt)}, ${sourceLabel(p)}\n\nCe qui manque ou est faux :\n`;
+    link.href = `${ISSUES}?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
   }
 
   function renderBoard() {
     document.title = "Prix des Protéines · Perceval";
+    setReportLink(null);
     const rows = ranked();
     const stores = Object.values(DATA.sources).map((s) => `${esc(s.label)} ${esc(s.store?.name ?? "")} (${esc(s.store?.postalCode ?? "")})`).join(", ");
     app.innerHTML = `
@@ -478,7 +501,7 @@
               <tr class="result-highlight ${i < 3 && p.available ? "top" : ""} ${p.available ? "" : "unavailable"}" data-id="${esc(p.id)}">
                 <td class="rank">${i + 1}</td>
                 <td><a class="product-link" href="#/produit/${esc(p.id)}">${esc(p.category)}</a>${p.available ? "" : '<span class="badge">indisponible</span>'}
-                  <span class="product-sub">${esc(p.brand)} · ${esc(p.packaging)}</span></td>
+                  <span class="product-sub">${esc(p.brand)} · ${esc(p.packaging)}${otherStore(p) ? ` · relevé à ${esc(p.store.name)}` : ""}</span></td>
                 <td class="num hide-sm">${eur(p.m.pricePerKg)}</td>
                 <td class="num hide-sm">${num(p.m.protein)} g</td>
                 <td class="num hide-sm">${p.m.gramsFor100gProtein == null ? "–" : Math.round(p.m.gramsFor100gProtein) + " g"}</td>
@@ -517,6 +540,7 @@
     const p = rows[index];
     const n = p.nutrition || {};
     document.title = `${p.category} · Prix des Protéines`;
+    setReportLink(p);
 
     const nutriRows = (p.nutritionTable || []).map((r) => {
       const sub = /^dont/i.test(r.label);

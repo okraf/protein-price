@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T14:47:02.044Z",
+  "generatedAt": "2026-11-03T15:44:57.147Z",
   "sources": {
     "intermarche": {
       "label": "Intermarché",
@@ -673,6 +673,227 @@
       "fetchedAt": "2026-11-03T14:44:08.808Z"
     },
     {
+      "id": "saumon",
+      "category": "Saumon (conserve au naturel)",
+      "source": "intermarche",
+      "url": "https://www.intermarche.com/produit/saumon-atlantique-au-naturel-sans-peau-&-sans-aretes/3250391893874",
+      "name": "Saumon Atlantique au naturel sans peau & sans arêtes",
+      "brand": "Odyssée, une marque Intermarché",
+      "image": "https://assets-big.cdn-mousquetaires.com/medias/domain11815/media119433/5830047-weao9pgo39-ecommint.jpg",
+      "packaging": "la boite de 112 g net égoutté",
+      "price": 3.3,
+      "unitPrice": 29.46,
+      "unit": "kg",
+      "pricePerKg": 29.46,
+      "netWeightG": 112,
+      "available": true,
+      "nutriScore": "B",
+      "store": {
+        "name": "Super Begard",
+        "city": "Begard",
+        "postalCode": "22140"
+      },
+      "estimate": null,
+      "nutrition": {
+        "energyKcal": 172,
+        "fat": 9.7,
+        "saturatedFat": 1.7,
+        "carbs": 0.5,
+        "sugars": 0.5,
+        "fiber": 0.5,
+        "protein": 21,
+        "salt": 0.77
+      },
+      "nutritionTable": [
+        {
+          "label": "Energie",
+          "value": "719.0 kj (172.0 kcal)"
+        },
+        {
+          "label": "Matière Grasse",
+          "value": "9.7"
+        },
+        {
+          "label": "Dont acide gras saturé",
+          "value": "1.7"
+        },
+        {
+          "label": "Dont acide gras polyinsaturé",
+          "value": "1.7"
+        },
+        {
+          "label": "Glucides",
+          "value": "0.5"
+        },
+        {
+          "label": "Dont sucre",
+          "value": "0.5"
+        },
+        {
+          "label": "Protéines",
+          "value": "21"
+        },
+        {
+          "label": "Sel",
+          "value": "0.77"
+        },
+        {
+          "label": "Fibres Alimentaires",
+          "value": "0.5"
+        }
+      ],
+      "ingredients": "Saumon* Atlantique (Salmo salar), eau, sel. *POISSONS",
+      "allergens": "poisson (Presence)",
+      "sections": [
+        {
+          "title": "Caractéristiques",
+          "items": [
+            {
+              "label": "Conservation",
+              "value": "Avant ouverture: A conserver dans un endroit sec et tempéré - Après ouverture: A consommer dans les 24 heures"
+            }
+          ]
+        },
+        {
+          "title": "En savoir plus",
+          "items": [
+            {
+              "label": "Dénomination légale de vente",
+              "value": "Saumon atlantique au naturel sans peau et sans arêtes"
+            },
+            {
+              "label": "Détails du produit",
+              "value": "Provenance des ingrédients : **L'espèce saumon atlantique est élevée en Norvège, Irlande, Ecosse ou Chili. # Produit en Bretagne."
+            },
+            {
+              "label": "Informations fabricant",
+              "value": "ITM Alimentaire International - 24 rue Auguste Chabrières - Paris - 75015"
+            },
+            {
+              "label": "Renseignements pratiques",
+              "value": "Prêt à l’emploi"
+            }
+          ]
+        },
+        {
+          "title": "Autres informations légales",
+          "items": [
+            {
+              "label": "Compléments d'informations",
+              "value": "Préparé dans notre conserverie à Plozévet (29) Produit en Bretagne Le saumon n'est pas français."
+            }
+          ]
+        }
+      ],
+      "fetchedAt": "2026-11-03T15:44:24.395Z"
+    },
+    {
+      "id": "colin",
+      "category": "Colin d'Alaska (filets surgelés)",
+      "source": "intermarche",
+      "url": "https://www.intermarche.com/produit/filets-de-colin-d'alaska/3599740006757",
+      "name": "Filets de colin d'Alaska",
+      "brand": "Findus",
+      "image": "https://assets-big.cdn-mousquetaires.com/medias/domain11815/media137560/11268234-d4omstbynv-ecommint.jpg",
+      "packaging": "la boîte de 4 filets - 400g",
+      "price": 5.22,
+      "unitPrice": 13.05,
+      "unit": "kg",
+      "pricePerKg": 13.05,
+      "netWeightG": 400,
+      "available": true,
+      "nutriScore": "A",
+      "store": {
+        "name": "Super Begard",
+        "city": "Begard",
+        "postalCode": "22140"
+      },
+      "estimate": null,
+      "nutrition": {
+        "energyKcal": 73,
+        "fat": 0.6,
+        "saturatedFat": 0.5,
+        "carbs": 0.5,
+        "sugars": 0.5,
+        "fiber": 0.5,
+        "protein": 17,
+        "salt": 0.55
+      },
+      "nutritionTable": [
+        {
+          "label": "Energie",
+          "value": "311.0 kj (73.0 kcal)"
+        },
+        {
+          "label": "Matière Grasse",
+          "value": "0.6"
+        },
+        {
+          "label": "Dont acide gras saturé",
+          "value": "0.5"
+        },
+        {
+          "label": "Dont acide gras polyinsaturé",
+          "value": "0.5"
+        },
+        {
+          "label": "Glucides",
+          "value": "0.5"
+        },
+        {
+          "label": "Dont sucre",
+          "value": "0.5"
+        },
+        {
+          "label": "Protéines",
+          "value": "17"
+        },
+        {
+          "label": "Sel",
+          "value": "0.55"
+        },
+        {
+          "label": "Fibres Alimentaires",
+          "value": "0.5"
+        }
+      ],
+      "ingredients": "COLIN. Bien qu'un soin tout particulier ait été pris pour enlever toutes les arêtes, quelques-unes peuvent exceptionnellement se trouver dans ce produit.",
+      "allergens": "cacahuètes / arachides (Absence), céleri (Absence), céréales contenant du gluten (Absence), crustacés (Absence), dioxyde de soufre et sulfites (Absence), fruit à coque (Absence), graines de sésame (Absence), lait (Absence), lupin (Absence), mollusques (Absence), moutarde (Absence), oeufs (Absence), poisson (Presence), soja (Absence)",
+      "sections": [
+        {
+          "title": "Caractéristiques",
+          "items": [
+            {
+              "label": "Conservation",
+              "value": "Conservé à -18°c, à consommer de préférence avant fin de la date indiquée sur le paquet. ne pas recongeler après décongélation."
+            }
+          ]
+        },
+        {
+          "title": "En savoir plus",
+          "items": [
+            {
+              "label": "Dénomination légale de vente",
+              "value": "4 portions de filets de colin d'alaska (theragra chalcogramma) pêché aux chaluts en océan pacifique nord-ouest (61) ou nord-est (67), surgelées."
+            },
+            {
+              "label": "Détails du produit",
+              "value": "Provenance des ingrédients : Chine"
+            },
+            {
+              "label": "Informations fabricant",
+              "value": "FINDUS France - Immeuble JUPITER - 11 Boulevard du Mont d'Est, 93192 NOISY LE GRAND CEDEX"
+            },
+            {
+              "label": "Renseignements pratiques",
+              "value": "Avant de consommer votre poisson Findus, cuisez-le à coeur selon l'un des modes de preparation suivants : Au four 12 minutes à 200°C : Préchauffez votre four à 200°C (chaleur tournante). Otez les sachets et disposez les filets encore surgelés sur une plaque recouverte de papier cuisson, ajoutez un filet d’huile (8g). Enfournez à mi-hauteur et laissez cuire 12 min. À la poêle 12 minutes : Ôtez les sachets et faites cuire les filets encore surgelés avec un filet d’huile (8g), à feu moyen, pendant 12 min. Retournez à mi-cuisson. Au court-bouillon 6 minutes : Portez votre court-bouillon à ébullition, et plongez-y les filets encore surgelés (après avoir retiré les sachets). Faites cuire 6 min à partir de la reprise du frémissement. Au micro-ondes 2 minutes 30 à 750W : Percez les sachets de quelques trous, disposez les filets encore surgelés dans un plat. Laissez cuire 2 min 30 pour 1 portion et 5 min pour 2 portions. Adaptez le temps de cuisson à votre équipement."
+            }
+          ]
+        }
+      ],
+      "fetchedAt": "2026-11-03T15:37:30.660Z"
+    },
+    {
       "id": "sardines",
       "category": "Sardines à l'huile",
       "source": "intermarche",
@@ -772,6 +993,112 @@
         }
       ],
       "fetchedAt": "2026-11-03T14:13:07.278Z"
+    },
+    {
+      "id": "maquereau",
+      "category": "Maquereau (filets en conserve)",
+      "source": "intermarche",
+      "url": "https://www.intermarche.com/produit/filets-de-maquereaux-blancs-au-vin-blanc-&-aux-aromates/3250390103738",
+      "name": "Filets de maquereaux blancs au vin blanc & aux aromates",
+      "brand": "Odyssée, une marque Intermarché",
+      "image": "https://cdn.intermarche.com/fr/Content/images/pim/03250390103738/cb50674f375f41f889d4feb7a8a90853.jpg",
+      "packaging": "la boîte de 176 g",
+      "price": 1.61,
+      "unitPrice": 9.15,
+      "unit": "kg",
+      "pricePerKg": 9.15,
+      "netWeightG": 176,
+      "available": true,
+      "nutriScore": "A",
+      "store": {
+        "name": "Super Begard",
+        "city": "Begard",
+        "postalCode": "22140"
+      },
+      "estimate": null,
+      "nutrition": {
+        "energyKcal": 137,
+        "fat": 9.4,
+        "saturatedFat": 0.7,
+        "carbs": 0.7,
+        "sugars": 0.7,
+        "fiber": 0.5,
+        "protein": 12.4,
+        "salt": 1.21
+      },
+      "nutritionTable": [
+        {
+          "label": "Energie",
+          "value": "571.0 kj (137.0 kcal)"
+        },
+        {
+          "label": "Matière Grasse",
+          "value": "9.4"
+        },
+        {
+          "label": "Dont acide gras saturé",
+          "value": "0,7g"
+        },
+        {
+          "label": "Dont acide gras polyinsaturé",
+          "value": "2.2"
+        },
+        {
+          "label": "Glucides",
+          "value": "0.7"
+        },
+        {
+          "label": "Dont sucre",
+          "value": "0.7"
+        },
+        {
+          "label": "Protéines",
+          "value": "12.4"
+        },
+        {
+          "label": "Sel",
+          "value": "1.21"
+        },
+        {
+          "label": "Fibres Alimentaires",
+          "value": "0.5"
+        }
+      ],
+      "ingredients": "Ingredients: filets de MAQUEREAUX blancs* (scomber colios ou scomber japonicus) ** 59,7%, eau, vinaigre de vin blanc, vinaigre d'alcool, poivrons 2,8%, carottes 2,8%, cornichons au vinaigre 2,8% (cornichons, sel, vinaigre d'alcool, affermissant : chlorure de calcium), vin blanc 1,8%, oignons 1,5%, sel, arôme naturel de poivre, persil déshydraté 0,1%, arôme naturel d'oignon, arôme naturel. POISSONS. *espèce de MAQUEREAU blanc : voir sur le couvercle.",
+      "allergens": "POISSON",
+      "sections": [
+        {
+          "title": "Caractéristiques",
+          "items": [
+            {
+              "label": "Conservation",
+              "value": "Avant ouverture: à conserver dans un endroit sec et tempéré. - après ouverture: à conserver au réfrigérateur dans un récipient adapté et à consommer sous 48h."
+            }
+          ]
+        },
+        {
+          "title": "En savoir plus",
+          "items": [
+            {
+              "label": "Dénomination légale de vente",
+              "value": "Filets de maquereaux marinés au muscadet et aux aromates"
+            },
+            {
+              "label": "Avantages",
+              "value": "Riches en oméga 3, les filets de maquereaux blancs au vin blanc et aux aromates offrent une option savoureuse et bénéfique pour votre santé."
+            },
+            {
+              "label": "Détails du produit",
+              "value": "Provenance des ingrédients : Fabriqué à Hesdin - l'Abbé. # poissons pêchés en Atlantique Nord-Est."
+            },
+            {
+              "label": "Informations fabricant",
+              "value": "ITM AI - 24 rue Auguste Chabrières - 75015 Paris - France - ODYSSÉE 0 805 101 115 - Service & Appel gratuits - www.intermarche.com"
+            }
+          ]
+        }
+      ],
+      "fetchedAt": "2026-11-03T15:38:00.017Z"
     },
     {
       "id": "skyr",
@@ -1331,6 +1658,121 @@
       "fetchedAt": "2026-11-03T14:44:42.600Z"
     },
     {
+      "id": "mozzarella",
+      "category": "Mozzarella",
+      "source": "intermarche",
+      "url": "https://www.intermarche.com/produit/mozzarella/3250390747413",
+      "name": "Mozzarella",
+      "brand": "Pâturages, une marque Intermarché",
+      "image": "https://cdn.intermarche.com/fr/Content/images/pim/03250390747413/07562ae3184941b2a6a508cd8105b91c.jpg",
+      "packaging": "le sachet de 400 g",
+      "price": 2.88,
+      "unitPrice": 7.2,
+      "unit": "kg",
+      "pricePerKg": 7.2,
+      "netWeightG": 400,
+      "available": true,
+      "nutriScore": "C",
+      "store": {
+        "name": "Super Begard",
+        "city": "Begard",
+        "postalCode": "22140"
+      },
+      "estimate": null,
+      "nutrition": {
+        "energyKcal": 262,
+        "fat": 20,
+        "saturatedFat": 12.9,
+        "carbs": 1.5,
+        "sugars": 1.2,
+        "fiber": 0.5,
+        "protein": 19,
+        "salt": 0.39
+      },
+      "nutritionTable": [
+        {
+          "label": "Energie",
+          "value": "1089.0 kj (262.0 kcal)"
+        },
+        {
+          "label": "Matière Grasse",
+          "value": "20"
+        },
+        {
+          "label": "Dont acide gras saturé",
+          "value": "12,9g"
+        },
+        {
+          "label": "Dont acide gras polyinsaturé",
+          "value": "13"
+        },
+        {
+          "label": "Glucides",
+          "value": "1.5"
+        },
+        {
+          "label": "Dont sucre",
+          "value": "1.2"
+        },
+        {
+          "label": "Protéines",
+          "value": "19"
+        },
+        {
+          "label": "Sel",
+          "value": "0.39"
+        },
+        {
+          "label": "Fibres Alimentaires",
+          "value": "0.5"
+        }
+      ],
+      "ingredients": "LAIT de vache pasteurisé (origine : UE), sel, correcteur d'acidité : acide citrique, enzyme coagulante.",
+      "allergens": "lait (Presence)",
+      "sections": [
+        {
+          "title": "Caractéristiques",
+          "items": [
+            {
+              "label": "Conservation",
+              "value": "Avant ouverture: A conserver entre +4°C et +8°C - Après ouverture: A conserver entre +4°C et +8°C"
+            }
+          ]
+        },
+        {
+          "title": "En savoir plus",
+          "items": [
+            {
+              "label": "Dénomination légale de vente",
+              "value": "Mozzarella - Fromage à pâte filée au lait pasteurisé de vache"
+            },
+            {
+              "label": "Détails du produit",
+              "value": "Provenance des ingrédients : /"
+            },
+            {
+              "label": "Informations fabricant",
+              "value": "ITM Alimentaire International - 24 rue Auguste Chabrières - Paris - 75015"
+            },
+            {
+              "label": "Renseignements pratiques",
+              "value": "Prêt à l’emploi"
+            }
+          ]
+        },
+        {
+          "title": "Autres informations légales",
+          "items": [
+            {
+              "label": "Compléments d'informations",
+              "value": "À consommer immédiatement après ouverture."
+            }
+          ]
+        }
+      ],
+      "fetchedAt": "2026-11-03T15:38:26.221Z"
+    },
+    {
       "id": "cacahuetes",
       "category": "Cacahuètes",
       "source": "intermarche",
@@ -1453,76 +1895,77 @@
       "id": "beurre-de-cacahuete",
       "category": "Beurre de cacahuète",
       "source": "intermarche",
-      "url": "https://www.intermarche.com/produit/beurre-de-cacahuete-cremeux/3250393461637",
-      "name": "Beurre de cacahuète crémeux",
-      "brand": "Ivoria, une marque Intermarché",
-      "image": "https://cdn.intermarche.com/fr/Content/images/pim/03250393461637/a4a4ed148e06409ebf08aff431e1ca8e.jpg",
-      "packaging": "le pot de 350 g",
-      "price": 2.85,
-      "unitPrice": 8.14,
+      "url": "https://www.intermarche.com/produit/puree-100%25-cacahuetes-be-nuts/3608580204305",
+      "name": "Purée 100% cacahuètes Be Nuts",
+      "brand": "Andros",
+      "image": "https://cdn.intermarche.com/fr/Content/images/pim/03608580204305/9ea010981fe9439687bb3db30de1852f.png",
+      "packaging": "le pot de 676g",
+      "price": 4.95,
+      "unitPrice": 7.32,
       "unit": "kg",
-      "pricePerKg": 8.14,
-      "netWeightG": 350,
+      "pricePerKg": 7.32,
+      "netWeightG": 676,
       "available": true,
-      "nutriScore": "B",
+      "nutriScore": "A",
+      "store": {
+        "name": "Super Begard",
+        "city": "Begard",
+        "postalCode": "22140"
+      },
       "estimate": null,
       "nutrition": {
-        "energyKcal": 594,
-        "fat": 46,
-        "saturatedFat": 3.8,
-        "carbs": 12,
-        "sugars": 10,
-        "fiber": 14,
-        "protein": 26,
-        "salt": 0.85
+        "energyKcal": 628,
+        "fat": 49,
+        "saturatedFat": 6.3,
+        "carbs": 15,
+        "sugars": 6.1,
+        "fiber": 9.6,
+        "protein": 27,
+        "salt": 0.01
       },
       "nutritionTable": [
         {
           "label": "Energie",
-          "value": "2460.0 kj (594.0 kcal)"
+          "value": "2604.0 kj (628.0 kcal)"
         },
         {
           "label": "Matière Grasse",
-          "value": "46"
-        },
-        {
-          "label": "Dont acide gras saturé",
-          "value": "3,8g"
+          "value": "49"
         },
         {
           "label": "Dont acide gras polyinsaturé",
-          "value": "3.8"
+          "value": "6.3"
         },
         {
           "label": "Glucides",
-          "value": "12"
+          "value": "15"
         },
         {
           "label": "Dont sucre",
-          "value": "10"
+          "value": "6.1"
         },
         {
           "label": "Protéines",
-          "value": "26"
+          "value": "27"
         },
         {
           "label": "Sel",
-          "value": "0.85"
+          "value": "0.01"
         },
         {
           "label": "Fibres Alimentaires",
-          "value": "14"
+          "value": "9.6"
         }
       ],
-      "ingredients": "Cacahuètes grillées (ARACHIDE) 92%, sucre, huile de tournesol, sel, huile de colza totalement hydrogénée.",
-      "allergens": "cacahuètes / arachides (Presence)",
+      "ingredients": "Ingrédients : CACAHUETES torréfiées. Peut contenir des FRUITS A COQUE.",
+      "allergens": "amande et produits à base d'amande (Trace), cacahuètes / arachides (Presence), fruit à coque (Trace), noisette et produits à base de noisette (Trace), noix de cajou et produits à base de noix de cajou (Trace), noix de macadamia et produits à base de noix de macadamia (Trace), noix de pécan et produits à base de noix de pécan (Trace), noix du Brésil (Trace), noix et produits à base de noix (Trace), pistache (Trace)",
       "sections": [
         {
           "title": "Caractéristiques",
           "items": [
             {
               "label": "Conservation",
-              "value": "Avant ouverture: à conserver au sec et à température ambiante. - après ouverture: à conserver au sec et à température ambiante. après ouverture, à consommer dans les 3 mois. - spécifique: il peut y avoir naturellement une séparation de l'huile et de la pâte. remuez le bien avant chaque utilisation."
+              "value": "A conserver à l'abri de la chaleur et de la lumière. Ne pas stocker au réfrigérateur."
             }
           ]
         },
@@ -1531,28 +1974,29 @@
           "items": [
             {
               "label": "Dénomination légale de vente",
-              "value": "Beurre de cacahuètes crémeux"
+              "value": "Purée de cacahuètes."
             },
             {
               "label": "Avantages",
-              "value": "Sans huile de palme."
-            },
-            {
-              "label": "Détails du produit",
-              "value": "Provenance des ingrédients : /"
+              "value": "Un produit généreux en cacahuètes et fabriqué en France."
             },
             {
               "label": "Informations fabricant",
-              "value": "ITM Alimentaire International - 24 rue Auguste Chabrières - Paris - 75015"
-            },
+              "value": "ANDROS SNC - ZI - BIARS SUR CERE - 46130 - 05 65 10 10 10"
+            }
+          ]
+        },
+        {
+          "title": "Autres informations légales",
+          "items": [
             {
-              "label": "Renseignements pratiques",
-              "value": "Prêt à l’emploi"
+              "label": "Autres conseils de prudence :",
+              "value": "La présence d'huile en surface est un phénomène naturel : mélanger si nécessaire."
             }
           ]
         }
       ],
-      "fetchedAt": "2026-11-03T14:46:00.426Z"
+      "fetchedAt": "2026-11-03T15:38:59.216Z"
     },
     {
       "id": "lentilles",
@@ -1879,6 +2323,222 @@
       "fetchedAt": "2026-11-03T14:14:11.232Z"
     },
     {
+      "id": "haricots-rouges",
+      "category": "Haricots rouges (secs)",
+      "source": "intermarche",
+      "url": "https://www.intermarche.com/produit/haricots-rouges-source-de-proteines-riche-en-fibres/3250390119258",
+      "name": "Haricots rouges source de protéines riche en fibres",
+      "brand": "Saint Eloi, une marque Intermarché",
+      "image": "https://assets-big.cdn-mousquetaires.com/medias/domain11815/media140599/12179898-r4rdfofo2v-ecommint.jpg",
+      "packaging": "le paquet de 500 g",
+      "price": 2.38,
+      "unitPrice": 4.76,
+      "unit": "kg",
+      "pricePerKg": 4.76,
+      "netWeightG": 500,
+      "available": true,
+      "nutriScore": "A",
+      "store": {
+        "name": "Super Begard",
+        "city": "Begard",
+        "postalCode": "22140"
+      },
+      "estimate": null,
+      "nutrition": {
+        "energyKcal": 300,
+        "fat": 1.8,
+        "saturatedFat": 0.3,
+        "carbs": 39.5,
+        "sugars": 2.4,
+        "fiber": 20.8,
+        "protein": 21,
+        "salt": 0.01
+      },
+      "nutritionTable": [
+        {
+          "label": "Energie",
+          "value": "1261.0 kj (300.0 kcal)"
+        },
+        {
+          "label": "Matière Grasse",
+          "value": "1.8"
+        },
+        {
+          "label": "Dont acide gras saturé",
+          "value": "0,3g"
+        },
+        {
+          "label": "Dont acide gras polyinsaturé",
+          "value": "0.3"
+        },
+        {
+          "label": "Glucides",
+          "value": "39.5"
+        },
+        {
+          "label": "Dont sucre",
+          "value": "2.4"
+        },
+        {
+          "label": "Protéines",
+          "value": "21"
+        },
+        {
+          "label": "Sel",
+          "value": "0.01"
+        },
+        {
+          "label": "Fibres Alimentaires",
+          "value": "20.8"
+        }
+      ],
+      "ingredients": "Haricots rouges Peut contenir : céréales contenant du gluten et sulfites.",
+      "allergens": "avoine et produits à base d'avoine (contenant du gluten) (Trace), blé (Trace), blé de Khorasan (Trace), céréales contenant du gluten (Trace), dioxyde de soufre et sulfites (Trace), épeautre et produits à base d'épeautre (contenant du gluten) (Trace), orge et produits à base d'orge (contenant du gluten) (Trace), seigle (Trace)",
+      "sections": [
+        {
+          "title": "Caractéristiques",
+          "items": [
+            {
+              "label": "Conservation",
+              "value": "Avant ouverture: À conserver dans un endroit sec et à l'abri de la lumière. - Après ouverture: À conserver dans un endroit sec et à l'abri de la lumière."
+            }
+          ]
+        },
+        {
+          "title": "En savoir plus",
+          "items": [
+            {
+              "label": "Dénomination légale de vente",
+              "value": "Haricots rouges"
+            },
+            {
+              "label": "Avantages",
+              "value": "Source de protéines, riche en fibres."
+            },
+            {
+              "label": "Détails du produit",
+              "value": "Provenance des ingrédients : /"
+            },
+            {
+              "label": "Informations fabricant",
+              "value": "ITM Alimentaire International - 24 rue Auguste Chabrières - Paris - 75015"
+            },
+            {
+              "label": "Renseignements pratiques",
+              "value": "à la casserole : Trempage dans l’eau froide environ 12 heures puis jeter l’eau. QUANTITE CONSEILLEE : 50g par personne. CUISSON CLASSIQUE : Cuire 1h à 1h30 dans 5 fois leur volume d’eau. CUISSON AUTOCUISEUR : Cuire 30 à 45 min dans 3 fois leur volume d’eau."
+            }
+          ]
+        }
+      ],
+      "fetchedAt": "2026-11-03T15:39:36.390Z"
+    },
+    {
+      "id": "petits-pois",
+      "category": "Petits pois extra-fins",
+      "source": "intermarche",
+      "url": "https://www.intermarche.com/produit/petits-pois-extra-fins/3250390026020",
+      "name": "Petits pois extra-fins",
+      "brand": "Saint Eloi, une marque Intermarché",
+      "image": "https://assets-big.cdn-mousquetaires.com/medias/domain11815/media145743/13722963-5y5va21oh2-ecommint.jpg",
+      "packaging": "le sachet de 1 kg",
+      "price": 1.91,
+      "unitPrice": 1.91,
+      "unit": "kg",
+      "pricePerKg": 1.91,
+      "netWeightG": 1000,
+      "available": true,
+      "nutriScore": "A",
+      "store": {
+        "name": "Super Begard",
+        "city": "Begard",
+        "postalCode": "22140"
+      },
+      "estimate": null,
+      "nutrition": {
+        "energyKcal": 83,
+        "fat": 0.7,
+        "saturatedFat": 0.2,
+        "carbs": 11,
+        "sugars": 5.9,
+        "fiber": 5.5,
+        "protein": 5.5,
+        "salt": 0.01
+      },
+      "nutritionTable": [
+        {
+          "label": "Energie",
+          "value": "350.0 kj (83.0 kcal)"
+        },
+        {
+          "label": "Matière Grasse",
+          "value": "0.7"
+        },
+        {
+          "label": "Dont acide gras saturé",
+          "value": "0.2"
+        },
+        {
+          "label": "Dont acide gras polyinsaturé",
+          "value": "0.1"
+        },
+        {
+          "label": "Glucides",
+          "value": "11"
+        },
+        {
+          "label": "Dont sucre",
+          "value": "5.9"
+        },
+        {
+          "label": "Protéines",
+          "value": "5.5"
+        },
+        {
+          "label": "Sel",
+          "value": "0.01"
+        },
+        {
+          "label": "Fibres Alimentaires",
+          "value": "5.5"
+        }
+      ],
+      "ingredients": "100% petits pois doux extra-fins.",
+      "allergens": "céleri (Trace)",
+      "sections": [
+        {
+          "title": "Caractéristiques",
+          "items": [
+            {
+              "label": "Conservation",
+              "value": "Avant ouverture: réfrigérateur (+4°c) : 24 heures. congélateur***(-18°c) : jusqu'à la date indiquée sur le sachet. - après ouverture: réfrigérateur (+4°c) : 24 heures. congélateur***(-18°c) : jusqu'à la date indiquée sur le sachet. - spécifique: ne pas recongeler apres decongelation."
+            }
+          ]
+        },
+        {
+          "title": "En savoir plus",
+          "items": [
+            {
+              "label": "Dénomination légale de vente",
+              "value": "Petits pois extra-fins - surgelés"
+            },
+            {
+              "label": "Détails du produit",
+              "value": "Provenance des ingrédients : /"
+            },
+            {
+              "label": "Informations fabricant",
+              "value": "ITM Alimentaire International - 24 rue Auguste Chabrières - Paris - 75015"
+            },
+            {
+              "label": "Renseignements pratiques",
+              "value": "à la casserole Ce produit doit être impérativement cuit avant consommation. Sans décongélation au préalable. Plonger les petits pois surgelés dans une casserole d'eau bouillante. Laissez cuire 8 à 10 minutes à partir de la reprise du frémissement. Egouttez. Assaisonnez selon votre goût., à l'autocuiseur (à la vapeur) Ce produit doit être impérativement cuit avant consommation. Sans décongélation au préalable. Versez 2 verres d' eau dans l' autocuiseur, déposez les petits pois dans le panier en position haute. Fermez et laissez cuire 5 à 6 minutes à partir de la mise en rotation de la soupape. Assaisonnez selon votre goût."
+            }
+          ]
+        }
+      ],
+      "fetchedAt": "2026-11-03T15:40:02.218Z"
+    },
+    {
       "id": "pain-de-mie",
       "category": "Pain de mie complet",
       "source": "intermarche",
@@ -2092,6 +2752,451 @@
         }
       ],
       "fetchedAt": "2026-11-03T14:14:18.214Z"
+    },
+    {
+      "id": "flocons-avoine",
+      "category": "Flocons d'avoine",
+      "source": "intermarche",
+      "url": "https://www.intermarche.com/produit/flocons-d'avoine-oats/3168930003632",
+      "name": "Flocons d'avoine Oats",
+      "brand": "Quaker",
+      "image": "https://assets-big.cdn-mousquetaires.com/medias/domain11815/media140123/12037089-qgc7fawgwl-ecommint.jpg",
+      "packaging": "La boîte de 800g",
+      "price": 2.36,
+      "unitPrice": 2.95,
+      "unit": "kg",
+      "pricePerKg": 2.95,
+      "netWeightG": 800,
+      "available": true,
+      "nutriScore": "A",
+      "store": {
+        "name": "Super Begard",
+        "city": "Begard",
+        "postalCode": "22140"
+      },
+      "estimate": null,
+      "nutrition": {
+        "energyKcal": 375,
+        "fat": 8,
+        "saturatedFat": 1.5,
+        "carbs": 60,
+        "sugars": 1.1,
+        "fiber": 9,
+        "protein": 11,
+        "salt": 0
+      },
+      "nutritionTable": [
+        {
+          "label": "Energie",
+          "value": "1570.0 kj (375.0 kcal)"
+        },
+        {
+          "label": "Matière Grasse",
+          "value": "8"
+        },
+        {
+          "label": "Dont acide gras saturé",
+          "value": "1,5g"
+        },
+        {
+          "label": "Dont acide gras polyinsaturé",
+          "value": "1.5"
+        },
+        {
+          "label": "Glucides",
+          "value": "60"
+        },
+        {
+          "label": "Dont sucre",
+          "value": "1.1"
+        },
+        {
+          "label": "Protéines",
+          "value": "11"
+        },
+        {
+          "label": "Sel",
+          "value": "0"
+        },
+        {
+          "label": "Fibres Alimentaires",
+          "value": "9"
+        }
+      ],
+      "ingredients": "Ingrédients : 100% flocons d'AVOINE complète. Peut contenir : BLÉ, ORGE.",
+      "allergens": "céréales contenant du gluten (Presence)",
+      "sections": [
+        {
+          "title": "Caractéristiques",
+          "items": [
+            {
+              "label": "Conservation",
+              "value": "Conserver au sec."
+            }
+          ]
+        },
+        {
+          "title": "En savoir plus",
+          "items": [
+            {
+              "label": "Dénomination légale de vente",
+              "value": "Flocons d'avoine complète"
+            },
+            {
+              "label": "Avantages",
+              "value": "L'authenticité et les bienfaits de l'avoine dans un petit déjeuner délicieux. 100% naturel L'avoine Quaker est cultivée en Ecosse, berceau de la culture de l'avoine. Chaque grain est soigneusement sélectionné, concassé et doré au four. Quaker s'attac"
+            },
+            {
+              "label": "Détails du produit",
+              "value": "Provenance des ingrédients : Pays d'origine Écosse"
+            },
+            {
+              "label": "Informations fabricant",
+              "value": "PepsiCo France - 15 boulevard Charles de Gaulle 92705 Colombes Cedex"
+            },
+            {
+              "label": "Renseignements pratiques",
+              "value": "Ouverture facile Ouvrir: tirer le long de la perforation. Fermer: replier la languette à l'intérieur. Idées de préparation En muesli - froid Mélangez Quaker Oats avec du lait, du yaourt ou du fromage blanc, ainsi que vos ingrédients préférés (fruits, noix, graines, chocolat...). En porridge - chaud Versez 40g de Quaker Oats. Ajoutez 250ml d'eau ou de lait (classique ou végétal). 2 méthodes : Dans une casserole : portez à ébullition, laissez cuire 5 minutes en remuant de temps en temps. Au micro-ondes : réchauffez 2 minutes. Pour plus de gourmandise, ajoutez du miel, copeaux de chocolat, sirop d'érable, fruits ou noix ! C'est prêt !"
+            }
+          ]
+        }
+      ],
+      "fetchedAt": "2026-11-03T15:40:44.301Z"
+    },
+    {
+      "id": "pates",
+      "category": "Pâtes (sèches)",
+      "source": "intermarche",
+      "url": "https://www.intermarche.com/produit/pates-alimentaires-de-qualite-superieure-torti/3250390000402",
+      "name": "Pâtes alimentaires de qualité supérieure torti",
+      "brand": "Fiorini, une marque Intermarché",
+      "image": "https://assets-big.cdn-mousquetaires.com/medias/domain11815/media139905/11971545-hco7iyi9py-ecommint.jpg",
+      "packaging": "le sachet de 1 kg",
+      "price": 1.27,
+      "unitPrice": 1.27,
+      "unit": "kg",
+      "pricePerKg": 1.27,
+      "netWeightG": 1000,
+      "available": true,
+      "nutriScore": "A",
+      "store": {
+        "name": "Super Begard",
+        "city": "Begard",
+        "postalCode": "22140"
+      },
+      "estimate": null,
+      "nutrition": {
+        "energyKcal": 357,
+        "fat": 1.9,
+        "saturatedFat": 0.4,
+        "carbs": 71,
+        "sugars": 3.1,
+        "fiber": 4.1,
+        "protein": 12,
+        "salt": 0.01
+      },
+      "nutritionTable": [
+        {
+          "label": "Energie",
+          "value": "1514.0 kj (357.0 kcal)"
+        },
+        {
+          "label": "Matière Grasse",
+          "value": "1.9"
+        },
+        {
+          "label": "Dont acide gras saturé",
+          "value": "0,4g"
+        },
+        {
+          "label": "Dont acide gras polyinsaturé",
+          "value": "0.4"
+        },
+        {
+          "label": "Glucides",
+          "value": "71"
+        },
+        {
+          "label": "Dont sucre",
+          "value": "3.1"
+        },
+        {
+          "label": "Protéines",
+          "value": "12"
+        },
+        {
+          "label": "Sel",
+          "value": "0.01"
+        },
+        {
+          "label": "Fibres Alimentaires",
+          "value": "4.1"
+        }
+      ],
+      "ingredients": "Semoule de BLÉ dur de qualité supérieure. Peut contenir : moutarde et soja.",
+      "allergens": "avoine et produits à base d'avoine (contenant du gluten) (Trace), blé (Presence), blé de Khorasan (Trace), céréales contenant du gluten (Presence), épeautre et produits à base d'épeautre (contenant du gluten) (Trace), moutarde (Trace), oeufs (Trace), orge et produits à base d'orge (contenant du gluten) (Trace), seigle (Trace), soja (Trace)",
+      "sections": [
+        {
+          "title": "Caractéristiques",
+          "items": [
+            {
+              "label": "Conservation",
+              "value": "Avant ouverture: à conserver à l’abri de la chaleur et de l’humidité. - après ouverture: à conserver à l’abri de la chaleur et de l’humidité. bien refermer le sachet."
+            }
+          ]
+        },
+        {
+          "title": "En savoir plus",
+          "items": [
+            {
+              "label": "Dénomination légale de vente",
+              "value": "Pâtes alimentaires de qualité supérieure"
+            },
+            {
+              "label": "Avantages",
+              "value": "Pâtes alimentaires de qualité supérieure."
+            },
+            {
+              "label": "Détails du produit",
+              "value": "Provenance des ingrédients : /"
+            },
+            {
+              "label": "Informations fabricant",
+              "value": "ITM Alimentaire International - 24 rue Auguste Chabrières - Paris - 75015"
+            },
+            {
+              "label": "Renseignements pratiques",
+              "value": "Plonger les pâtes dans un grand volume d'eau bouillante salée (1 litre pour 100g de pâtes): remuer jusqu'à la reprise de l'ébullition. cuire selon votre goût 5 minutes pour texture ferme, 6 minutes pour une texture \"al dente\", 7 minutes pour une texture fondante, puis égoutter"
+            }
+          ]
+        }
+      ],
+      "fetchedAt": "2026-11-03T15:41:22.765Z"
+    },
+    {
+      "id": "riz",
+      "category": "Riz (sec)",
+      "source": "intermarche",
+      "url": "https://www.intermarche.com/produit/riz-long-grain-etuve-de-qualite-superieure/3250390139577",
+      "name": "Riz long grain étuvé de qualité supérieure",
+      "brand": "Saint Eloi, une marque Intermarché",
+      "image": "https://assets-big.cdn-mousquetaires.com/medias/domain11815/media138488/11546682-5tytwje57v-ecommint.jpg",
+      "packaging": "le paquet de 1 kg",
+      "price": 1.71,
+      "unitPrice": 1.71,
+      "unit": "kg",
+      "pricePerKg": 1.71,
+      "netWeightG": 1000,
+      "available": true,
+      "nutriScore": "B",
+      "store": {
+        "name": "Super Begard",
+        "city": "Begard",
+        "postalCode": "22140"
+      },
+      "estimate": null,
+      "nutrition": {
+        "energyKcal": 352,
+        "fat": 1.2,
+        "saturatedFat": 0.3,
+        "carbs": 76,
+        "sugars": 0.5,
+        "fiber": 2.5,
+        "protein": 8,
+        "salt": 0.04
+      },
+      "nutritionTable": [
+        {
+          "label": "Energie",
+          "value": "1492.0 kj (352.0 kcal)"
+        },
+        {
+          "label": "Matière Grasse",
+          "value": "1.2"
+        },
+        {
+          "label": "Dont acide gras saturé",
+          "value": "0,3g"
+        },
+        {
+          "label": "Dont acide gras polyinsaturé",
+          "value": "0.3"
+        },
+        {
+          "label": "Glucides",
+          "value": "76"
+        },
+        {
+          "label": "Dont sucre",
+          "value": "0.5"
+        },
+        {
+          "label": "Protéines",
+          "value": "8"
+        },
+        {
+          "label": "Sel",
+          "value": "0.04"
+        },
+        {
+          "label": "Fibres Alimentaires",
+          "value": "2.5"
+        }
+      ],
+      "ingredients": "Riz long grain étuvé de qualité supérieure. Peut contenir : céréales contenant du gluten et sulfites.",
+      "allergens": "avoine et produits à base d'avoine (contenant du gluten) (Trace), blé (Trace), blé de Khorasan (Trace), céréales contenant du gluten (Trace), dioxyde de soufre et sulfites (Trace), épeautre et produits à base d'épeautre (contenant du gluten) (Trace), orge et produits à base d'orge (contenant du gluten) (Trace), seigle (Trace)",
+      "sections": [
+        {
+          "title": "Caractéristiques",
+          "items": [
+            {
+              "label": "Conservation",
+              "value": "Avant ouverture: À conserver à l'abri de la chaleur et de l'humidité. - Après ouverture: À conserver à l'abri de la chaleur et de l'humidité."
+            }
+          ]
+        },
+        {
+          "title": "En savoir plus",
+          "items": [
+            {
+              "label": "Dénomination légale de vente",
+              "value": "Riz long grain étuvé de qualité supérieure"
+            },
+            {
+              "label": "Détails du produit",
+              "value": "Provenance des ingrédients : /"
+            },
+            {
+              "label": "Informations fabricant",
+              "value": "ITM Alimentaire International - 24 rue Auguste Chabrières - Paris - 75015"
+            },
+            {
+              "label": "Renseignements pratiques",
+              "value": "Dosage pratique : 1 verre pour 2 personnes, soit environ 125 g de riz. • Cuisson pilaf : 1. Faire revenir un volume de riz dans une cuillère à soupe d’huile ou de beurre jusqu’à ce que les grains soient translucides. 2. Ajouter alors 3 volumes d’eau salée. 3. Couvrir et laisser cuire à feu doux jusqu’à complète absorption du liquide (10 minutes) en remuant de temps en temps. • Cuisson créole : 1. Verser le riz dans un grand volume d’eau bouillante salée (environ 1 volume de riz pour 10 volumes d’eau). 2. Laisser cuire 10 minutes à petits bouillons sans couvrir. 3. Égoutter et servir. Selon la fermeté recherchée, faire varier le temps de cuisson."
+            }
+          ]
+        }
+      ],
+      "fetchedAt": "2026-11-03T15:41:51.765Z"
+    },
+    {
+      "id": "pain-blanc",
+      "category": "Pain blanc (baguette précuite)",
+      "source": "intermarche",
+      "url": "https://www.intermarche.com/produit/demi-baguettes-precuites/3250391386857",
+      "name": "demi baguettes précuites",
+      "brand": "Chabrior, une marque Intermarché",
+      "image": "https://assets-big.cdn-mousquetaires.com/medias/domain11815/media137187/11156169-042oxo619i-ecommint.jpg",
+      "packaging": "le sachet de 300 g",
+      "price": 0.67,
+      "unitPrice": 2.23,
+      "unit": "kg",
+      "pricePerKg": 2.23,
+      "netWeightG": 300,
+      "available": true,
+      "nutriScore": "B",
+      "store": {
+        "name": "Super Begard",
+        "city": "Begard",
+        "postalCode": "22140"
+      },
+      "estimate": null,
+      "nutrition": {
+        "energyKcal": 245,
+        "fat": 1,
+        "saturatedFat": 0.2,
+        "carbs": 49.4,
+        "sugars": 3,
+        "fiber": 3,
+        "protein": 8,
+        "salt": 1.27
+      },
+      "nutritionTable": [
+        {
+          "label": "Energie",
+          "value": "1037.0 kj (245.0 kcal)"
+        },
+        {
+          "label": "Matière Grasse",
+          "value": "1"
+        },
+        {
+          "label": "Dont acide gras saturé",
+          "value": "0,2g"
+        },
+        {
+          "label": "Dont acide gras polyinsaturé",
+          "value": "0.2"
+        },
+        {
+          "label": "Glucides",
+          "value": "49.4"
+        },
+        {
+          "label": "Dont sucre",
+          "value": "3"
+        },
+        {
+          "label": "Protéines",
+          "value": "8"
+        },
+        {
+          "label": "Sel",
+          "value": "1.27"
+        },
+        {
+          "label": "Fibres Alimentaires",
+          "value": "3"
+        }
+      ],
+      "ingredients": "Farine de BLÉ 66%, eau, levure, sel, farine de BLÉ malté, farine de BLÉ fermentée, antioxydant: acide ascorbique. Peut contenir : lait et graines de sésame.",
+      "allergens": "avoine et produits à base d'avoine (contenant du gluten) (Traces), blé (Presence), céréales contenant du gluten (Presence), épeautre et produits à base d'épeautre (contenant du gluten) (Traces), graines de sésame (Traces), lait (Traces), orge et produits à base d'orge (contenant du gluten) (Traces), seigle (Traces)",
+      "sections": [
+        {
+          "title": "Caractéristiques",
+          "items": [
+            {
+              "label": "Conservation",
+              "value": "Avant ouverture: A conserver à température ambiante, à l'abri de la chaleur, de l'humidité et de la lumière. - Spécifique: Produit pouvant être congelé le jour de l'achat et consommé dans le mois suivant la congélation. Ne pas recongeler un produit décongelé."
+            }
+          ]
+        },
+        {
+          "title": "En savoir plus",
+          "items": [
+            {
+              "label": "Dénomination légale de vente",
+              "value": "2 DEMI BAGUETTES PRECUITES"
+            },
+            {
+              "label": "Avantages",
+              "value": "Farine de blé française*. * Hors farine de blé malté"
+            },
+            {
+              "label": "Détails du produit",
+              "value": "Provenance des ingrédients : # Farine de blé française*. # *Hors farine de blé malté."
+            },
+            {
+              "label": "Informations fabricant",
+              "value": "ITM Alimentaire International - 24 rue Auguste Chabrières - Paris - 75015"
+            },
+            {
+              "label": "Renseignements pratiques",
+              "value": "au four : Préchauffer le four à environ 200-220°C (Th6-7). Enlever le produit de son emballage et humectez-le légèrement avec de l'eau. Faire cuire pendant 10-12 minutes environ jusqu'à l'obtention de la couleur dorée souhaitée. Attendre quelques minutes avant de déguster. Ne pas utiliser au four à micro-ondes."
+            }
+          ]
+        },
+        {
+          "title": "Autres informations légales",
+          "items": [
+            {
+              "label": "Compléments d'informations",
+              "value": "Conditionné sous atmosphère protectrice. Produit pouvant être congelé le jour de l'achat et consommé dans le mois suivant la congélation."
+            }
+          ]
+        }
+      ],
+      "fetchedAt": "2026-11-03T15:42:33.796Z"
     }
   ]
 }
