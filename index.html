@@ -151,9 +151,18 @@
     max-width: 100%;
   }
   .ref-picker select:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
-  .delta { font-variant-numeric: tabular-nums; font-weight: 700; white-space: nowrap; }
-  .delta.cheaper { color: #038141; }
-  .delta.pricier { color: #c2410c; }
+  .delta {
+    display: inline-block;
+    min-width: 3.6rem;
+    padding: 0.15rem 0.45rem;
+    border-radius: 6px;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  .delta.cheaper { color: #02612f; }
+  .delta.pricier { color: #9a3412; }
   .delta.same { color: var(--text-muted); }
   .board tr.ref-row td { background: var(--accent-soft); }
   .btn-ghost {
@@ -509,7 +518,12 @@
     if (pct === 0) return '<span class="delta same">0 %</span>';
     const cls = pct < 0 ? "cheaper" : "pricier";
     const label = pct < 0 ? "moins cher" : "plus cher";
-    return `<span class="delta ${cls}" title="${Math.abs(pct)} % ${label} que ${esc(ref.category)}">${pct < 0 ? "−" : "+"}${Math.abs(pct)} %</span>`;
+    // Fond vert (moins cher) ou rouge (plus cher), d'autant plus soutenu que l'écart est grand :
+    // intensité maximale à 4 fois moins cher ou 4 fois plus cher que la référence.
+    const strength = Math.min(Math.abs(Math.log2(a / b)) / 2, 1);
+    const rgb = pct < 0 ? "3, 129, 65" : "230, 62, 17";
+    const bg = `rgba(${rgb}, ${(0.08 + 0.37 * strength).toFixed(2)})`;
+    return `<span class="delta ${cls}" style="background: ${bg}" title="${Math.abs(pct)} % ${label} que ${esc(ref.category)}">${pct < 0 ? "−" : "+"}${Math.abs(pct)} %</span>`;
   }
 
   function ranked() {
