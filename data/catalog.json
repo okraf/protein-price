@@ -28,9 +28,12 @@
     { "id": "petits-pois", "category": "Petits pois extra-fins", "source": "intermarche", "url": "https://www.intermarche.com/produit/petits-pois-extra-fins/3250390026020" },
     { "id": "pain-de-mie", "category": "Pain de mie complet", "source": "intermarche", "url": "https://www.intermarche.com/produit/pain-de-mie-maxi-tranches-complet/3029330022428" },
     { "id": "whey", "category": "Whey (protéine en poudre)", "source": "intermarche", "url": "https://www.intermarche.com/produit/preparation-en-poudre-pour-boisson-riche-en-proteines-whey-vanille/3662072156343" },
+    { "id": "barre-proteinee", "category": "Barre protéinée", "source": "intermarche", "url": "https://www.intermarche.com/produit/barres-protein-cacahuetes-&-chocolat-sans-gluten/8410076610737" },
     { "id": "flocons-avoine", "category": "Flocons d'avoine", "source": "intermarche", "url": "https://www.intermarche.com/produit/flocons-d'avoine-oats/3168930003632" },
     { "id": "pates", "category": "Pâtes (sèches)", "source": "intermarche", "url": "https://www.intermarche.com/produit/pates-alimentaires-de-qualite-superieure-torti/3250390000402" },
+    { "id": "pates-sans-gluten", "category": "Pâtes sans gluten", "source": "intermarche", "url": "https://www.intermarche.com/produit/fusilli-sans-gluten-a-base-de-mais-de-riz-complet-et-de-riz/3250393468438" },
     { "id": "riz", "category": "Riz (sec)", "source": "intermarche", "url": "https://www.intermarche.com/produit/riz-long-grain-etuve-de-qualite-superieure/3250390139577" },
-    { "id": "pain-blanc", "category": "Pain blanc (baguette précuite)", "source": "intermarche", "url": "https://www.intermarche.com/produit/demi-baguettes-precuites/3250391386857" }
+    { "id": "pain-blanc", "category": "Pain blanc (baguette précuite)", "source": "intermarche", "url": "https://www.intermarche.com/produit/demi-baguettes-precuites/3250391386857" },
+    { "id": "pain-sans-gluten", "category": "Pain sans gluten", "source": "intermarche", "url": "https://www.intermarche.com/produit/pain-de-campagne-sans-gluten/3250392550882" }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T15:44:57.147Z",
+  "generatedAt": "2026-11-03T17:03:07.464Z",
   "sources": {
     "intermarche": {
       "label": "Intermarché",
@@ -2754,6 +2754,112 @@
       "fetchedAt": "2026-11-03T14:14:18.214Z"
     },
     {
+      "id": "barre-proteinee",
+      "category": "Barre protéinée",
+      "source": "intermarche",
+      "url": "https://www.intermarche.com/produit/barres-protein-cacahuetes-&-chocolat-sans-gluten/8410076610737",
+      "name": "Barres Protein cacahuètes & chocolat sans gluten",
+      "brand": "Nature Valley",
+      "image": "https://assets-big.cdn-mousquetaires.com/medias/domain11815/media137568/11270634-5gk11xwigb-ecommint.jpg",
+      "packaging": "les 4 barres de 40 g",
+      "price": 2.61,
+      "unitPrice": 16.31,
+      "unit": "kg",
+      "pricePerKg": 16.31,
+      "netWeightG": 160,
+      "available": true,
+      "nutriScore": null,
+      "store": {
+        "name": "Super Begard",
+        "city": "Begard",
+        "postalCode": "22140"
+      },
+      "estimate": null,
+      "nutrition": {
+        "energyKcal": 489,
+        "fat": 28.3,
+        "saturatedFat": 8.8,
+        "carbs": 27.5,
+        "sugars": 17.2,
+        "fiber": 11,
+        "protein": 25.6,
+        "salt": 0.94
+      },
+      "nutritionTable": [
+        {
+          "label": "Energie",
+          "value": "2038.0 kj (489.0 kcal)"
+        },
+        {
+          "label": "Matière Grasse",
+          "value": "28.3"
+        },
+        {
+          "label": "Dont acide gras saturé",
+          "value": "8.8"
+        },
+        {
+          "label": "Dont acide gras polyinsaturé",
+          "value": "7.4"
+        },
+        {
+          "label": "Glucides",
+          "value": "27.5"
+        },
+        {
+          "label": "Dont sucre",
+          "value": "17.2"
+        },
+        {
+          "label": "Protéines",
+          "value": "25.6"
+        },
+        {
+          "label": "Sel",
+          "value": "0.94"
+        },
+        {
+          "label": "Fibres Alimentaires",
+          "value": "11"
+        }
+      ],
+      "ingredients": "CACAHUÈTES grillées (38,6%), protéine isolée de SOJA, oligofructose, sirop de glucose, huiles et graisses végétales (palme, karité, tournesol, colza), sucre, morceaux de chocolat (4%) (sucre, pâte de cacao, beurre de cacao, émulsifiant (lécithines (SOJA)), maltodextrine, beurre de CACAHUÈTES (1,9%), cacao maigre en poudre, amidon de tapioca, fructose, lactose (LAIT), humectant (glycérol), émulsifiants (lécithines (SOJA)), sel de cuisine, arôme naturel (LAIT), stabilisant (carbonate de calcium).",
+      "allergens": "cacahuètes / arachides (Presence), céleri (Absence), céréales contenant du gluten (Absence), crustacés (Absence), dioxyde de soufre et sulfites (Absence), fruit à coque (Presence), graines de sésame (Absence), lait (Presence), lupin (Absence), mollusques (Absence), moutarde (Absence), oeufs (Absence), poisson (Absence), soja (Presence)",
+      "sections": [
+        {
+          "title": "Caractéristiques",
+          "items": [
+            {
+              "label": "Conservation",
+              "value": "À conserver dans un endroit frais et sec."
+            }
+          ]
+        },
+        {
+          "title": "En savoir plus",
+          "items": [
+            {
+              "label": "Dénomination légale de vente",
+              "value": "Barre aux cacahuètes avec arôme naturel, et au chocolat sur un enrobage saveur cacao."
+            },
+            {
+              "label": "Avantages",
+              "value": "Ces barres de céréales sont riches en protéines, riche en fibres, sans colorant, sans conservateur, sans arôme artificiel et sans gluten."
+            },
+            {
+              "label": "Détails du produit",
+              "value": "Provenance des ingrédients : Espagne"
+            },
+            {
+              "label": "Informations fabricant",
+              "value": "General Mills France - Tour Horizons, 30 cours de l'ile Seguin - 92100 Boulogne-Billancourt, France"
+            }
+          ]
+        }
+      ],
+      "fetchedAt": "2026-11-03T16:56:48.728Z"
+    },
+    {
       "id": "flocons-avoine",
       "category": "Flocons d'avoine",
       "source": "intermarche",
@@ -2972,6 +3078,108 @@
         }
       ],
       "fetchedAt": "2026-11-03T15:41:22.765Z"
+    },
+    {
+      "id": "pates-sans-gluten",
+      "category": "Pâtes sans gluten",
+      "source": "intermarche",
+      "url": "https://www.intermarche.com/produit/fusilli-sans-gluten-a-base-de-mais-de-riz-complet-et-de-riz/3250393468438",
+      "name": "Fusilli sans gluten à base de maïs, de riz complet et de riz",
+      "brand": "Regain, une marque Intermarché",
+      "image": "https://cdn.intermarche.com/fr/Content/images/boitmal/produit/zoom/B7B131BDC02124FE840FFCA357265139.jpg",
+      "packaging": "l'étui de 400g",
+      "price": 1.73,
+      "unitPrice": 4.33,
+      "unit": "kg",
+      "pricePerKg": 4.33,
+      "netWeightG": 400,
+      "available": true,
+      "nutriScore": null,
+      "store": {
+        "name": "Super Begard",
+        "city": "Begard",
+        "postalCode": "22140"
+      },
+      "estimate": null,
+      "nutrition": {
+        "energyKcal": 361,
+        "fat": 2.3,
+        "saturatedFat": 0.6,
+        "carbs": 76,
+        "sugars": 0.5,
+        "fiber": 3.9,
+        "protein": 7.2,
+        "salt": 0.01
+      },
+      "nutritionTable": [
+        {
+          "label": "Energie",
+          "value": "1531.0 kj (361.0 kcal)"
+        },
+        {
+          "label": "Matière Grasse",
+          "value": "2,3g"
+        },
+        {
+          "label": "Dont acide gras saturé",
+          "value": "0,6g"
+        },
+        {
+          "label": "Glucides",
+          "value": "76g"
+        },
+        {
+          "label": "Dont sucre",
+          "value": "<0,5g"
+        },
+        {
+          "label": "Protéines",
+          "value": "7,2g"
+        },
+        {
+          "label": "Sel",
+          "value": "<0,01g"
+        },
+        {
+          "label": "Fibres Alimentaires",
+          "value": "3,9g"
+        }
+      ],
+      "ingredients": "Ingrédients : farine de maïs 50%, farine de riz complet 37,5%, farine de riz 12%, émulsifiant : mono- et diglycérides d'acides gras.",
+      "allergens": null,
+      "sections": [
+        {
+          "title": "Caractéristiques",
+          "items": [
+            {
+              "label": "Conservation",
+              "value": "À conserver à l'abri de la chaleur et de l'humidité"
+            }
+          ]
+        },
+        {
+          "title": "En savoir plus",
+          "items": [
+            {
+              "label": "Dénomination légale de vente",
+              "value": "Pâtes diététiques sans gluten à base de maïs, de riz complet et de riz."
+            },
+            {
+              "label": "Avantages",
+              "value": "Du plaisir sans gluten ! Alliant expertise et gourmandise, Regain vous propose ces délicieux fusilli pour vous faire plaisir au quotidien. Garantis sans gluten, avec un atelier de fabrication dédié, ainsi que des analyses et contrôles des produits."
+            },
+            {
+              "label": "Informations fabricant",
+              "value": "ANDRIANI SPA - Via N. Copernico SN - 70024 Gravina In Puglia - France - REGAIN 0 805 101 115 - Service & Appel gratuits - www.intermarche.com"
+            },
+            {
+              "label": "Renseignements pratiques",
+              "value": "Versez les pâtes dans de l'eau bouillante (1 l pour 100 g de pâtes). Remuez de temps en temps et laissez cuire 5 à 7 minutes à votre convenance. Égouttez, accommodez à votre goût et servez."
+            }
+          ]
+        }
+      ],
+      "fetchedAt": "2026-11-03T17:01:54.913Z"
     },
     {
       "id": "riz",
@@ -3197,6 +3405,117 @@
         }
       ],
       "fetchedAt": "2026-11-03T15:42:33.796Z"
+    },
+    {
+      "id": "pain-sans-gluten",
+      "category": "Pain sans gluten",
+      "source": "intermarche",
+      "url": "https://www.intermarche.com/produit/pain-de-campagne-sans-gluten/3250392550882",
+      "name": "Pain de campagne sans gluten",
+      "brand": "Regain, une marque Intermarché",
+      "image": "https://cdn.intermarche.com/fr/Content/images/boitmal/produit/zoom/82B9D567C7FAB683C2BF63137ECC9E48.jpg",
+      "packaging": "le paquet de 6 tranches - 400 g",
+      "price": 4.16,
+      "unitPrice": 10.4,
+      "unit": "kg",
+      "pricePerKg": 10.4,
+      "netWeightG": 400,
+      "available": true,
+      "nutriScore": null,
+      "store": {
+        "name": "Super Begard",
+        "city": "Begard",
+        "postalCode": "22140"
+      },
+      "estimate": null,
+      "nutrition": {
+        "energyKcal": 238,
+        "fat": 6,
+        "saturatedFat": 0.6,
+        "carbs": 37.9,
+        "sugars": 2.1,
+        "fiber": 10,
+        "protein": 3.2,
+        "salt": 1.57
+      },
+      "nutritionTable": [
+        {
+          "label": "Energie",
+          "value": "1001.0 kj (238.0 kcal)"
+        },
+        {
+          "label": "Matière Grasse",
+          "value": "6g"
+        },
+        {
+          "label": "Dont acide gras saturé",
+          "value": "0,6g"
+        },
+        {
+          "label": "Glucides",
+          "value": "37,9g"
+        },
+        {
+          "label": "Dont sucre",
+          "value": "2,1g"
+        },
+        {
+          "label": "Protéines",
+          "value": "3,2g"
+        },
+        {
+          "label": "Sel",
+          "value": "1,57g"
+        },
+        {
+          "label": "Fibres Alimentaires",
+          "value": "10g"
+        }
+      ],
+      "ingredients": "Eau, amidon de maïs, fécule de manioc, huile de tournesol, fécule de pomme de terre, fibre de psyllium, farine de riz, farine de maïs, farine de sarrasin, sucre, humectant : glycérol, levure, poudre de blanc d’ŒUF, épaississants : hydroxypropylmethylcellulose - gomme xanthane, fibre de bambou, jus de citron, sel, dextrose (maïs), conservateur : propionate de calcium.\nTraces éventuelles de lait.\nSans gluten.",
+      "allergens": "œuf",
+      "sections": [
+        {
+          "title": "Caractéristiques",
+          "items": [
+            {
+              "label": "Conservation",
+              "value": "À conserver à l'abri de la chaleur et de l'humidité.\nAprès ouverture, à conserver au réfrigérateur et à consommer dans les 3 jours."
+            }
+          ]
+        },
+        {
+          "title": "En savoir plus",
+          "items": [
+            {
+              "label": "Dénomination légale de vente",
+              "value": "Pain spécial tranché sans gluten"
+            },
+            {
+              "label": "Avantages",
+              "value": "Source de fibres."
+            },
+            {
+              "label": "Informations fabricant",
+              "value": "GGF - 513 rue Robert Estienne 60400 Noyon - France"
+            },
+            {
+              "label": "Renseignements pratiques",
+              "value": "Ouvrir le sachet 10 minutes avant dégustation.\nPour plus de croustillance, vous pouvez passer la tranche quelques secondes au grille pain."
+            }
+          ]
+        },
+        {
+          "title": "Autres informations légales",
+          "items": [
+            {
+              "label": "Compléments d'informations",
+              "value": "Préparé à Noyon"
+            }
+          ]
+        }
+      ],
+      "fetchedAt": "2026-11-03T17:02:36.672Z"
     }
   ]
 }
