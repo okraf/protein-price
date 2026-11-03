@@ -131,6 +131,48 @@
     vertical-align: 1px;
   }
   .board tr.unavailable td { opacity: 0.55; }
+  /* Comparaison à un produit de référence (choisi par le visiteur) */
+  .ref-picker {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  .ref-picker label { font-weight: 600; font-size: 0.9rem; }
+  .ref-picker select {
+    font: inherit;
+    font-size: 0.95rem;
+    padding: 0.4rem 0.6rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
+    max-width: 100%;
+  }
+  .ref-picker select:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .delta { font-variant-numeric: tabular-nums; font-weight: 700; white-space: nowrap; }
+  .delta.cheaper { color: #038141; }
+  .delta.pricier { color: #c2410c; }
+  .delta.same { color: var(--text-muted); }
+  .board tr.ref-row td { background: var(--accent-soft); }
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+    font: inherit;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    padding: 0.5rem 0.9rem;
+    cursor: pointer;
+  }
+  .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+  .btn-ghost[disabled] { cursor: default; color: var(--text-muted); border-color: var(--border); }
+  .actions { display: flex; gap: 0.6rem; flex-wrap: wrap; }
   /* Nutri-Score : couleurs officielles de l'échelle A à E */
   .ns {
     display: inline-flex;
@@ -445,6 +487,31 @@
       `<span class="info-popover" role="tooltip">${formula}</span></button>`;
   }
 
+  // Produit de référence pour la colonne d'écart : filet de poulet par défaut,
+  // choix du visiteur gardé dans son navigateur.
+  const DEFAULT_REF = "filet-de-poulet";
+  const REF_KEY = "protein-price.ref";
+  function getRefId() {
+    let id = null;
+    try { id = localStorage.getItem(REF_KEY); } catch {}
+    if (!DATA.products.some((p) => p.id === id)) id = DEFAULT_REF;
+    return DATA.products.some((p) => p.id === id) ? id : DATA.products[0]?.id;
+  }
+  function setRefId(id) {
+    try { localStorage.setItem(REF_KEY, id); } catch {}
+  }
+  // Écart en % du prix de 100 g de protéines par rapport à la référence.
+  function delta(p, ref) {
+    if (p.id === ref.id) return '<span class="delta same">réf.</span>';
+    const a = p.m.pricePer100gProtein, b = ref.m.pricePer100gProtein;
+    if (a == null || !(b > 0)) return "–";
+    const pct = Math.round((a - b) / b * 100);
+    if (pct === 0) return '<span class="delta same">0 %</span>';
+    const cls = pct < 0 ? "cheaper" : "pricier";
+    const label = pct < 0 ? "moins cher" : "plus cher";
+    return `<span class="delta ${cls}" title="${Math.abs(pct)} % ${label} que ${esc(ref.category)}">${pct < 0 ? "−" : "+"}${Math.abs(pct)} %</span>`;
+  }
+
   function ranked() {
     return DATA.products
       .map((p) => ({ ...p, m: computeMetrics(p) }))
@@ -476,6 +543,9 @@
     document.title = "Prix des Protéines · Perceval";
     setReportLink(null);
     const rows = ranked();
+    const ref = rows.find((p) => p.id === getRefId());
+    const options = [...rows].sort((a, b) => a.category.localeCompare(b.category, "fr"))
+      .map((p) => `<option value="${esc(p.id)}"${p.id === ref.id ? " selected" : ""}>${esc(p.category)}</option>`).join("");
     const stores = Object.values(DATA.sources).map((s) => `${esc(s.label)} ${esc(s.store?.name ?? "")} (${esc(s.store?.postalCode ?? "")})`).join(", ");
     app.innerHTML = `
       <header>
@@ -486,6 +556,10 @@
       <section class="card">
         <h2>Le classement</h2>
         <p class="card-meta">Prix relevés le ${formatDate(DATA.generatedAt)} · ${stores}</p>
+        <div class="ref-picker">
+          <label for="ref-select">Comparer à</label>
+          <select id="ref-select">${options}</select>
+        </div>
         <table class="board">
           <thead><tr>
             <th>#</th>
@@ -495,10 +569,11 @@
             <th class="num hide-sm"><span class="label-cell">Qté pour 100 g prot.${info("La quantité pour 100 g de protéines", "Quantité de produit à manger pour avoir 100 g de protéines = <code>100 ÷ protéines (g/100 g) × 100</code>")}</span></th>
             <th class="center hide-sm">Nutri</th>
             <th class="num"><span class="label-cell">100 g de prot.${info("Le prix de 100 g de protéines", "Prix de 100 g de protéines = <code>prix au kilo ÷ 1000 × quantité pour 100 g de protéines</code>")}</span></th>
+            <th class="num"><span class="label-cell">vs réf.${info("L'écart avec la référence", `Écart avec ${esc(ref.category)} = <code>(prix 100 g prot. − prix réf.) ÷ prix réf.</code>. Négatif : moins cher que la référence.`)}</span></th>
           </tr></thead>
           <tbody>
             ${rows.map((p, i) => `
-              <tr class="result-highlight ${i < 3 && p.available ? "top" : ""} ${p.available ? "" : "unavailable"}" data-id="${esc(p.id)}">
+              <tr class="result-highlight ${i < 3 && p.available ? "top" : ""} ${p.available ? "" : "unavailable"} ${p.id === ref.id ? "ref-row" : ""}" data-id="${esc(p.id)}">
                 <td class="rank">${i + 1}</td>
                 <td><a class="product-link" href="#/produit/${esc(p.id)}">${esc(p.category)}</a>${p.available ? "" : '<span class="badge">indisponible</span>'}
                   <span class="product-sub">${esc(p.brand)} · ${esc(p.packaging)}${otherStore(p) ? ` · relevé à ${esc(p.store.name)}` : ""}</span></td>
@@ -507,6 +582,7 @@
                 <td class="num hide-sm">${p.m.gramsFor100gProtein == null ? "–" : Math.round(p.m.gramsFor100gProtein) + " g"}</td>
                 <td class="center hide-sm">${nutriBadge(p.nutriScore)}</td>
                 <td class="value">${eur(p.m.pricePer100gProtein)}</td>
+                <td class="num">${delta(p, ref)}</td>
               </tr>`).join("")}
           </tbody>
         </table>
@@ -518,12 +594,18 @@
           <li>Méthode : pour chaque aliment, une référence courante disponible en magasin, en version nature (pas de plat cuisiné ni de version aromatisée), hors premier prix Top Budget.</li>
           <li>Prix de 100 g de protéines : <code>prix au kilo ÷ 1000 × (100 ÷ protéines pour 100 g × 100)</code>. Exemple : un filet de poulet à 11 €/kg avec 23 g de protéines pour 100 g, il en faut 435 g, soit 4,78 €.</li>
           <li>Protéines : valeur de l'étiquette nutritionnelle du produit, pour le produit tel que vendu (sec pour les légumineuses, égoutté pour les conserves quand le magasin l'indique).</li>
+          <li>Colonne « vs réf. » : écart du prix de 100 g de protéines avec le produit de référence (filet de poulet par défaut, modifiable avec « Comparer à » ou depuis une fiche produit ; le choix reste dans ton navigateur).</li>
           <li>Nutri-Score : relevé sur la fiche du magasin, affiché à titre indicatif (il ne modifie pas le classement). Le score Yuka n'est pas publié par le magasin.</li>
           <li>Prix au kilo recalculé à partir du prix et du poids du paquet quand le chiffre affiché par le magasin ne concorde pas.</li>
           <li>Liquides : 1 litre compté comme 1 kg. Œufs : vendus à la pièce, poids estimé indiqué sur la fiche.</li>
           <li>Source des prix : ${Object.values(DATA.sources).map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a> (magasin ${esc(s.store?.name ?? "")}, ${esc(s.store?.postalCode ?? "")}, prix du drive)`).join(", ")}. D'autres enseignes pourront être ajoutées.</li>
         </ul>
       </details>`;
+
+    document.getElementById("ref-select").addEventListener("change", (event) => {
+      setRefId(event.target.value);
+      renderBoard();
+    });
 
     app.querySelectorAll(".board tbody tr").forEach((tr) => {
       tr.addEventListener("click", (event) => {
@@ -538,7 +620,7 @@
     const index = rows.findIndex((p) => p.id === id);
     if (index < 0) { location.hash = ""; return; }
     const p = rows[index];
-    const n = p.nutrition || {};
+    const ref = rows.find((r) => r.id === getRefId());
     document.title = `${p.category} · Prix des Protéines`;
     setReportLink(p);
 
@@ -563,7 +645,10 @@
             <p class="brand">${esc(p.brand)} · ${esc(p.category)} ${nutriBadge(p.nutriScore)}</p>
             <h1>${esc(p.name)}</h1>
             <p class="pack">${esc(p.packaging)} · ${eur(p.price)}${p.available ? "" : " · indisponible au dernier relevé"}</p>
-            <a class="btn" href="${esc(p.url)}" target="_blank" rel="noopener">Voir chez ${esc(DATA.sources[p.source]?.label ?? p.source)} ↗</a>
+            <div class="actions">
+              <a class="btn" href="${esc(p.url)}" target="_blank" rel="noopener">Voir chez ${esc(DATA.sources[p.source]?.label ?? p.source)} ↗</a>
+              <button type="button" class="btn-ghost" id="make-ref"${p.id === ref.id ? " disabled" : ""}>${p.id === ref.id ? "Référence actuelle" : "Prendre comme référence"}</button>
+            </div>
           </div>
         </div>
       </section>
@@ -576,6 +661,7 @@
           <div class="kpi"><div class="k-label">Protéines /100 g</div><div class="k-value">${num(p.m.protein)} g</div></div>
           <div class="kpi"><div class="k-label">Qté pour 100 g prot.</div><div class="k-value">${p.m.gramsFor100gProtein == null ? "–" : Math.round(p.m.gramsFor100gProtein) + " g"}</div></div>
         </div>
+        <p class="note">${p.id === ref.id ? "C'est le produit de référence du classement." : `Par rapport à ${esc(ref.category)} (${eur(ref.m.pricePer100gProtein)} les 100 g de protéines) : ${delta(p, ref)}`}</p>
         ${p.estimate ? `<p class="note">${esc(p.estimate)}</p>` : ""}
         <p class="note">Relevé le ${formatDate(p.fetchedAt)} · ${esc(sourceLabel(p))}</p>
       </section>
@@ -596,6 +682,10 @@
       </section>` : ""}
 
       ${facts}`;
+    document.getElementById("make-ref").addEventListener("click", () => {
+      setRefId(p.id);
+      renderProduct(p.id);
+    });
     window.scrollTo(0, 0);
   }
 
