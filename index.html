@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prix des Protéines · Perceval</title>
+<meta name="description" content="Quelle protéine coûte le moins cher ? Classement du prix de 100 g de protéines (poulet, œufs, skyr, cacahuètes...) à partir des prix réels en magasin.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  /* Palette officielle Perceval (github.com/perceval-sh/theme-asciidoc) */
+  :root {
+    --bg: #faf9f4;
+    --surface: #ffffff;
+    --border: #ece7d8;
+    --text: #4e4427;
+    --text-muted: #948a6d;
+    --accent: #be9e12;
+    --accent-soft: #f6f5f4;
+    --shadow: 0 1px 3px rgba(78,68,39,0.07), 0 1px 2px rgba(78,68,39,0.04);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "League Spartan", Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.5;
+  }
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem 4rem;
+  }
+  header { margin-bottom: 2rem; }
+  h1 {
+    font-size: 1.6rem;
+    margin: 0 0 0.4rem;
+  }
+  .subtitle {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin: 0;
+  }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
+  }
+  .card h2 {
+    font-size: 1.05rem;
+    margin: 0 0 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .card-meta {
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    margin: -0.6rem 0 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+  }
+  th, td {
+    text-align: left;
+    padding: 0.55rem 0.4rem;
+    border-bottom: 1px solid var(--border);
+  }
+  th {
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    vertical-align: bottom;
+  }
+  th.num { text-align: right; }
+  td.value {
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+    text-align: right;
+    white-space: nowrap;
+  }
+  td.num {
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+    white-space: nowrap;
+  }
+  tr:last-child td { border-bottom: none; }
+  .result-highlight td.value { color: var(--accent); }
+
+  /* Classement */
+  .rank {
+    width: 1.8rem;
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+  }
+  tr.top .rank { color: var(--accent); }
+  .board tbody tr { cursor: pointer; }
+  .board tbody tr:hover td { background: var(--accent-soft); }
+  .board a.product-link {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .board tbody tr:hover a.product-link { color: var(--accent); }
+  .product-sub {
+    display: block;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    font-weight: 400;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0 0.45rem;
+    margin-left: 0.3rem;
+    vertical-align: 1px;
+  }
+  .board tr.unavailable td { opacity: 0.55; }
+  /* Nutri-Score : couleurs officielles de l'échelle A à E */
+  .ns {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.35rem;
+    height: 1.35rem;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.8rem;
+  }
+  .ns-A { background: #038141; }
+  .ns-B { background: #85bb2f; }
+  .ns-C { background: #fecb02; color: #4e4427; }
+  .ns-D { background: #ee8100; }
+  .ns-E { background: #e63e11; }
+  .ns-none { background: var(--border); color: var(--text-muted); }
+  th.center, td.center { text-align: center; }
+
+  .label-cell {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  th .label-cell { justify-content: flex-end; }
+  .info-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.1rem;
+    height: 1.1rem;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text-muted);
+    font-size: 0.68rem;
+    font-style: italic;
+    font-family: Georgia, "Times New Roman", serif;
+    text-transform: none;
+    letter-spacing: 0;
+    cursor: pointer;
+    flex: none;
+    padding: 0;
+    line-height: 1;
+  }
+  .info-btn:hover,
+  .info-btn:focus-visible,
+  .info-btn.open {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+  .info-popover {
+    position: absolute;
+    top: 140%;
+    right: -0.5rem;
+    transform: translateY(-4px);
+    min-width: 13rem;
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    padding: 0.5rem 0.65rem;
+    font-size: 0.78rem;
+    font-weight: 400;
+    font-style: normal;
+    font-family: "League Spartan", Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    text-align: left;
+    line-height: 1.4;
+    white-space: normal;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.12s ease, transform 0.12s ease;
+    z-index: 10;
+  }
+  .info-btn:hover .info-popover,
+  .info-btn:focus-visible .info-popover,
+  .info-btn.open .info-popover {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  .info-popover code {
+    color: var(--accent);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+
+  /* Fiche produit */
+  .back {
+    display: inline-block;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
+  }
+  .back:hover { color: var(--accent); }
+  .product-head {
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+  }
+  .product-head img {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: #fff;
+    flex: none;
+  }
+  .product-head .brand {
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin: 0;
+  }
+  .product-head h1 { margin: 0.1rem 0 0.3rem; }
+  .product-head .pack {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin: 0 0 0.9rem;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    padding: 0.5rem 0.9rem;
+  }
+  .btn:hover { filter: brightness(0.95); }
+  .kpis {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+  }
+  .kpi {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.75rem;
+  }
+  .kpi .k-label {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .kpi .k-value {
+    font-size: 1.25rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+  .kpi.main .k-value { color: var(--accent); }
+  .note {
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    margin: 1rem 0 0;
+  }
+  dl.facts { margin: 0; }
+  dl.facts dt {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-top: 0.9rem;
+  }
+  dl.facts dt:first-child { margin-top: 0; }
+  dl.facts dd {
+    margin: 0.15rem 0 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    white-space: pre-line;
+  }
+  .nutri td.sub { padding-left: 1.2rem; color: var(--text-muted); }
+  .nutri tr.protein td { color: var(--accent); font-weight: 700; }
+
+  .sources {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+  }
+  .sources summary {
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .sources summary::-webkit-details-marker { display: none; }
+  .sources summary::after {
+    content: "+";
+    color: var(--accent);
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+  .sources[open] summary::after { content: "−"; }
+  .sources ul {
+    margin: 0;
+    padding: 0 1.5rem 1.25rem;
+    list-style: none;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+  .sources li { padding: 0.15rem 0; }
+  .sources a { color: var(--accent); text-decoration: none; }
+  .sources a:hover { text-decoration: underline; }
+  .sources code {
+    color: var(--accent);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  footer {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    margin-top: 2rem;
+    text-align: center;
+  }
+  footer .disclaimer { margin: 0 0 1rem; }
+  footer .meta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+  }
+  footer a {
+    color: var(--text-muted);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    text-decoration: none;
+  }
+  footer a:hover { color: var(--accent); }
+  footer a svg { width: 1rem; height: 1rem; fill: currentColor; }
+
+  @media (max-width: 640px) {
+    .card { padding: 1.1rem; }
+    .hide-sm { display: none; }
+    table { font-size: 0.88rem; }
+    th, td { padding: 0.5rem 0.25rem; }
+    .kpis { grid-template-columns: repeat(2, 1fr); }
+    .product-head { flex-direction: column; }
+    .product-head img { width: 120px; height: 120px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <main id="app"><p class="subtitle">Chargement…</p></main>
+
+  <footer>
+    <p class="disclaimer">Prix relevés sur le site du magasin, susceptibles de changer. Comparatif à visée pédagogique : le prix ne dit rien de la qualité nutritionnelle globale d'un aliment.</p>
+    <div class="meta">
+      <span>© 2026 Perceval</span>
+      <a href="https://github.com/okraf/protein-price" target="_blank" rel="noopener">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        <span>github.com/okraf/protein-price</span>
+      </a>
+    </div>
+  </footer>
+</div>
+
+<script>
+  const app = document.getElementById("app");
+  let DATA = null;
+
+  const eur = (v, digits = 2) => v == null ? "–" : v.toLocaleString("fr-FR", { minimumFractionDigits: digits, maximumFractionDigits: digits }) + " €";
+  const num = (v, digits = 1) => v == null ? "–" : v.toLocaleString("fr-FR", { minimumFractionDigits: 0, maximumFractionDigits: digits });
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const formatDate = (iso) => iso ? new Date(iso).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }) : "–";
+
+  // Formules du classement (aussi affichées via les icônes ⓘ).
+  function computeMetrics(p) {
+    const protein = p.nutrition?.protein;
+    const ok = p.pricePerKg > 0 && protein > 0;
+    return {
+      protein,
+      pricePerKg: p.pricePerKg,
+      gramsFor100gProtein: protein > 0 ? 100 / protein * 100 : null,
+      pricePer100gProtein: ok ? p.pricePerKg / 1000 * (100 / protein * 100) : null,
+    };
+  }
+
+  const nutriBadge = (s) => s ? `<span class="ns ns-${s}" title="Nutri-Score ${s}">${s}</span>` : '<span class="ns ns-none" title="Nutri-Score non communiqué">?</span>';
+
+  function info(label, formula) {
+    return `<button type="button" class="info-btn" aria-label="Comment ${esc(label.toLowerCase())} est calculé">i` +
+      `<span class="info-popover" role="tooltip">${formula}</span></button>`;
+  }
+
+  function ranked() {
+    return DATA.products
+      .map((p) => ({ ...p, m: computeMetrics(p) }))
+      .sort((a, b) => {
+        if (a.available !== b.available) return a.available ? -1 : 1;
+        return (a.m.pricePer100gProtein ?? Infinity) - (b.m.pricePer100gProtein ?? Infinity);
+      });
+  }
+
+  function sourceLabel(p) {
+    const s = DATA.sources[p.source];
+    return s ? `${s.label} ${s.store?.name ?? ""}`.trim() : p.source;
+  }
+
+  function renderBoard() {
+    document.title = "Prix des Protéines · Perceval";
+    const rows = ranked();
+    const stores = Object.values(DATA.sources).map((s) => `${esc(s.label)} ${esc(s.store?.name ?? "")} (${esc(s.store?.postalCode ?? "")})`).join(", ");
+    app.innerHTML = `
+      <header>
+        <h1>Prix des Protéines</h1>
+        <p class="subtitle">Combien coûtent 100 g de protéines selon ce qu'on met dans son caddie ? Poulet, œufs, skyr, cacahuètes... classés du moins cher au plus cher, au prix réel du magasin.</p>
+      </header>
+
+      <section class="card">
+        <h2>Le classement</h2>
+        <p class="card-meta">Prix relevés le ${formatDate(DATA.generatedAt)} · ${stores}</p>
+        <table class="board">
+          <thead><tr>
+            <th>#</th>
+            <th>Produit</th>
+            <th class="num hide-sm"><span class="label-cell">Prix /kg${info("Le prix au kilo", "Prix au kilo affiché par le magasin (au litre pour les liquides, compté comme un kilo).")}</span></th>
+            <th class="num hide-sm"><span class="label-cell">Prot. /100 g${info("Les protéines pour 100 g", "Protéines pour 100 g de produit, lues sur l'étiquette nutritionnelle.")}</span></th>
+            <th class="num hide-sm"><span class="label-cell">Qté pour 100 g prot.${info("La quantité pour 100 g de protéines", "Quantité de produit à manger pour avoir 100 g de protéines = <code>100 ÷ protéines (g/100 g) × 100</code>")}</span></th>
+            <th class="center hide-sm">Nutri</th>
+            <th class="num"><span class="label-cell">100 g de prot.${info("Le prix de 100 g de protéines", "Prix de 100 g de protéines = <code>prix au kilo ÷ 1000 × quantité pour 100 g de protéines</code>")}</span></th>
+          </tr></thead>
+          <tbody>
+            ${rows.map((p, i) => `
+              <tr class="result-highlight ${i < 3 && p.available ? "top" : ""} ${p.available ? "" : "unavailable"}" data-id="${esc(p.id)}">
+                <td class="rank">${i + 1}</td>
+                <td><a class="product-link" href="#/produit/${esc(p.id)}">${esc(p.category)}</a>${p.available ? "" : '<span class="badge">indisponible</span>'}
+                  <span class="product-sub">${esc(p.brand)} · ${esc(p.packaging)}</span></td>
+                <td class="num hide-sm">${eur(p.m.pricePerKg)}</td>
+                <td class="num hide-sm">${num(p.m.protein)} g</td>
+                <td class="num hide-sm">${p.m.gramsFor100gProtein == null ? "–" : Math.round(p.m.gramsFor100gProtein) + " g"}</td>
+                <td class="center hide-sm">${nutriBadge(p.nutriScore)}</td>
+                <td class="value">${eur(p.m.pricePer100gProtein)}</td>
+              </tr>`).join("")}
+          </tbody>
+        </table>
+      </section>
+
+      <details class="sources">
+        <summary>En savoir plus</summary>
+        <ul>
+          <li>Méthode : pour chaque aliment, la référence la moins chère au kilo trouvée en magasin, en version nature (pas de plat cuisiné ni de version aromatisée).</li>
+          <li>Prix de 100 g de protéines : <code>prix au kilo ÷ 1000 × (100 ÷ protéines pour 100 g × 100)</code>. Exemple : un filet de poulet à 11 €/kg avec 23 g de protéines pour 100 g, il en faut 435 g, soit 4,78 €.</li>
+          <li>Protéines : valeur de l'étiquette nutritionnelle du produit, pour le produit tel que vendu (sec pour les légumineuses, égoutté pour les conserves quand le magasin l'indique).</li>
+          <li>Nutri-Score : relevé sur la fiche du magasin, affiché à titre indicatif (il ne modifie pas le classement). Le score Yuka n'est pas publié par le magasin.</li>
+          <li>Prix au kilo recalculé à partir du prix et du poids du paquet quand le chiffre affiché par le magasin ne concorde pas.</li>
+          <li>Liquides : 1 litre compté comme 1 kg. Œufs : vendus à la pièce, poids estimé indiqué sur la fiche.</li>
+          <li>Source des prix : ${Object.values(DATA.sources).map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a> (magasin ${esc(s.store?.name ?? "")}, ${esc(s.store?.postalCode ?? "")}, prix du drive)`).join(", ")}. D'autres enseignes pourront être ajoutées.</li>
+        </ul>
+      </details>`;
+
+    app.querySelectorAll(".board tbody tr").forEach((tr) => {
+      tr.addEventListener("click", (event) => {
+        if (event.target.closest("a, button")) return;
+        location.hash = `#/produit/${tr.dataset.id}`;
+      });
+    });
+  }
+
+  function renderProduct(id) {
+    const rows = ranked();
+    const index = rows.findIndex((p) => p.id === id);
+    if (index < 0) { location.hash = ""; return; }
+    const p = rows[index];
+    const n = p.nutrition || {};
+    document.title = `${p.category} · Prix des Protéines`;
+
+    const nutriRows = (p.nutritionTable || []).map((r) => {
+      const sub = /^dont/i.test(r.label);
+      const prot = /prot[ée]ines/i.test(r.label);
+      return `<tr class="${prot ? "protein" : ""}"><td class="${sub ? "sub" : ""}">${esc(r.label)}</td><td class="num">${esc(r.value)}</td></tr>`;
+    }).join("");
+
+    const facts = (p.sections || []).map((s) => `
+      <section class="card">
+        <h2>${esc(s.title)}</h2>
+        <dl class="facts">${s.items.map((it) => `<dt>${esc(it.label)}</dt><dd>${esc(it.value)}</dd>`).join("")}</dl>
+      </section>`).join("");
+
+    app.innerHTML = `
+      <a class="back" href="#">← Retour au classement</a>
+      <section class="card">
+        <div class="product-head">
+          ${p.image ? `<img src="${esc(p.image)}" alt="${esc(p.name)}" loading="lazy">` : ""}
+          <div>
+            <p class="brand">${esc(p.brand)} · ${esc(p.category)} ${nutriBadge(p.nutriScore)}</p>
+            <h1>${esc(p.name)}</h1>
+            <p class="pack">${esc(p.packaging)} · ${eur(p.price)}${p.available ? "" : " · indisponible au dernier relevé"}</p>
+            <a class="btn" href="${esc(p.url)}" target="_blank" rel="noopener">Voir chez ${esc(DATA.sources[p.source]?.label ?? p.source)} ↗</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Prix des protéines <span class="badge">${index + 1}<sup>e</sup> sur ${rows.length}</span></h2>
+        <div class="kpis">
+          <div class="kpi main"><div class="k-label">100 g de protéines</div><div class="k-value">${eur(p.m.pricePer100gProtein)}</div></div>
+          <div class="kpi"><div class="k-label">Prix au kilo</div><div class="k-value">${eur(p.m.pricePerKg)}</div></div>
+          <div class="kpi"><div class="k-label">Protéines /100 g</div><div class="k-value">${num(p.m.protein)} g</div></div>
+          <div class="kpi"><div class="k-label">Qté pour 100 g prot.</div><div class="k-value">${p.m.gramsFor100gProtein == null ? "–" : Math.round(p.m.gramsFor100gProtein) + " g"}</div></div>
+        </div>
+        ${p.estimate ? `<p class="note">${esc(p.estimate)}</p>` : ""}
+        <p class="note">Relevé le ${formatDate(p.fetchedAt)} · ${esc(sourceLabel(p))}</p>
+      </section>
+
+      ${nutriRows ? `
+      <section class="card">
+        <h2>Valeurs nutritionnelles <span class="badge">pour 100 g</span></h2>
+        <table class="nutri"><tbody>${nutriRows}</tbody></table>
+      </section>` : ""}
+
+      ${p.ingredients || p.allergens ? `
+      <section class="card">
+        <h2>Composition</h2>
+        <dl class="facts">
+          ${p.ingredients ? `<dt>Ingrédients</dt><dd>${esc(p.ingredients)}</dd>` : ""}
+          ${p.allergens ? `<dt>Allergènes</dt><dd>${esc(p.allergens)}</dd>` : ""}
+        </dl>
+      </section>` : ""}
+
+      ${facts}`;
+    window.scrollTo(0, 0);
+  }
+
+  function route() {
+    if (!DATA) return;
+    const m = location.hash.match(/^#\/produit\/(.+)$/);
+    if (m) renderProduct(decodeURIComponent(m[1]));
+    else renderBoard();
+  }
+
+  fetch("data/products.json", { cache: "no-cache" })
+    .then((r) => r.json())
+    .then((d) => { DATA = d; route(); })
+    .catch(() => { app.innerHTML = '<p class="subtitle">Impossible de charger les données.</p>'; });
+
+  window.addEventListener("hashchange", route);
+
+  // Info popovers: click/tap toggles (hover already works via CSS),
+  // and clicking elsewhere closes any open popover.
+  document.addEventListener("click", (event) => {
+    const clickedBtn = event.target.closest(".info-btn");
+    document.querySelectorAll(".info-btn.open").forEach((btn) => {
+      if (btn !== clickedBtn) btn.classList.remove("open");
+    });
+    if (clickedBtn) {
+      clickedBtn.classList.toggle("open");
+    }
+  });
+</script>
+</body>
+</html>

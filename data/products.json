@@ -1,0 +1,1816 @@
+{
+  "generatedAt": "2026-11-03T14:14:22.413Z",
+  "sources": {
+    "intermarche": {
+      "label": "Intermarché",
+      "url": "https://www.intermarche.com",
+      "store": {
+        "ref": "06900",
+        "name": "Super Begard",
+        "city": "Begard",
+        "postalCode": "22140"
+      }
+    }
+  },
+  "products": [
+    {
+      "id": "filet-de-poulet",
+      "category": "Filet de poulet",
+      "source": "intermarche",
+      "url": "https://www.intermarche.com/produit/filet-de-poulet/5413458060185",
+      "name": "Filet de poulet",
+      "brand": "Notre Sélection",
+      "image": "https://cdn.intermarche.com/fr/Content/images/boitmal/produit/zoom/1188EEB4DAD5C4ED9A30F6F6BA24E53B.jpg",
+      "packaging": "la barquette de 2,5 kg",
+      "price": 18.9,
+      "unitPrice": 7.56,
+      "unit": "kg",
+      "pricePerKg": 7.56,
+      "netWeightG": 2500,
+      "available": true,
+      "nutriScore": null,
+      "estimate": null,
+      "nutrition": {
+        "energyKcal": null,
+        "fat": 2.4,
+        "saturatedFat": 0.9,
+        "carbs": 0.5,
+        "sugars": 0.5,
+        "fiber": null,
+        "protein": 22,
+        "salt": 0.2
+      },
+      "nutritionTable": [
+        {
+          "label": "Matière Grasse",
+          "value": "2,40g"
+        },
+        {
+          "label": "Dont acide gras saturé",
+          "value": "0,9g"
+        },
+        {
+          "label": "Glucides",
+          "value": "<0,5g"
+        },
+        {
+          "label": "Dont sucre",
+          "value": "<0,5g"
+        },
+        {
+          "label": "Protéines",
+          "value": "22g"
+        },
+        {
+          "label": "Sel",
+          "value": "0,20g"
+        }
+      ],
+      "ingredients": "100% poulet.",
+      "allergens": null,
+      "sections": [
+        {
+          "title": "Caractéristiques",
+          "items": [
+            {
+              "label": "Conservation",
+              "value": "A conserver au frais à +4°C max."
+            }
+          ]
+        },
+        {
+          "title": "Autres informations légales",
+          "items": [
+            {
+              "label": "Compléments d'informations",
+              "value": "Bien cuire à cœur avant consommation."
+            }
+          ]
+        }
+      ],
+      "fetchedAt": "2026-11-03T14:12:18.773Z"
+    },
+    {
+      "id": "blanc-de-dinde",
+      "category": "Blanc de dinde (tranches)",
+      "source": "intermarche",
+      "url": "https://www.intermarche.com/produit/blanc-de-dinde-dore-au-four/3250393483349",
+      "name": "Blanc de dinde doré au four",
+      "brand": "Monique Ranou, une marque Intermarché",
+      "image": "https://cdn.intermarche.com/fr/Content/images/boitmal/produit/zoom/489DD59F71E1B97729038E5F99790D4D.jpg",
+      "packaging": "la barquette de 160 g",
+      "price": 1.8,
+      "unitPrice": 11.25,
+      "unit": "kg",
+      "pricePerKg": 11.25,
+      "netWeightG": 160,
+      "available": true,
+      "nutriScore": null,
+      "estimate": null,
+      "nutrition": {
+        "energyKcal": 104,
+        "fat": 1.3,
+        "saturatedFat": 0.5,
+        "carbs": 1.1,
+        "sugars": 1.1,
+        "fiber": null,
+        "protein": 22,
+        "salt": 1.9
+      },
+      "nutritionTable": [
+        {
+          "label": "Energie",
+          "value": "441.0 kj (104.0 kcal)"
+        },
+        {
+          "label": "Matière Grasse",
+          "value": "1,3g"
+        },
+        {
+          "label": "Dont acide gras saturé",
+          "value": "0,5g"
+        },
+        {
+          "label": "Glucides",
+          "value": "1,1g"
+        },
+        {
+          "label": "Dont sucre",
+          "value": "1,1g"
+        },
+        {
+          "label": "Protéines",
+          "value": "22g"
+        },
+        {
+          "label": "Sel",
+          "value": "1,9g"
+        }
+      ],
+      "ingredients": "Ingrédients: filet de dinde (origine : UE), sel, dextrose, arôme naturel, conservateur : nitrite de sodium - colorant : caramel ordinaire",
+      "allergens": null,
+      "sections": [
+        {
+          "title": "Caractéristiques",
+          "items": [
+            {
+              "label": "Conservation",
+              "value": "À conserver entre 0°C et +4°C. Après ouverture, à consommer dans les 2 jours."
+            }
+          ]
+        },
+        {
+          "title": "En savoir plus",
+          "items": [
+            {
+              "label": "Dénomination légale de vente",
+              "value": "Blanc de dinde reconstitué cuit traité par salaison, bruni et doré au four, qualité supérieure."
+            },
+            {
+              "label": "Informations fabricant",
+              "value": "SAS S.C.O. - 29170 St Evarzec - France - MONIQUE RANOU 0 805 101 115 - Service & Appel gratuits - www.intermarche.com"
+            }
+          ]
+        }
+      ],
+      "fetchedAt": "2026-11-03T14:12:31.799Z"
+    },
+    {
+      "id": "steak-hache",
+      "category": "Steak haché",
+      "source": "intermarche",
+      "url": "https://www.intermarche.com/produit/steaks-haches-20%25-mg/3410280022871",
+      "name": "Steaks hachés 20% MG",
+      "brand": "Top Budget",
+      "image": "https://assets-big.cdn-mousquetaires.com/medias/domain11815/media121567/6470277-w7n881fdbh-ecommint.jpg",
+      "packaging": "la boite de 10 - 1 kg",
+      "price": 11.22,
+      "unitPrice": 11.22,
+      "unit": "kg",
+      "pricePerKg": 11.22,
+      "netWeightG": 1000,
+      "available": true,
+      "nutriScore": "D",
+      "estimate": null,
+      "nutrition": {
+        "energyKcal": 252,
+        "fat": 20,
+        "saturatedFat": 8.7,
+        "carbs": 0.5,
+        "sugars": 0.5,
+        "fiber": 0.5,
+        "protein": 18,
+        "salt": 0.2
+      },
+      "nutritionTable": [
+        {
+          "label": "Energie",
+          "value": "1046.0 kj (252.0 kcal)"
+        },
+        {
+          "label": "Matière Grasse",
+          "value": "20"
+        },
+        {
+          "label": "Dont acide gras saturé",
+          "value": "8,7g"
+        },
+        {
+          "label": "Dont acide gras polyinsaturé",
+          "value": "8.7"
+        },
+        {
+          "label": "Glucides",
+          "value": "0.5"
+        },
+        {
+          "label": "Dont sucre",
+          "value": "0.5"
+        },
+        {
+          "label": "Protéines",
+          "value": "18"
+        },
+        {
+          "label": "Sel",
+          "value": "0.2"
+        },
+        {
+          "label": "Fibres Alimentaires",
+          "value": "0.5"
+        }
+      ],
+      "ingredients": "100% viande bovine. Viande d'origine UE. Pourcentage de matières grasses inférieur à 20%. Rapport collagène sur protéines de viande inférieur à 15%.",
+      "allergens": null,
+      "sections": [
+        {
+          "title": "Caractéristiques",
+          "items": [
+            {
+              "label": "Conservation",
+              "value": "Avant ouverture: **compartiment à glace (-12°c) du réfrigérateur : 3 jours ***congélateur (-18°c°) : jusqu'à la date indiquée sur le côté de l'emballage - après ouverture: **compartiment à glace (-12°c) du réfrigérateur : 3 jours ***congélateur (-18°c°) : jusqu'à la date indiquée sur le côté de l'emballage - spécifique: ne pas recongeler apres decongelation"
+            }
+          ]
+        },
+        {
+          "title": "En savoir plus",
+          "items": [
+            {
+              "label": "Dénomination légale de vente",
+              "value": "Steaks haches pur boeuf - surgeles"
+            },
+            {
+              "label": "Détails du produit",
+              "value": "Provenance des ingrédients : viande d'origine UE"
+            },
+            {
+              "label": "Informations fabricant",
+              "value": "ITM Alimentaire International - 24 rue Auguste Chabrières - Paris - 75015"
+            },
+            {
+              "label": "Renseignements pratiques",
+              "value": "à la poêle : Avec ou sans matière grasse sans décongélation préalable. Préchauffer la poêle ou le grill. Saisir à feu vif les steaks 1 minute sur chaque face. Terminer la cuisson à feu doux 5 à 6 minutes en les retournant de temps en temps jusqu'à la cuisson complète - conseil de sécurité : A CONSOMMER CUIT A COEUR"
+            }
+          ]
+        },
+        {
+          "title": "Autres informations légales",
+          "items": [
+            {
+              "label": "Compléments d'informations",
+              "value": "viande d'origine UE Ne pas recongeler après décongélation."
+            }
+          ]
+        }
+      ],
+      "fetchedAt": "2026-11-03T14:12:38.175Z"
+    },
+    {
+      "id": "jambon-blanc",
+      "category": "Jambon blanc",
+      "source": "intermarche",
+      "url": "https://www.intermarche.com/produit/jambon-de-porc-mon-paris-decouenne-degraisse/3250390190936",
+      "name": "Jambon de porc Mon Paris découenné dégraissé",
+      "brand": "Monique Ranou, une marque Intermarché",
+      "image": "https://assets-big.cdn-mousquetaires.com/medias/domain11815/media134422/10326676-j1pcg5wx81-ecommint.jpg",
+      "packaging": "la barquette de 6 tranches - 270 g",
+      "price": 2.69,
+      "unitPrice": 9.96,
+      "unit": "kg",
+      "pricePerKg": 9.96,
+      "netWeightG": 270,
+      "available": true,
+      "nutriScore": "C",
+      "estimate": null,
+      "nutrition": {
+        "energyKcal": 112,
+        "fat": 2.9,
+        "saturatedFat": 1.1,
+        "carbs": 0.5,
+        "sugars": 0.5,
+        "fiber": 0.5,
+        "protein": 21,
+        "salt": 2
+      },
+      "nutritionTable": [
+        {
+          "label": "Energie",
+          "value": "473.0 kj (112.0 kcal)"
+        },
+        {
+          "label": "Matière Grasse",
+          "value": "2.9"
+        },
+        {
+          "label": "Dont acide gras saturé",
+          "value": "1.1"
+        },
+        {
+          "label": "Dont acide gras polyinsaturé",
+          "value": "1.1"
+        },
+        {
+          "label": "Glucides",
+          "value": "0.5"
+        },
+        {
+          "label": "Dont sucre",
+          "value": "0.5"
+        },
+        {
+          "label": "Protéines",
+          "value": "21"
+        },
+        {
+          "label": "Sel",
+          "value": "2"
+        },
+        {
+          "label": "Fibres Alimentaires",
+          "value": "0.5"
+        }
+      ],
+      "ingredients": "Jambon de porc (origine: France), sel, dextrose, antioxydant : ascorbate de sodium ; conservateur : nitrite de sodium.",
+      "allergens": null,
+      "sections": [
+        {
+          "title": "Caractéristiques",
+          "items": [
+            {
+              "label": "Conservation",
+              "value": "Avant ouverture: à conserver entre 0°C et +4°C - Après ouverture: A consommer dans les 2 jours. A conserver entre 0°C et +4°C"
+            }
+          ]
+        },
+        {
+          "title": "En savoir plus",
+          "items": [
+            {
+              "label": "Dénomination légale de vente",
+              "value": "Jambon cuit de Paris de qualité supérieure"
+            },
+            {
+              "label": "Détails du produit",
+              "value": "Provenance des ingrédients : Jambon de porc (origine : France). # Le Porc français.\nPays de transformation : FRANCE"
+            },
+            {
+              "label": "Informations fabricant",
+              "value": "ITM Alimentaire International - 24 rue Auguste Chabrières - Paris - 75015"
+            },
+            {
+              "label": "Renseignements pratiques",
+              "value": "Prêt à l’emploi"
+            }
+          ]
+        },
+        {
+          "title": "Autres informations légales",
+          "items": [
+            {
+              "label": "Compléments d'informations",
+              "value": "Fabriqué dans notre charcuterie à St-Evarzec (29). Jambon de porc (origine: France). Le Porc français."
+            },
+            {
+              "label": "Mentions obligatoires complémentaires :",
+              "value": "Conditionné sous atmosphère protectrice"
+            }
+          ]
+        }
+      ],
+      "fetchedAt": "2026-11-03T14:12:45.811Z"
+    },
+    {
+      "id": "oeufs",
+      "category": "Œufs",
+      "source": "intermarche",
+      "url": "https://www.intermarche.com/produit/œufs-frais-de-poules-elevees-au-sol/3410280142357",
+      "name": "Œufs frais de poules élevées au sol",
+      "brand": "Top Budget",
+      "image": "https://cdn.intermarche.com/fr/Content/images/pim/03410280142357/72c067661d054d33855a0764a9478b58.jpg",
+      "packaging": "la boîte de 10 œufs",
+      "price": 1.82,
+      "unitPrice": 1.82,
+      "unit": "pi",
+      "pricePerKg": 3.64,
+      "netWeightG": 500,
+      "available": true,
+      "nutriScore": "A",
+      "estimate": "Œufs vendus à la pièce : calibre non précisé, poids estimé à 50 g mangeables par œuf (calibre moyen : 53 à 63 g coquille comprise).",
+      "nutrition": {
+        "energyKcal": 140,
+        "fat": 9.8,
+        "saturatedFat": 2.6,
+        "carbs": 0.5,
+        "sugars": 0.5,
+        "fiber": 0.5,
+        "protein": 13,
+        "salt": 0.31
+      },
+      "nutritionTable": [
+        {
+          "label": "Energie",
+          "value": "584.0 kj (140.0 kcal)"
+        },
+        {
+          "label": "Matière Grasse",
+          "value": "9.8"
+        },
+        {
+          "label": "Dont acide gras saturé",
+          "value": "2,6g"
+        },
+        {
+          "label": "Dont acide gras polyinsaturé",
+          "value": "2.6"
+        },
+        {
+          "label": "Glucides",
+          "value": "0.5"
+        },
+        {
+          "label": "Dont sucre",
+          "value": "0.5"
+        },
+        {
+          "label": "Protéines",
+          "value": "13"
+        },
+        {
+          "label": "Sel",
+          "value": "0.31"
+        },
+        {
+          "label": "Fibres Alimentaires",
+          "value": "0.5"
+        }
+      ],
+      "ingredients": "OEUFS frais",
+      "allergens": "oeufs (Presence)",
+      "sections": [
+        {
+          "title": "Caractéristiques",
+          "items": [
+            {
+              "label": "Conservation",
+              "value": "Avant ouverture: a conserver au réfrigérateur après achat"
+            }
+          ]
+        },
+        {
+          "title": "En savoir plus",
+          "items": [
+            {
+              "label": "Dénomination légale de vente",
+              "value": "10 oeufs de poules élevées au sol"
+            },
+            {
+              "label": "Avantages",
+              "value": "Poules élevées au sol, œufs de France."
+            },
+            {
+              "label": "Détails du produit",
+              "value": "Provenance des ingrédients : Œufs de France"
+            },
+            {
+              "label": "Informations fabricant",
+              "value": "ITM Alimentaire International - 24 rue Auguste Chabrières - Paris - 75015"
+            }
+          ]
+        },
+        {
+          "title": "Autres informations légales",
+          "items": [
+            {
+              "label": "Mentions obligatoires complémentaires :",
+              "value": "A consommer de préférence avant la date de consommation recommandée (dcr) = voir sur le dessus de la boîte. 2 = sol - fr = france, 3 lettres = identification de l'élevage, 2 chiffres = n° du bâtiment. pour accompagner la conversion des élevages, les œufs contenus dans cette boîte peuvent être issus de poules élevées en plein air (code 1 sur l’œuf). imp : itm alimentaire belgium sa-b-1348 louvain-la-neuve"
+            }
+          ]
+        }
+      ],
+      "fetchedAt": "2026-11-03T14:12:53.247Z"
+    },
+    {
+      "id": "thon",
+      "category": "Thon au naturel",
+      "source": "intermarche",
+      "url": "https://www.intermarche.com/produit/morceaux-de-thon-listao-au-naturel/3410280066066",
+      "name": "Morceaux de thon Listao au naturel",
+      "brand": "Top Budget",
+      "image": "https://assets-big.cdn-mousquetaires.com/medias/domain11815/media130550/9165299-ywrxehqu7p-ecommint.jpg",
+      "packaging": "l'unité de 280g net égoutté",
+      "price": 2.09,
+      "unitPrice": 7.46,
+      "unit": "kg",
+      "pricePerKg": 7.46,
+      "netWeightG": 280,
+      "available": true,
+      "nutriScore": "A",
+      "estimate": null,
+      "nutrition": {
+        "energyKcal": 100,
+        "fat": 0.9,
+        "saturatedFat": 0.4,
+        "carbs": 0.5,
+        "sugars": 0.5,
+        "fiber": 0.5,
+        "protein": 23,
+        "salt": 0.84
+      },
+      "nutritionTable": [
+        {
+          "label": "Energie",
+          "value": "424.0 kj (100.0 kcal)"
+        },
+        {
+          "label": "Matière Grasse",
+          "value": "0.9"
+        },
+        {
+          "label": "Dont acide gras saturé",
+          "value": "0.4"
+        },
+        {
+          "label": "Dont acide gras polyinsaturé",
+          "value": "0.4"
+        },
+        {
+          "label": "Glucides",
+          "value": "0.5"
+        },
+        {
+          "label": "Dont sucre",
+          "value": "0.5"
+        },
+        {
+          "label": "Protéines",
+          "value": "23"
+        },
+        {
+          "label": "Sel",
+          "value": "0.84"
+        },
+        {
+          "label": "Fibres Alimentaires",
+          "value": "0.5"
+        }
+      ],
+      "ingredients": "Thon listao* (Katsuwonus pelamis), eau, sel. *POISSONS. Thon pêché à la senne coulissante.",
+      "allergens": "poisson (Presence)",
+      "sections": [
+        {
+          "title": "Caractéristiques",
+          "items": [
+            {
+              "label": "Conservation",
+              "value": "Avant ouverture: à conserver à l'abri de la chaleur et de l'humidité. - après ouverture: à conserver au réfrigérateur dans un récipient hermétique et à consommer sous 48h."
+            }
+          ]
+        },
+        {
+          "title": "En savoir plus",
+          "items": [
+            {
+              "label": "Dénomination légale de vente",
+              "value": "Thon listao au naturel en morceaux"
+            },
+            {
+              "label": "Détails du produit",
+              "value": "Provenance des ingrédients : /"
+            },
+            {
+              "label": "Informations fabricant",
+              "value": "ITM Alimentaire International - 24 rue Auguste Chabrières - Paris - 75015"
+            },
+            {
+              "label": "Renseignements pratiques",
+              "value": "Prêt à l’emploi"
+            }
+          ]
+        },
+        {
+          "title": "Autres informations légales",
+          "items": [
+            {
+              "label": "Compléments d'informations",
+              "value": "Mentions complémentaires obligatoires : Poids net: 400g Poids net égoutté: 280g"
+            },
+            {
+              "label": "Mentions obligatoires complémentaires :",
+              "value": "Mentions complémentaires obligatoires : Poids net: 400g Poids net égoutté: 280g"
+            }
+          ]
+        }
+      ],
+      "fetchedAt": "2026-11-03T14:13:00.272Z"
+    },
+    {
+      "id": "sardines",
+      "category": "Sardines à l'huile",
+      "source": "intermarche",
+      "url": "https://www.intermarche.com/produit/sardines-a-l'huile-vegetale/3250390111078",
+      "name": "Sardines à l'huile vegetale",
+      "brand": "Odyssée, une marque Intermarché",
+      "image": "https://cdn.intermarche.com/fr/Content/images/pim/03250390111078/729b790b16074f0e9f087837c8d64743.png",
+      "packaging": "l'unité de 161g net égoutté",
+      "price": 2.35,
+      "unitPrice": 14.6,
+      "unit": "kg",
+      "pricePerKg": 14.6,
+      "netWeightG": 161,
+      "available": true,
+      "nutriScore": "B",
+      "estimate": null,
+      "nutrition": {
+        "energyKcal": 235,
+        "fat": 15.6,
+        "saturatedFat": 2.6,
+        "carbs": 0.5,
+        "sugars": 0.5,
+        "fiber": 0.5,
+        "protein": 23.2,
+        "salt": 0.61
+      },
+      "nutritionTable": [
+        {
+          "label": "Energie",
+          "value": "981.0 kj (235.0 kcal)"
+        },
+        {
+          "label": "Matière Grasse",
+          "value": "15.6"
+        },
+        {
+          "label": "Dont acide gras saturé",
+          "value": "2.6"
+        },
+        {
+          "label": "Dont acide gras polyinsaturé",
+          "value": "2.6"
+        },
+        {
+          "label": "Glucides",
+          "value": "0.5"
+        },
+        {
+          "label": "Dont sucre",
+          "value": "0.5"
+        },
+        {
+          "label": "Protéines",
+          "value": "23.2"
+        },
+        {
+          "label": "Sel",
+          "value": "0.61"
+        },
+        {
+          "label": "Fibres Alimentaires",
+          "value": "0.5"
+        }
+      ],
+      "ingredients": "Sardines* (Sardina pilchardus), huile de tournesol, sel. *POISSONS",
+      "allergens": "poisson (Presence)",
+      "sections": [
+        {
+          "title": "Caractéristiques",
+          "items": [
+            {
+              "label": "Conservation",
+              "value": "Avant ouverture: Avant ouverture, à conserver dans un endroit sec et tempéré. - Après ouverture: Après ouverture, à conserver au réfrigérateur dans un récipient alimentaire fermé hermétiquement et àconsommer sous 24h."
+            }
+          ]
+        },
+        {
+          "title": "En savoir plus",
+          "items": [
+            {
+              "label": "Dénomination légale de vente",
+              "value": "Sardines à l'huile de tournesol"
+            },
+            {
+              "label": "Détails du produit",
+              "value": "Provenance des ingrédients : /"
+            },
+            {
+              "label": "Informations fabricant",
+              "value": "ITM Alimentaire International - 24 rue Auguste Chabrières - Paris - 75015"
+            },
+            {
+              "label": "Renseignements pratiques",
+              "value": "Prêt à l’emploi"
+            }
+          ]
+        }
+      ],
+      "fetchedAt": "2026-11-03T14:13:07.278Z"
+    },
+    {
+      "id": "skyr",
+      "category": "Skyr",
+      "source": "intermarche",
+      "url": "https://www.intermarche.com/produit/fromage-frais-skyr-nature/3250393447358",
+      "name": "Fromage frais Skyr nature",
+      "brand": "Pâturages, une marque Intermarché",
+      "image": "https://assets-big.cdn-mousquetaires.com/medias/domain11815/media145754/13726338-v3disxoncj-ecommint.jpg",
+      "packaging": "le pot de 850g",
+      "price": 2.75,
+      "unitPrice": 3.24,
+      "unit": "kg",
+      "pricePerKg": 3.24,
+      "netWeightG": 850,
+      "available": true,
+      "nutriScore": "A",
+      "estimate": null,
+      "nutrition": {
+        "energyKcal": 57,
+        "fat": 0.5,
+        "saturatedFat": 0.1,
+        "carbs": 4.3,
+        "sugars": 3.6,
+        "fiber": 0.5,
+        "protein": 8.5,
+        "salt": 0.08
+      },
+      "nutritionTable": [
+        {
+          "label": "Energie",
+          "value": "240.0 kj (57.0 kcal)"
+        },
+        {
+          "label": "Matière Grasse",
+          "value": "0.5"
+        },
+        {
+          "label": "Dont acide gras saturé",
+          "value": "<0,1g"
+        },
+        {
+          "label": "Dont acide gras polyinsaturé",
+          "value": "0.1"
+        },
+        {
+          "label": "Glucides",
+          "value": "4.3"
+        },
+        {
+          "label": "Dont sucre",
+          "value": "3.6"
+        },
+        {
+          "label": "Protéines",
+          "value": "8.5"
+        },
+        {
+          "label": "Sel",
+          "value": "0.08"
+        },
+        {
+          "label": "Fibres Alimentaires",
+          "value": "0.5"
+        }
+      ],
+      "ingredients": "LAIT écrémé pasteurisé (Origine : France), ferments lactiques (dont LAIT). Contient plus de 85% d'humidité.",
+      "allergens": "lait (Presence)",
+      "sections": [
+        {
+          "title": "Caractéristiques",
+          "items": [
+            {
+              "label": "Conservation",
+              "value": "Avant ouverture: a conserver entre 0°c et +6°c. - après ouverture: a consommer dans les 3 jours après ouverture."
+            }
+          ]
+        },
+        {
+          "title": "En savoir plus",
+          "items": [
+            {
+              "label": "Dénomination légale de vente",
+              "value": "Fromage frais à 0% de matières grasses dans le produit fini"
+            },
+            {
+              "label": "Avantages",
+              "value": "Lait français.\nRiche en protéines et sans matières grasses, il sera le partenaire idéal d'une alimentation équilibrée.\nFerme et consistant à la fois il se démarque par son goût unique.\nUn produit idéal dans de nombreuses applications : petit-déjeuner, dessert, en-cas et même en cuisine."
+            },
+            {
+              "label": "Détails du produit",
+              "value": "Provenance des ingrédients : # Lait écrémé pasteurisé (Origine : France). # Lait français"
+            },
+            {
+              "label": "Informations fabricant",
+              "value": "ITM Alimentaire International - 24 rue Auguste Chabrières - Paris - 75015"
+            },
+            {
+              "label": "Renseignements pratiques",
+              "value": "La présence éventuelle de petit lait dans le pot est naturelle. Mélanger avant de servir"
+            }
+          ]
+        },
+        {
+          "title": "Autres informations légales",
+          "items": [
+            {
+              "label": "Compléments d'informations",
+              "value": "Fabriqué à Ploudaniel (29) Lait écrémé Français Lait français"
+            },
+            {
+              "label": "Mentions obligatoires complémentaires :",
+              "value": "Imp : itm alimentaire belgium sa-b- 1348 louvain- la- neuve."
+            }
+          ]
+        }
+      ],
+      "fetchedAt": "2026-11-03T14:13:14.238Z"
+    },
+    {
+      "id": "fromage-blanc",
+      "category": "Fromage blanc",
+      "source": "intermarche",
+      "url": "https://www.intermarche.com/produit/fromage-blanc-32%25mg/3250393100123",
+      "name": "Fromage blanc 3,2%MG",
+      "brand": "Les Éleveurs vous disent Merci, une marque Intermarché",
+      "image": "https://assets-big.cdn-mousquetaires.com/medias/domain11815/media144100/13230039-msxx8qpccg-ecommint.jpg",
+      "packaging": "le pot de 1 kg",
+      "price": 2.09,
+      "unitPrice": 2.11,
+      "unit": "kg",
+      "pricePerKg": 2.11,
+      "netWeightG": 1000,
+      "available": true,
+      "nutriScore": "A",
+      "estimate": null,
+      "nutrition": {
+        "energyKcal": 73,
+        "fat": 3.2,
+        "saturatedFat": 2.3,
+        "carbs": 3.9,
+        "sugars": 3.3,
+        "fiber": 0.5,
+        "protein": 7.2,
+        "salt": 0.09
+      },
+      "nutritionTable": [
+        {
+          "label": "Energie",
+          "value": "307.0 kj (73.0 kcal)"
+        },
+        {
+          "label": "Matière Grasse",
+          "value": "3.2"
+        },
+        {
+          "label": "Dont acide gras saturé",
+          "value": "2,3g"
+        },
+        {
+          "label": "Dont acide gras polyinsaturé",
+          "value": "2.3"
+        },
+        {
+          "label": "Glucides",
+          "value": "3.9"
+        },
+        {
+          "label": "Dont sucre",
+          "value": "3.3"
+        },
+        {
+          "label": "Protéines",
+          "value": "7.2"
+        },
+        {
+          "label": "Sel",
+          "value": "0.09"
+        },
+        {
+          "label": "Fibres Alimentaires",
+          "value": "0.5"
+        }
+      ],
+      "ingredients": "LAIT écrémé pasteurisé (origine : France), crème** pasteurisée (origine : France), ferments lactiques**.**dont LAIT.",
+      "allergens": "lait (Presence)",
+      "sections": [
+        {
+          "title": "Caractéristiques",
+          "items": [
+            {
+              "label": "Conservation",
+              "value": "Avant ouverture: a conserver entre +2°c et +6°c - après ouverture: a conserver entre +2°c et +6°c. a consommer rapidement après ouverture."
+            }
+          ]
+        },
+        {
+          "title": "En savoir plus",
+          "items": [
+            {
+              "label": "Dénomination légale de vente",
+              "value": "Fromage frais nature à 3,2% de matière grasse. contient plus de 82% d'humidité."
+            },
+            {
+              "label": "Avantages",
+              "value": "Plus de 40 % reversés aux éleveurs, pour une meilleure rémunération des agriculteurs. Lait français."
+            },
+            {
+              "label": "Détails du produit",
+              "value": "Provenance des ingrédients : Lait écrémé pasteurisé origine France # crème pasteurisée origine France # Lait français."
+            },
+            {
+              "label": "Informations fabricant",
+              "value": "ITM Alimentaire International - 24 rue Auguste Chabrières - Paris - 75015"
+            },
+            {
+              "label": "Renseignements pratiques",
+              "value": "Prêt à l’emploi"
+            }
+          ]
+        },
+        {
+          "title": "Autres informations légales",
+          "items": [
+            {
+              "label": "Mentions obligatoires complémentaires :",
+              "value": "Contient plus de 82% d'humidité."
+            }
+          ]
+        }
+      ],
+      "fetchedAt": "2026-11-03T14:13:21.246Z"
+    },
+    {
+      "id": "petits-suisses",
+      "category": "Petits suisses",
+      "source": "intermarche",
+      "url": "https://www.intermarche.com/produit/fromage-blanc-petit-suisse-nature-38%25mg/3329770051096",
+      "name": "Fromage blanc petit suisse nature 3,8%mg",
+      "brand": "Yoplait",
+      "image": "https://assets-big.cdn-mousquetaires.com/medias/domain11815/media133865/10159654-xcexk6qion-ecommint.jpg",
+      "packaging": "les 12 pots de 60g - 720g",
+      "price": 1.89,
+      "unitPrice": 2.63,
+      "unit": "kg",
+      "pricePerKg": 2.63,
+      "netWeightG": 720,
+      "available": true,
+      "nutriScore": "A",
+      "estimate": null,
+      "nutrition": {
+        "energyKcal": 87,
+        "fat": 3.8,
+        "saturatedFat": 2.5,
+        "carbs": 4,
+        "sugars": 4,
+        "fiber": null,
+        "protein": 9,
+        "salt": 0.13
+      },
+      "nutritionTable": [
+        {
+          "label": "Energie",
+          "value": "364.0 kj (87.0 kcal)"
+        },
+        {
+          "label": "Matière Grasse",
+          "value": "3.8"
+        },
+        {
+          "label": "Dont acide gras saturé",
+          "value": "2.5"
+        },
+        {
+          "label": "Dont acide gras polyinsaturé",
+          "value": "2.5"
+        },
+        {
+          "label": "Glucides",
+          "value": "4"
+        },
+        {
+          "label": "Dont sucre",
+          "value": "4"
+        },
+        {
+          "label": "Protéines",
+          "value": "9"
+        },
+        {
+          "label": "Sel",
+          "value": "0.13"
+        }
+      ],
+      "ingredients": "Fromage frais au LAIT demi-écrémé pasteurisé - Conservateur : Sorbate de potassium (papier traité). LAIT D’ORIGINE France",
+      "allergens": "lait (Presence)",
+      "sections": [
+        {
+          "title": "Caractéristiques",
+          "items": [
+            {
+              "label": "Conservation",
+              "value": "Conservation entre 0°c et +6°c max"
+            }
+          ]
+        },
+        {
+          "title": "En savoir plus",
+          "items": [
+            {
+              "label": "Dénomination légale de vente",
+              "value": "Fromage frais nature au lait demi-écrémé."
+            },
+            {
+              "label": "Avantages",
+              "value": "Goût frais et onctueux.\nRiches en protéines.\nAu lait demi-écrémé."
+            },
+            {
+              "label": "Détails du produit",
+              "value": "Provenance des ingrédients : France"
+            },
+            {
+              "label": "Informations fabricant",
+              "value": "Yoplait France - TSA 40100 92649 Boulogne Billancourt Cedex"
+            },
+            {
+              "label": "Renseignements pratiques",
+              "value": "On peut le déguster ou le cuisiner de multiples façons."
+            }
+          ]
+        },
+        {
+          "title": "Autres informations légales",
+          "items": [
+            {
+              "label": "Compléments d'informations",
+              "value": "Mentions complémentaires obligatoires : Source phenylanaline (édulcorant)"
+            },
+            {
+              "label": "Mentions obligatoires complémentaires :",
+              "value": "Source phenylanaline (édulcorant)"
+            }
+          ]
+        }
+      ],
+      "fetchedAt": "2026-11-03T14:13:28.282Z"
+    },
+    {
+      "id": "lait",
+      "category": "Lait demi-écrémé",
+      "source": "intermarche",
+      "url": "https://www.intermarche.com/produit/lait-demi-ecreme/3250390059011",
+      "name": "Lait demi-écrémé",
+      "brand": "Pâturages, une marque Intermarché",
+      "image": "https://assets-big.cdn-mousquetaires.com/medias/domain11815/media140425/12127572-eihi4cmu8u-ecommint.jpg",
+      "packaging": "les 6 bouteilles de 50 cl",
+      "price": 4.74,
+      "unitPrice": 0.79,
+      "unit": "l",
+      "pricePerKg": 1.58,
+      "netWeightG": 3000,
+      "available": true,
+      "nutriScore": "B",
+      "estimate": null,
+      "nutrition": {
+        "energyKcal": 47,
+        "fat": 1.6,
+        "saturatedFat": 1,
+        "carbs": 4.8,
+        "sugars": 4.8,
+        "fiber": 0.5,
+        "protein": 3.3,
+        "salt": 0.09
+      },
+      "nutritionTable": [
+        {
+          "label": "Energie",
+          "value": "197.0 kj (47.0 kcal)"
+        },
+        {
+          "label": "Matière Grasse",
+          "value": "1.6"
+        },
+        {
+          "label": "Dont acide gras polyinsaturé",
+          "value": "1"
+        },
+        {
+          "label": "Glucides",
+          "value": "4.8"
+        },
+        {
+          "label": "Dont sucre",
+          "value": "4.8"
+        },
+        {
+          "label": "Protéines",
+          "value": "3.3"
+        },
+        {
+          "label": "Sel",
+          "value": "0.09"
+        },
+        {
+          "label": "Fibres Alimentaires",
+          "value": "0.5"
+        }
+      ],
+      "ingredients": "LAIT (Origine: France)",
+      "allergens": "lait (Presence)",
+      "sections": [
+        {
+          "title": "Caractéristiques",
+          "items": [
+            {
+              "label": "Conservation",
+              "value": "Avant ouverture: à conserver à température ambiante. - après ouverture: à conserver entre 0°c et +6°c et à consommer dans les 5 jours."
+            }
+          ]
+        },
+        {
+          "title": "En savoir plus",
+          "items": [
+            {
+              "label": "Dénomination légale de vente",
+              "value": "Lait demi-écrémé stérilisé uht origine france"
+            },
+            {
+              "label": "Détails du produit",
+              "value": "Provenance des ingrédients : Lait collecté et conditionné en France. # Lait (origine : France). # Lait français."
+            },
+            {
+              "label": "Informations fabricant",
+              "value": "ITM Alimentaire International - 24 rue Auguste Chabrières - Paris - 75015"
+            },
+            {
+              "label": "Renseignements pratiques",
+              "value": "Prêt à l’emploi"
+            }
+          ]
+        }
+      ],
+      "fetchedAt": "2026-11-03T14:13:35.245Z"
+    },
+    {
+      "id": "emmental",
+      "category": "Emmental",
+      "source": "intermarche",
+      "url": "https://www.intermarche.com/produit/emmental/3410280140643",
+      "name": "Emmental",
+      "brand": "Top Budget",
+      "image": "https://assets-big.cdn-mousquetaires.com/medias/domain11815/media133541/10062421-2dspaum30d-ecommint.jpg",
+      "packaging": "le sachet de 500 g",
+      "price": 3.66,
+      "unitPrice": 7.32,
+      "unit": "kg",
+      "pricePerKg": 7.32,
+      "netWeightG": 500,
+      "available": true,
+      "nutriScore": "D",
+      "estimate": null,
+      "nutrition": {
+        "energyKcal": 372,
+        "fat": 29,
+        "saturatedFat": 20,
+        "carbs": 0.7,
+        "sugars": 0.5,
+        "fiber": 0.5,
+        "protein": 27,
+        "salt": 0.6
+      },
+      "nutritionTable": [
+        {
+          "label": "Energie",
+          "value": "1544.0 kj (372.0 kcal)"
+        },
+        {
+          "label": "Matière Grasse",
+          "value": "29"
+        },
+        {
+          "label": "Dont acide gras saturé",
+          "value": "20"
+        },
+        {
+          "label": "Dont acide gras polyinsaturé",
+          "value": "20"
+        },
+        {
+          "label": "Glucides",
+          "value": "0.7"
+        },
+        {
+          "label": "Dont sucre",
+          "value": "0.5"
+        },
+        {
+          "label": "Protéines",
+          "value": "27"
+        },
+        {
+          "label": "Sel",
+          "value": "0.6"
+        },
+        {
+          "label": "Fibres Alimentaires",
+          "value": "0.5"
+        }
+      ],
+      "ingredients": "LAIT de vache pasteurisé (origine : UE), sel, ferments lactiques (dont LAIT), enzyme coagulante",
+      "allergens": "lait (Presence)",
+      "sections": [
+        {
+          "title": "Caractéristiques",
+          "items": [
+            {
+              "label": "Conservation",
+              "value": "Avant ouverture: a conserver entre +2°c et +8°c - après ouverture: a conserver entre +2°c et +8°c. a consommer dans les 3 jours après ouverture"
+            }
+          ]
+        },
+        {
+          "title": "En savoir plus",
+          "items": [
+            {
+              "label": "Dénomination légale de vente",
+              "value": "Emmental, fromage à pâte pressée cuite"
+            },
+            {
+              "label": "Détails du produit",
+              "value": "Provenance des ingrédients : lait de vache pasteurisé (origine : UE)\nPays de transformation : FRANCE"
+            },
+            {
+              "label": "Informations fabricant",
+              "value": "ITM Alimentaire International - 24 rue Auguste Chabrières - Paris - 75015"
+            },
+            {
+              "label": "Renseignements pratiques",
+              "value": "Prêt à l’emploi"
+            }
+          ]
+        },
+        {
+          "title": "Autres informations légales",
+          "items": [
+            {
+              "label": "Compléments d'informations",
+              "value": "Mentions complémentaires obligatoires : Conditionné sous atmosphère protectrice; Conditionné sous atmosphère protectrice"
+            },
+            {
+              "label": "Mentions obligatoires complémentaires :",
+              "value": "conditionné sous atmosphère protectrice"
+            }
+          ]
+        }
+      ],
+      "fetchedAt": "2026-11-03T14:13:42.269Z"
+    },
+    {
+      "id": "cacahuetes",
+      "category": "Cacahuètes",
+      "source": "intermarche",
+      "url": "https://www.intermarche.com/produit/cacahuetes-grillees-et-salees/3410280020150",
+      "name": "Cacahuètes grillées et salées",
+      "brand": "Top Budget",
+      "image": "https://assets-big.cdn-mousquetaires.com/medias/domain11815/media127820/8346155-81kk9m5cd4-ecommint.jpg",
+      "packaging": "le sachet de 250g",
+      "price": 0.69,
+      "unitPrice": 2.76,
+      "unit": "kg",
+      "pricePerKg": 2.76,
+      "netWeightG": 250,
+      "available": true,
+      "nutriScore": "B",
+      "estimate": null,
+      "nutrition": {
+        "energyKcal": 626,
+        "fat": 51,
+        "saturatedFat": 5.5,
+        "carbs": 12.4,
+        "sugars": 5.4,
+        "fiber": 7.1,
+        "protein": 26,
+        "salt": 0.87
+      },
+      "nutritionTable": [
+        {
+          "label": "Energie",
+          "value": "2592.0 kj (626.0 kcal)"
+        },
+        {
+          "label": "Matière Grasse",
+          "value": "51"
+        },
+        {
+          "label": "Dont acide gras saturé",
+          "value": "5,5g"
+        },
+        {
+          "label": "Dont acide gras polyinsaturé",
+          "value": "6.7"
+        },
+        {
+          "label": "Glucides",
+          "value": "12.4"
+        },
+        {
+          "label": "Dont sucre",
+          "value": "5.4"
+        },
+        {
+          "label": "Protéines",
+          "value": "26"
+        },
+        {
+          "label": "Sel",
+          "value": "0.87"
+        },
+        {
+          "label": "Fibres Alimentaires",
+          "value": "7.1"
+        }
+      ],
+      "ingredients": "CACAHUÈTES, huile de tournesol, sel. Traces éventuelles de : fruits à coque.",
+      "allergens": "amande et produits à base d'amande (Trace), cacahuètes / arachides (Presence), fruit à coque (Trace), noisette et produits à base de noisette (Trace), noix de cajou et produits à base de noix de cajou (Trace), noix de macadamia et produits à base de noix de macadamia (Trace), noix de pécan et produits à base de noix de pécan (Trace), noix du Brésil (Trace), noix et produits à base de noix (Trace), pistache (Trace)",
+      "sections": [
+        {
+          "title": "Caractéristiques",
+          "items": [
+            {
+              "label": "Conservation",
+              "value": "Avant ouverture: a conserver à l'abri de la chaleur et de l'humidité. - après ouverture: a conserver à l'abri de la chaleur et de l'humidité. - spécifique: conditionné sous atmosphère protectrice."
+            }
+          ]
+        },
+        {
+          "title": "En savoir plus",
+          "items": [
+            {
+              "label": "Dénomination légale de vente",
+              "value": "Cacahuètes grillées et salées"
+            },
+            {
+              "label": "Détails du produit",
+              "value": "Provenance des ingrédients : /"
+            },
+            {
+              "label": "Informations fabricant",
+              "value": "ITM Alimentaire International - 24 rue Auguste Chabrières - Paris - 75015"
+            },
+            {
+              "label": "Renseignements pratiques",
+              "value": "Consigne de sécurité top budget vous recommande de ne pas donner ni laisser de graines à la portée des jeunes enfants ; ils risqueraient de les avaler sans les croquer."
+            }
+          ]
+        },
+        {
+          "title": "Autres informations légales",
+          "items": [
+            {
+              "label": "Mentions obligatoires complémentaires :",
+              "value": "Imp : itm alimentaire belgium sa-b-1348 louvain-la-neuve conditionné sous atmosphère protectrice"
+            }
+          ]
+        }
+      ],
+      "fetchedAt": "2026-11-03T14:13:49.251Z"
+    },
+    {
+      "id": "lentilles",
+      "category": "Lentilles vertes (sèches)",
+      "source": "intermarche",
+      "url": "https://www.intermarche.com/produit/lentilles-vertes-bio/3250391781539",
+      "name": "lentilles vertes BIO",
+      "brand": "Saint Eloi, une marque Intermarché",
+      "image": "https://assets-big.cdn-mousquetaires.com/medias/domain11815/media139468/11840541-46k901yerc-ecommint.jpg",
+      "packaging": "le paquet de 500 g",
+      "price": 2.27,
+      "unitPrice": 4.54,
+      "unit": "kg",
+      "pricePerKg": 4.54,
+      "netWeightG": 500,
+      "available": true,
+      "nutriScore": "A",
+      "estimate": null,
+      "nutrition": {
+        "energyKcal": 332,
+        "fat": 1.4,
+        "saturatedFat": 0.2,
+        "carbs": 48.6,
+        "sugars": 0.9,
+        "fiber": 12.4,
+        "protein": 25.1,
+        "salt": 0.01
+      },
+      "nutritionTable": [
+        {
+          "label": "Energie",
+          "value": "1404.0 kj (332.0 kcal)"
+        },
+        {
+          "label": "Matière Grasse",
+          "value": "1.4"
+        },
+        {
+          "label": "Dont acide gras saturé",
+          "value": "0.2"
+        },
+        {
+          "label": "Dont acide gras polyinsaturé",
+          "value": "0.2"
+        },
+        {
+          "label": "Glucides",
+          "value": "48.6"
+        },
+        {
+          "label": "Dont sucre",
+          "value": "0.9"
+        },
+        {
+          "label": "Protéines",
+          "value": "25.1"
+        },
+        {
+          "label": "Sel",
+          "value": "0.01"
+        },
+        {
+          "label": "Fibres Alimentaires",
+          "value": "12.4"
+        }
+      ],
+      "ingredients": "Peut contenir : céréales contenant du gluten et sulfites.",
+      "allergens": "avoine et produits à base d'avoine (contenant du gluten) (Trace), blé (Trace), blé de Khorasan (Trace), céréales contenant du gluten (Trace), épeautre et produits à base d'épeautre (contenant du gluten) (Trace), orge et produits à base d'orge (contenant du gluten) (Trace), seigle (Trace)",
+      "sections": [
+        {
+          "title": "Caractéristiques",
+          "items": [
+            {
+              "label": "Conservation",
+              "value": "Avant ouverture: à conserver dans un endroit frais et sec. - après ouverture: à conserver dans un endroit frais et sec."
+            }
+          ]
+        },
+        {
+          "title": "En savoir plus",
+          "items": [
+            {
+              "label": "Dénomination légale de vente",
+              "value": "Lentilles vertes issues de l'agriculture biologique"
+            },
+            {
+              "label": "Avantages",
+              "value": "Lentilles vertes issues de l'agriculture biologique, la certification de tous nos produits bio selon la réglementation en vigueur, la qualité de nos produits bio, la transparence sur la fabrication de nos produits bio, le soutien aux producteurs et aux industriels français, mieux produire pour permettre à tous de mieux manger."
+            },
+            {
+              "label": "Détails du produit",
+              "value": "Provenance des ingrédients : # Agriculture France.\nPays de transformation : FRANCE"
+            },
+            {
+              "label": "Informations fabricant",
+              "value": "ITM Alimentaire International - 24 rue Auguste Chabrières - Paris - 75015"
+            },
+            {
+              "label": "Renseignements pratiques",
+              "value": "À la casserole : • cuisson classique : cuire 25 à 30 min dans 5 fois leur volume d’eau. - • cuisson autocuiseur : cuire 10 à 15 min dans 3 fois leur volume d’eau - ce produit doit être cuit avant consommation. quantité conseillée : 75g par personne. trempage inutile."
+            }
+          ]
+        },
+        {
+          "title": "Autres informations légales",
+          "items": [
+            {
+              "label": "Compléments d'informations",
+              "value": "LENTILLES VERTES ISSUES DE L'AGRICULTURE BIOLOGIQUE"
+            }
+          ]
+        }
+      ],
+      "fetchedAt": "2026-11-03T14:13:57.222Z"
+    },
+    {
+      "id": "pois-chiches",
+      "category": "Pois chiches (secs)",
+      "source": "intermarche",
+      "url": "https://www.intermarche.com/produit/pois-chiches/3250390004592",
+      "name": "Pois chiches",
+      "brand": "Saint Eloi, une marque Intermarché",
+      "image": "https://assets-big.cdn-mousquetaires.com/medias/domain11815/media139830/11949030-2mwd3mpctm-ecommint.jpg",
+      "packaging": "la boîte de 500 g",
+      "price": 1.5,
+      "unitPrice": 3,
+      "unit": "kg",
+      "pricePerKg": 3,
+      "netWeightG": 500,
+      "available": true,
+      "nutriScore": "A",
+      "estimate": null,
+      "nutrition": {
+        "energyKcal": 341,
+        "fat": 4.8,
+        "saturatedFat": 0.7,
+        "carbs": 45.9,
+        "sugars": 2.3,
+        "fiber": 15.9,
+        "protein": 20.6,
+        "salt": 0.02
+      },
+      "nutritionTable": [
+        {
+          "label": "Energie",
+          "value": "1436.0 kj (341.0 kcal)"
+        },
+        {
+          "label": "Matière Grasse",
+          "value": "4.8"
+        },
+        {
+          "label": "Dont acide gras saturé",
+          "value": "0,7g"
+        },
+        {
+          "label": "Dont acide gras polyinsaturé",
+          "value": "0.6"
+        },
+        {
+          "label": "Glucides",
+          "value": "45.9"
+        },
+        {
+          "label": "Dont sucre",
+          "value": "2.3"
+        },
+        {
+          "label": "Protéines",
+          "value": "20.6"
+        },
+        {
+          "label": "Sel",
+          "value": "0.02"
+        },
+        {
+          "label": "Fibres Alimentaires",
+          "value": "15.9"
+        }
+      ],
+      "ingredients": "Pois chiches Peut contenir : céréales contenant du gluten, soja et sulfites.",
+      "allergens": "avoine et produits à base d'avoine (contenant du gluten) (Trace), blé (Trace), blé de Khorasan (Trace), céréales contenant du gluten (Trace), dioxyde de soufre et sulfites (Trace), épeautre et produits à base d'épeautre (contenant du gluten) (Trace), orge et produits à base d'orge (contenant du gluten) (Trace), seigle (Trace)",
+      "sections": [
+        {
+          "title": "Caractéristiques",
+          "items": [
+            {
+              "label": "Conservation",
+              "value": "Avant ouverture: À conserver dans un endroit sec et à l'abri de la lumière. - Après ouverture: À conserver dans un endroit sec et à l'abri de la lumière."
+            }
+          ]
+        },
+        {
+          "title": "En savoir plus",
+          "items": [
+            {
+              "label": "Dénomination légale de vente",
+              "value": "Pois chiches"
+            },
+            {
+              "label": "Avantages",
+              "value": "Source de protéines, riche en fibres."
+            },
+            {
+              "label": "Détails du produit",
+              "value": "Provenance des ingrédients : /"
+            },
+            {
+              "label": "Informations fabricant",
+              "value": "ITM Alimentaire International - 24 rue Auguste Chabrières - Paris - 75015"
+            },
+            {
+              "label": "Renseignements pratiques",
+              "value": "à la casserole : Trempage dans l’eau froide environ 12 heures puis jeter l’eau. QUANTITE CONSEILLEE : 50g par personne. CUISSON CLASSIQUE : Cuire 1h15 à 1h30 dans 5 fois leur volume d’eau. CUISSON AUTOCUISEUR : Cuire 45 min à 1h min dans 3 fois leur volume d’eau."
+            }
+          ]
+        }
+      ],
+      "fetchedAt": "2026-11-03T14:14:04.257Z"
+    },
+    {
+      "id": "pois-casses",
+      "category": "Pois cassés (secs)",
+      "source": "intermarche",
+      "url": "https://www.intermarche.com/produit/pois-casses/3250390004608",
+      "name": "Pois cassés",
+      "brand": "Saint Eloi, une marque Intermarché",
+      "image": "https://assets-big.cdn-mousquetaires.com/medias/domain11815/media115315/4594738-hfnuesg8o4-ecommint.jpg",
+      "packaging": "le paquet de 500 g",
+      "price": 1.08,
+      "unitPrice": 2.16,
+      "unit": "kg",
+      "pricePerKg": 2.16,
+      "netWeightG": 500,
+      "available": true,
+      "nutriScore": "A",
+      "estimate": null,
+      "nutrition": {
+        "energyKcal": 335,
+        "fat": 2.2,
+        "saturatedFat": 0.3,
+        "carbs": 52.1,
+        "sugars": 2.8,
+        "fiber": 9.1,
+        "protein": 22.1,
+        "salt": 0.01
+      },
+      "nutritionTable": [
+        {
+          "label": "Energie",
+          "value": "1416.0 kj (335.0 kcal)"
+        },
+        {
+          "label": "Matière Grasse",
+          "value": "2.2"
+        },
+        {
+          "label": "Dont acide gras saturé",
+          "value": "0,3g"
+        },
+        {
+          "label": "Dont acide gras polyinsaturé",
+          "value": "0.3"
+        },
+        {
+          "label": "Glucides",
+          "value": "52.1"
+        },
+        {
+          "label": "Dont sucre",
+          "value": "2.8"
+        },
+        {
+          "label": "Protéines",
+          "value": "22.1"
+        },
+        {
+          "label": "Sel",
+          "value": "0.01"
+        },
+        {
+          "label": "Fibres Alimentaires",
+          "value": "9.1"
+        }
+      ],
+      "ingredients": "Pois cassés. Peut contenir : céréales contenant du gluten et sulfites.",
+      "allergens": "avoine et produits à base d'avoine (contenant du gluten) (Trace), blé (Trace), blé de Khorasan (Trace), céréales contenant du gluten (Trace), dioxyde de soufre et sulfites (Trace), épeautre et produits à base d'épeautre (contenant du gluten) (Trace), orge et produits à base d'orge (contenant du gluten) (Trace), seigle (Trace)",
+      "sections": [
+        {
+          "title": "Caractéristiques",
+          "items": [
+            {
+              "label": "Conservation",
+              "value": "Avant ouverture: À conserver dans un endroit sec et à l'abri de la lumière. - Après ouverture: À conserver dans un endroit sec et à l'abri de la lumière."
+            }
+          ]
+        },
+        {
+          "title": "En savoir plus",
+          "items": [
+            {
+              "label": "Dénomination légale de vente",
+              "value": "Pois cassés"
+            },
+            {
+              "label": "Avantages",
+              "value": "Source de fibres."
+            },
+            {
+              "label": "Détails du produit",
+              "value": "Provenance des ingrédients : /"
+            },
+            {
+              "label": "Informations fabricant",
+              "value": "ITM Alimentaire International - 24 rue Auguste Chabrières - Paris - 75015"
+            },
+            {
+              "label": "Renseignements pratiques",
+              "value": "à la casserole : Trempage inutile QUANTITÉ CONSEILLÉE : 50g par personne. CUISSON CLASSIQUE : Cuire 45 min à 1h dans 5 fois leur volume d’eau. CUISSON AUTOCUISEUR : Déconseillée."
+            }
+          ]
+        }
+      ],
+      "fetchedAt": "2026-11-03T14:14:11.232Z"
+    },
+    {
+      "id": "whey",
+      "category": "Whey (protéine en poudre)",
+      "source": "intermarche",
+      "url": "https://www.intermarche.com/produit/preparation-en-poudre-pour-boisson-riche-en-proteines-whey-vanille/3662072156343",
+      "name": "Préparation en poudre pour boisson riche en protéines Whey vanille",
+      "brand": "Inshape Nutrition",
+      "image": "https://cdn.intermarche.com/fr/Content/images/pim/03662072156343/0727ebd8d5a34f5b80abe9ec73697ed9.jpg",
+      "packaging": "le sachet de 420g",
+      "price": 20.53,
+      "unitPrice": 48.88,
+      "unit": "kg",
+      "pricePerKg": 48.88,
+      "netWeightG": 420,
+      "available": true,
+      "nutriScore": null,
+      "estimate": null,
+      "nutrition": {
+        "energyKcal": 399,
+        "fat": 4.3,
+        "saturatedFat": 3,
+        "carbs": 11,
+        "sugars": 8.6,
+        "fiber": null,
+        "protein": 77,
+        "salt": 1.6
+      },
+      "nutritionTable": [
+        {
+          "label": "Energie",
+          "value": "1663.0 kj (399.0 kcal)"
+        },
+        {
+          "label": "Matière Grasse",
+          "value": "4.3"
+        },
+        {
+          "label": "Dont acide gras polyinsaturé",
+          "value": "3"
+        },
+        {
+          "label": "Glucides",
+          "value": "11"
+        },
+        {
+          "label": "Dont sucre",
+          "value": "8.6"
+        },
+        {
+          "label": "Protéines",
+          "value": "77"
+        },
+        {
+          "label": "Sel",
+          "value": "1.6"
+        }
+      ],
+      "ingredients": "Protéines de LAIT 94,6 %, calcium issu du LAIT 1 %, arômes, épaississants : gomme guar et gomme xanthane, sel, édulcorant : sucralose. Peut contenir des traces de poisson, soja et gluten.",
+      "allergens": "lait (Presence)",
+      "sections": [
+        {
+          "title": "Caractéristiques",
+          "items": [
+            {
+              "label": "Conservation",
+              "value": "Conserver au frais, au sec et à l'abri de la lumière."
+            }
+          ]
+        },
+        {
+          "title": "En savoir plus",
+          "items": [
+            {
+              "label": "Dénomination légale de vente",
+              "value": "Préparation en poudre pour boisson, naturellement riche en protéines et légèrement sucrée avec édulcorant, aromatisée à la vanille."
+            },
+            {
+              "label": "Avantages",
+              "value": "contribue à l’augmentation et au maintien de la masse musculaire et optimise la récupération après l’entrainement."
+            },
+            {
+              "label": "Détails du produit",
+              "value": "Provenance des ingrédients : France"
+            },
+            {
+              "label": "Informations fabricant",
+              "value": "N4BRANDS - 420 route de charavines - voiron - 38500"
+            },
+            {
+              "label": "Renseignements pratiques",
+              "value": "Mélanger une dosette (environ 30 g de poudre) dans 200 ml d’eau ou de lait et bien \" shaker \". A consommer dans le cadre d'une alimentation variée\net équilibrée et d'un mode de vie sain. Déconseillé aux femmes enceintes ou allaitantes. Pour les adolescents et les enfants, il est conseillé de demander l'avis des parents. Tenir hors de la portée des enfants."
+            }
+          ]
+        }
+      ],
+      "fetchedAt": "2026-11-03T14:14:18.214Z"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "stores": {
+    "intermarche": { "ref": "06900", "name": "Super Begard", "city": "Begard", "postalCode": "22140" }
+  },
+  "products": [
+    { "id": "filet-de-poulet", "category": "Filet de poulet", "source": "intermarche", "url": "https://www.intermarche.com/produit/filet-de-poulet/5413458060185" },
+    { "id": "blanc-de-dinde", "category": "Blanc de dinde (tranches)", "source": "intermarche", "url": "https://www.intermarche.com/produit/blanc-de-dinde-dore-au-four/3250393483349" },
+    { "id": "steak-hache", "category": "Steak haché", "source": "intermarche", "url": "https://www.intermarche.com/produit/steaks-haches-20%25-mg/3410280022871" },
+    { "id": "jambon-blanc", "category": "Jambon blanc", "source": "intermarche", "url": "https://www.intermarche.com/produit/jambon-de-porc-mon-paris-decouenne-degraisse/3250390190936" },
+    { "id": "oeufs", "category": "Œufs", "source": "intermarche", "url": "https://www.intermarche.com/produit/œufs-frais-de-poules-elevees-au-sol/3410280142357", "unitNetWeightG": 50, "estimate": "Œufs vendus à la pièce : calibre non précisé, poids estimé à 50 g mangeables par œuf (calibre moyen : 53 à 63 g coquille comprise)." },
+    { "id": "thon", "category": "Thon au naturel", "source": "intermarche", "url": "https://www.intermarche.com/produit/morceaux-de-thon-listao-au-naturel/3410280066066" },
+    { "id": "sardines", "category": "Sardines à l'huile", "source": "intermarche", "url": "https://www.intermarche.com/produit/sardines-a-l'huile-vegetale/3250390111078" },
+    { "id": "skyr", "category": "Skyr", "source": "intermarche", "url": "https://www.intermarche.com/produit/fromage-frais-skyr-nature/3250393447358" },
+    { "id": "fromage-blanc", "category": "Fromage blanc", "source": "intermarche", "url": "https://www.intermarche.com/produit/fromage-blanc-32%25mg/3250393100123" },
+    { "id": "petits-suisses", "category": "Petits suisses", "source": "intermarche", "url": "https://www.intermarche.com/produit/fromage-blanc-petit-suisse-nature-38%25mg/3329770051096" },
+    { "id": "lait", "category": "Lait demi-écrémé", "source": "intermarche", "url": "https://www.intermarche.com/produit/lait-demi-ecreme/3250390059011" },
+    { "id": "emmental", "category": "Emmental", "source": "intermarche", "url": "https://www.intermarche.com/produit/emmental/3410280140643" },
+    { "id": "cacahuetes", "category": "Cacahuètes", "source": "intermarche", "url": "https://www.intermarche.com/produit/cacahuetes-grillees-et-salees/3410280020150" },
+    { "id": "lentilles", "category": "Lentilles vertes (sèches)", "source": "intermarche", "url": "https://www.intermarche.com/produit/lentilles-vertes-bio/3250391781539" },
+    { "id": "pois-chiches", "category": "Pois chiches (secs)", "source": "intermarche", "url": "https://www.intermarche.com/produit/pois-chiches/3250390004592" },
+    { "id": "pois-casses", "category": "Pois cassés (secs)", "source": "intermarche", "url": "https://www.intermarche.com/produit/pois-casses/3250390004608" },
+    { "id": "whey", "category": "Whey (protéine en poudre)", "source": "intermarche", "url": "https://www.intermarche.com/produit/preparation-en-poudre-pour-boisson-riche-en-proteines-whey-vanille/3662072156343" }
+  ]
+}
