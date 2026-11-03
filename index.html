@@ -519,11 +519,12 @@
     const cls = pct < 0 ? "cheaper" : "pricier";
     const label = pct < 0 ? "moins cher" : "plus cher";
     // Fond vert (moins cher) ou rouge (plus cher), d'autant plus soutenu que l'écart est grand :
-    // intensité maximale à 4 fois moins cher ou 4 fois plus cher que la référence.
-    const strength = Math.min(Math.abs(Math.log2(a / b)) / 2, 1);
-    const rgb = pct < 0 ? "3, 129, 65" : "230, 62, 17";
-    const bg = `rgba(${rgb}, ${(0.08 + 0.37 * strength).toFixed(2)})`;
-    return `<span class="delta ${cls}" style="background: ${bg}" title="${Math.abs(pct)} % ${label} que ${esc(ref.category)}">${pct < 0 ? "−" : "+"}${Math.abs(pct)} %</span>`;
+    // intensité maximale vers 2,8 fois moins cher ou plus cher, texte blanc sur les fonds foncés.
+    const strength = Math.min(Math.abs(Math.log2(a / b)) / 1.5, 1);
+    const rgb = pct < 0 ? "3, 129, 65" : "220, 50, 20";
+    const alpha = 0.22 + 0.73 * strength;
+    const fg = alpha > 0.7 ? "color: #fff;" : "";
+    return `<span class="delta ${cls}" style="background: rgba(${rgb}, ${alpha.toFixed(2)}); ${fg}" title="${Math.abs(pct)} % ${label} que ${esc(ref.category)}">${pct < 0 ? "−" : "+"}${Math.abs(pct)} %</span>`;
   }
 
   function ranked() {
