@@ -487,6 +487,102 @@
     color: var(--accent);
     font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   }
+  /* Calculateur en rayon : replié par défaut pour laisser la priorité au classement */
+  .calc {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+  }
+  .calc-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-align: left;
+    cursor: pointer;
+  }
+  .calc-toggle::after {
+    content: "+";
+    color: var(--accent);
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+  .calc-toggle[aria-expanded="true"]::after { content: "−"; }
+  .calc-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; border-radius: 14px; }
+  .calc-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.25s ease;
+  }
+  .calc-panel.open { grid-template-rows: 1fr; }
+  .calc-inner {
+    min-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: visibility 0.25s;
+  }
+  /* Visible dès l'ouverture : un champ caché ne peut pas recevoir le focus */
+  .calc-panel.open .calc-inner { visibility: visible; transition: visibility 0s; }
+  .calc-body { padding: 0 1.5rem 1.25rem; }
+  .calc-fields {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  .calc-fields label { display: block; font-weight: 600; font-size: 0.9rem; }
+  .calc-fields small {
+    display: block;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    font-weight: 400;
+  }
+  .calc-input {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 0.35rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+  .calc-input input {
+    font: inherit;
+    font-size: 1rem;
+    color: var(--text);
+    width: 100%;
+    min-width: 0;
+    padding: 0.5rem 0.6rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+  }
+  .calc-input input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .calc-result { margin-top: 1rem; font-size: 0.9rem; }
+  .calc-result .hint { color: var(--text-muted); margin: 0; }
+  .calc-price {
+    color: var(--accent);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  .calc-price small { color: var(--text-muted); font-size: 0.85rem; font-weight: 400; }
+  .calc-place { margin: 0.2rem 0 0; }
+  .calc-ref { margin: 0.5rem 0 0; color: var(--text-muted); }
+  @media (prefers-reduced-motion: reduce) {
+    .calc-panel, .calc-inner { transition: none; }
+  }
+
   footer {
     color: var(--text-muted);
     font-size: 0.8rem;
@@ -522,6 +618,8 @@
 
   @media (max-width: 640px) {
     .card { padding: 1.1rem; }
+    .calc-toggle { padding: 1rem 1.1rem; }
+    .calc-body { padding: 0 1.1rem 1.1rem; }
     .hide-sm { display: none; }
     table { font-size: 0.88rem; }
     th, td { padding: 0.5rem 0.25rem; }
@@ -699,6 +797,50 @@
     link.href = `${ISSUES}?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
   }
 
+  // Calculateur en rayon : gardé en mémoire pour survivre aux changements de référence et de page.
+  const calc = { open: false, price: "", protein: "" };
+  const parseAmount = (s) => Number(s.trim().replace(",", "."));
+
+  function calcResult(rows, ref) {
+    if (!calc.price.trim() || !calc.protein.trim()) return '<p class="hint">Renseigne les deux valeurs pour situer ton produit dans le classement.</p>';
+    const price = parseAmount(calc.price), protein = parseAmount(calc.protein);
+    if (!(price > 0) || !(protein > 0)) return '<p class="hint">Saisis deux nombres supérieurs à 0, par exemple 8,50 et 21.</p>';
+    if (protein > 100) return '<p class="hint">Les protéines se comptent pour 100 g de produit : la valeur ne peut pas dépasser 100.</p>';
+    const value = price * 10 / protein;
+    const others = rows.filter((p) => p.available && p.m.pricePer100gProtein != null);
+    const cheaper = others.filter((p) => p.m.pricePer100gProtein < value);
+    const before = cheaper[cheaper.length - 1], after = others[cheaper.length];
+    const label = (p) => `${esc(p.category)} (${eur(p.m.pricePer100gProtein)})`;
+    const place = !before ? `Moins cher que tout le classement, devant ${label(after)}.`
+      : !after ? `Plus cher que tout le classement, après ${label(before)}.`
+      : `Entre ${label(before)} et ${label(after)}.`;
+    return `
+      <p class="calc-price">${eur(value)} <small>les 100 g de protéines</small></p>
+      <p class="calc-place"><strong>${cheaper.length + 1}<sup>${cheaper.length ? "e" : "er"}</sup> sur ${others.length + 1}</strong> · ${place}</p>
+      <p class="calc-ref">Par rapport à ${esc(ref.category)} : ${delta({ id: "calc", m: { pricePer100gProtein: value } }, ref)}</p>`;
+  }
+
+  function renderCalc(rows, ref) {
+    const panel = document.getElementById("calc-panel");
+    const toggle = document.getElementById("calc-toggle");
+    const result = document.getElementById("calc-result");
+    const price = document.getElementById("calc-price");
+    const protein = document.getElementById("calc-protein");
+    const update = () => {
+      calc.price = price.value;
+      calc.protein = protein.value;
+      result.innerHTML = calcResult(rows, ref);
+    };
+    toggle.addEventListener("click", () => {
+      calc.open = !calc.open;
+      toggle.setAttribute("aria-expanded", calc.open);
+      panel.classList.toggle("open", calc.open);
+      if (calc.open) price.focus({ preventScroll: true });
+    });
+    price.addEventListener("input", update);
+    protein.addEventListener("input", update);
+  }
+
   function renderBoard() {
     document.title = "Prix des Protéines · Perceval";
     setReportLink(null);
@@ -712,6 +854,27 @@
         <h1>Prix des Protéines</h1>
         <p class="subtitle">Combien coûtent 100 g de protéines selon ce qu'on met dans son caddie ? Poulet, œufs, skyr, cacahuètes... classés du moins cher au plus cher, au prix réel du magasin.</p>
       </header>
+
+      <section class="calc">
+        <button type="button" class="calc-toggle" id="calc-toggle" aria-expanded="${calc.open}" aria-controls="calc-panel">En rayon : calculer le prix d'un autre produit</button>
+        <div class="calc-panel${calc.open ? " open" : ""}" id="calc-panel">
+          <div class="calc-inner">
+            <div class="calc-body">
+              <div class="calc-fields">
+                <div>
+                  <label for="calc-price">Prix au kilo <small>Étiquette du rayon, pas le prix du paquet</small></label>
+                  <div class="calc-input"><input id="calc-price" type="text" inputmode="decimal" autocomplete="off" placeholder="8,50" value="${esc(calc.price)}">€/kg</div>
+                </div>
+                <div>
+                  <label for="calc-protein">Protéines <small>Tableau nutritionnel, pour 100 g</small></label>
+                  <div class="calc-input"><input id="calc-protein" type="text" inputmode="decimal" autocomplete="off" placeholder="21" value="${esc(calc.protein)}">g</div>
+                </div>
+              </div>
+              <div class="calc-result" id="calc-result" aria-live="polite">${calcResult(rows, ref)}</div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section class="card">
         <h2>Le classement</h2>
@@ -759,6 +922,7 @@
           <li>Prix de 100 g de protéines : <code>prix au kilo ÷ 1000 × (100 ÷ protéines pour 100 g × 100)</code>. Exemple : un filet de poulet à 11 €/kg avec 23 g de protéines pour 100 g, il en faut 435 g, soit 4,78 €.</li>
           <li>Protéines : valeur de l'étiquette nutritionnelle du produit, pour le produit tel que vendu (sec pour les légumineuses, égoutté pour les conserves quand le magasin l'indique).</li>
           <li>Colonne « vs réf. » : écart du prix de 100 g de protéines avec le produit de référence (filet de poulet par défaut, modifiable avec « Comparer à » ou depuis une fiche produit ; le choix reste dans ton navigateur).</li>
+          <li>Calculateur en rayon : même formule que le classement, soit <code>prix au kilo × 10 ÷ protéines pour 100 g</code>. Les deux valeurs doivent porter sur le même produit : pour une conserve, le prix au kilo égoutté avec les protéines de l'égoutté ; pour un liquide, le prix au litre. Rien n'est envoyé ni enregistré.</li>
           <li>Barre sous chaque produit : part des calories apportée par les protéines, les lipides, les glucides et les fibres, calculée depuis l'étiquette avec les coefficients réglementaires (<code>protéines et glucides × 4, lipides × 9, fibres × 2</code>). Elle ne modifie pas le classement.</li>
           <li>Eau : moyenne de la table <a href="${esc(COMPOSITION.source?.url ?? "https://doi.org/10.57745/RDMHWY")}" target="_blank" rel="noopener">${esc(COMPOSITION.source?.label ?? "Ciqual")}</a> pour l'aliment le plus proche, pas une mesure du produit. Valeurs du produit tel que vendu, cru ou sec (la cuisson change la teneur en eau).</li>
           <li>Nutri-Score : relevé sur la fiche du magasin, affiché à titre indicatif (il ne modifie pas le classement). Le score Yuka n'est pas publié par le magasin.</li>
@@ -767,6 +931,8 @@
           <li>Source des prix : ${Object.values(DATA.sources).map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a> (magasin ${esc(s.store?.name ?? "")}, ${esc(s.store?.postalCode ?? "")}, prix du drive)`).join(", ")}. D'autres enseignes pourront être ajoutées.</li>
         </ul>
       </details>`;
+
+    renderCalc(rows, ref);
 
     document.getElementById("ref-select").addEventListener("change", (event) => {
       setRefId(event.target.value);
