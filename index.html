@@ -19,6 +19,13 @@
     --accent: #be9e12;
     --accent-soft: #f6f5f4;
     --shadow: 0 1px 3px rgba(78,68,39,0.07), 0 1px 2px rgba(78,68,39,0.04);
+    /* Macronutriments (ordre et teintes validés pour le daltonisme) */
+    --macro-protein: #cf3f3a;
+    --macro-fat: #c9920f;
+    --macro-carbs: #2fa36b;
+    --macro-fiber: #a0619f;
+    --macro-water: #2b8ad6;
+    --macro-rest: #e4dfd0;
   }
   * { box-sizing: border-box; }
   body {
@@ -201,6 +208,79 @@
   .ns-E { background: #e63e11; }
   .ns-none { background: var(--border); color: var(--text-muted); }
   th.center, td.center { text-align: center; }
+
+  /* Répartition des macronutriments : barres empilées, segments séparés par 2 px */
+  .stack {
+    display: flex;
+    gap: 2px;
+    height: 20px;
+    width: 100%;
+  }
+  .seg { flex: 1 1 0; min-width: 2px; }
+  .seg:first-child { border-radius: 4px 0 0 4px; }
+  .seg:last-child { border-radius: 0 4px 4px 0; }
+  .seg:only-child { border-radius: 4px; }
+  .seg-protein, .swatch-protein { background: var(--macro-protein); }
+  .seg-fat, .swatch-fat { background: var(--macro-fat); }
+  .seg-carbs, .swatch-carbs { background: var(--macro-carbs); }
+  .seg-fiber, .swatch-fiber { background: var(--macro-fiber); }
+  .seg-water, .swatch-water { background: var(--macro-water); }
+  .seg-rest, .swatch-rest { background: var(--macro-rest); }
+  .swatch {
+    display: inline-block;
+    width: 0.65rem;
+    height: 0.65rem;
+    border-radius: 2px;
+    margin-right: 0.4rem;
+    flex: none;
+  }
+  .kcal-mini {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.3rem;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-weight: 400;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+  .kcal-mini .stack {
+    height: 6px;
+    flex: 1;
+    max-width: 9rem;
+    min-width: 3.5rem;
+  }
+  .macro-legend {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.25rem 0.8rem;
+    margin: 0.9rem 0 0;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+  }
+  .macro-legend span { display: inline-flex; align-items: center; }
+  .macro-headline {
+    font-size: 1.05rem;
+    margin: 0 0 1rem;
+  }
+  .macro-headline strong { font-weight: 700; }
+  .stack-label {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    margin: 0.8rem 0 0.25rem;
+  }
+  .stack-label span:last-child {
+    color: var(--text-muted);
+    font-weight: 400;
+    font-variant-numeric: tabular-nums;
+  }
+  .macro-table { margin-top: 1rem; }
+  .macro-table .name { display: flex; align-items: center; }
 
   .label-cell {
     display: flex;
@@ -471,6 +551,7 @@
 <script>
   const app = document.getElementById("app");
   let DATA = null;
+  let COMPOSITION = {};
 
   const eur = (v, digits = 2) => v == null ? "–" : v.toLocaleString("fr-FR", { minimumFractionDigits: digits, maximumFractionDigits: digits }) + " €";
   const num = (v, digits = 1) => v == null ? "–" : v.toLocaleString("fr-FR", { minimumFractionDigits: 0, maximumFractionDigits: digits });
@@ -487,6 +568,70 @@
       gramsFor100gProtein: protein > 0 ? 100 / protein * 100 : null,
       pricePer100gProtein: ok ? p.pricePerKg / 1000 * (100 / protein * 100) : null,
     };
+  }
+
+  // D'où viennent les calories : grammes de l'étiquette × coefficients réglementaires UE (kcal/g).
+  const MACROS = [
+    { key: "protein", label: "Protéines", factor: 4 },
+    { key: "fat", label: "Lipides", factor: 9 },
+    { key: "carbs", label: "Glucides", factor: 4 },
+    { key: "fiber", label: "Fibres", factor: 2 },
+  ];
+  function macroParts(p) {
+    const parts = MACROS.map((m) => ({ ...m, grams: p.nutrition?.[m.key] ?? null, kcal: (p.nutrition?.[m.key] ?? 0) * m.factor }));
+    const total = parts.reduce((sum, m) => sum + m.kcal, 0);
+    return parts.map((m) => ({ ...m, share: total > 0 ? m.kcal / total * 100 : 0 }));
+  }
+  const percent = (v) => v > 0 && v < 1 ? "< 1 %" : `${Math.round(v)} %`;
+  const describeShares = (parts) => parts.filter((m) => m.share >= 1).map((m) => `${m.label} ${percent(m.share)}`).join(", ");
+
+  // Barre empilée ; les segments de moins de 1 % restent lisibles dans le tableau de la fiche.
+  function stack(segments, label) {
+    const total = segments.reduce((sum, s) => sum + s.value, 0);
+    return `<span class="stack" role="img" aria-label="${esc(label)}">${segments
+      .filter((s) => s.value / total >= 0.01)
+      .map((s) => `<span class="seg seg-${s.key}" style="flex-grow: ${s.value.toFixed(2)}" title="${esc(s.title)}"></span>`).join("")}</span>`;
+  }
+  const kcalStack = (parts) => stack(
+    parts.map((m) => ({ key: m.key, value: m.share, title: `${m.label} : ${percent(m.share)} des calories` })),
+    `Répartition des calories : ${describeShares(parts)}`,
+  );
+
+  function renderMacros(p) {
+    const parts = macroParts(p);
+    const food = COMPOSITION.foods?.[p.id];
+    const macroGrams = parts.reduce((sum, m) => sum + (m.grams ?? 0), 0);
+    // L'eau vient d'une moyenne, l'étiquette du produit fixe le reste : la barre ne dépasse jamais 100 g.
+    const waterInBar = food ? Math.min(food.water, Math.max(0, 100 - macroGrams)) : 0;
+    const rest = Math.max(0, 100 - macroGrams - waterInBar);
+    const restLabel = food ? "Autres" : "Eau et autres";
+    const main = parts.reduce((a, b) => (b.share > a.share ? b : a));
+    const massSegments = [
+      ...parts.map((m) => ({ key: m.key, value: m.grams ?? 0, title: `${m.label} : ${num(m.grams)} g` })),
+      { key: "water", value: waterInBar, title: `Eau : environ ${num(food?.water)} g` },
+      { key: "rest", value: rest, title: `${restLabel} : ${num(rest)} g` },
+    ];
+    const rows = parts.filter((m) => m.grams != null).map((m) => `
+      <tr><td><span class="name"><span class="swatch swatch-${m.key}"></span>${m.label}</span></td><td class="num">${num(m.grams)} g</td><td class="num">${percent(m.share)}</td></tr>`).join("");
+    return `
+      <section class="card">
+        <h2>Répartition <span class="badge">pour 100 g</span></h2>
+        <p class="macro-headline"><strong>${percent(main.share)} des calories</strong> viennent des ${main.label.toLowerCase()}.</p>
+        <div class="stack-label"><span>Calories</span><span>${num(p.nutrition?.energyKcal, 0)} kcal</span></div>
+        ${kcalStack(parts)}
+        <div class="stack-label"><span>Poids</span><span>100 g</span></div>
+        ${stack(massSegments, `Poids pour 100 g : ${massSegments.filter((s) => s.value >= 1).map((s) => s.title).join(", ")}`)}
+        <table class="macro-table">
+          <thead><tr><th></th><th class="num">Poids</th><th class="num">Part des calories</th></tr></thead>
+          <tbody>${rows}
+            ${food ? `<tr><td><span class="name"><span class="swatch swatch-water"></span>Eau</span></td><td class="num">≈ ${num(food.water)} g</td><td class="num">0 %</td></tr>` : ""}
+            ${rest >= 1 ? `<tr><td><span class="name"><span class="swatch swatch-rest"></span>${restLabel}</span></td><td class="num">${num(rest)} g</td><td class="num">–</td></tr>` : ""}
+          </tbody>
+        </table>
+        <p class="note">Protéines, lipides, glucides, fibres et calories : étiquette du produit. ${food
+          ? `Eau : moyenne ${esc(COMPOSITION.source.label)} pour « ${esc(food.ciqualName)} », pas une mesure de ce produit${food.confidence === "D" ? " (valeur de fiabilité faible selon Ciqual)" : ""}.`
+          : "Teneur en eau absente de Ciqual pour ce type de produit."}</p>
+      </section>`;
   }
 
   const nutriBadge = (s) => s ? `<span class="ns ns-${s}" title="Nutri-Score ${s}">${s}</span>` : '<span class="ns ns-none" title="Nutri-Score non communiqué">?</span>';
@@ -575,6 +720,9 @@
           <label for="ref-select">Comparer à</label>
           <select id="ref-select">${options}</select>
         </div>
+        <p class="macro-legend">D'où viennent les calories :
+          ${MACROS.map((m) => `<span><span class="swatch swatch-${m.key}"></span>${m.label}</span>`).join("")}
+        </p>
         <table class="board">
           <thead><tr>
             <th>#</th>
@@ -591,7 +739,8 @@
               <tr class="result-highlight ${i < 3 && p.available ? "top" : ""} ${p.available ? "" : "unavailable"} ${p.id === ref.id ? "ref-row" : ""}" data-id="${esc(p.id)}">
                 <td class="rank">${i + 1}</td>
                 <td><a class="product-link" href="#/produit/${esc(p.id)}">${esc(p.category)}</a>${p.available ? "" : '<span class="badge">indisponible</span>'}
-                  <span class="product-sub">${esc(p.brand)} · ${esc(p.packaging)}${otherStore(p) ? ` · relevé à ${esc(p.store.name)}` : ""}</span></td>
+                  <span class="product-sub">${esc(p.brand)} · ${esc(p.packaging)}${otherStore(p) ? ` · relevé à ${esc(p.store.name)}` : ""}</span>
+                  <span class="kcal-mini">${kcalStack(macroParts(p))}${num(p.nutrition?.energyKcal, 0)} kcal/100 g</span></td>
                 <td class="num hide-sm">${eur(p.m.pricePerKg)}</td>
                 <td class="num hide-sm">${num(p.m.protein)} g</td>
                 <td class="num hide-sm">${p.m.gramsFor100gProtein == null ? "–" : Math.round(p.m.gramsFor100gProtein) + " g"}</td>
@@ -610,6 +759,8 @@
           <li>Prix de 100 g de protéines : <code>prix au kilo ÷ 1000 × (100 ÷ protéines pour 100 g × 100)</code>. Exemple : un filet de poulet à 11 €/kg avec 23 g de protéines pour 100 g, il en faut 435 g, soit 4,78 €.</li>
           <li>Protéines : valeur de l'étiquette nutritionnelle du produit, pour le produit tel que vendu (sec pour les légumineuses, égoutté pour les conserves quand le magasin l'indique).</li>
           <li>Colonne « vs réf. » : écart du prix de 100 g de protéines avec le produit de référence (filet de poulet par défaut, modifiable avec « Comparer à » ou depuis une fiche produit ; le choix reste dans ton navigateur).</li>
+          <li>Barre sous chaque produit : part des calories apportée par les protéines, les lipides, les glucides et les fibres, calculée depuis l'étiquette avec les coefficients réglementaires (<code>protéines et glucides × 4, lipides × 9, fibres × 2</code>). Elle ne modifie pas le classement.</li>
+          <li>Eau : moyenne de la table <a href="${esc(COMPOSITION.source?.url ?? "https://doi.org/10.57745/RDMHWY")}" target="_blank" rel="noopener">${esc(COMPOSITION.source?.label ?? "Ciqual")}</a> pour l'aliment le plus proche, pas une mesure du produit. Valeurs du produit tel que vendu, cru ou sec (la cuisson change la teneur en eau).</li>
           <li>Nutri-Score : relevé sur la fiche du magasin, affiché à titre indicatif (il ne modifie pas le classement). Le score Yuka n'est pas publié par le magasin.</li>
           <li>Prix au kilo recalculé à partir du prix et du poids du paquet quand le chiffre affiché par le magasin ne concorde pas.</li>
           <li>Liquides : 1 litre compté comme 1 kg. Œufs : vendus à la pièce, poids estimé indiqué sur la fiche.</li>
@@ -681,6 +832,8 @@
         <p class="note">Relevé le ${formatDate(p.fetchedAt)} · ${esc(sourceLabel(p))}</p>
       </section>
 
+      ${renderMacros(p)}
+
       ${nutriRows ? `
       <section class="card">
         <h2>Valeurs nutritionnelles <span class="badge">pour 100 g</span></h2>
@@ -711,9 +864,10 @@
     else renderBoard();
   }
 
-  fetch("data/products.json", { cache: "no-cache" })
-    .then((r) => r.json())
-    .then((d) => { DATA = d; route(); })
+  // Sans la table de composition, la page reste complète, seule l'eau manque.
+  const composition = fetch("data/composition.json", { cache: "no-cache" }).then((r) => r.json()).catch(() => ({}));
+  Promise.all([fetch("data/products.json", { cache: "no-cache" }).then((r) => r.json()), composition])
+    .then(([d, c]) => { DATA = d; COMPOSITION = c; route(); })
     .catch(() => { app.innerHTML = '<p class="subtitle">Impossible de charger les données.</p>'; });
 
   window.addEventListener("hashchange", route);

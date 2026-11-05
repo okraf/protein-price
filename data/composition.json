@@ -1,0 +1,183 @@
+{
+  "source": {
+    "label": "Ciqual 2025 (ANSES)",
+    "url": "https://doi.org/10.57745/RDMHWY",
+    "license": "Licence Ouverte Etalab 2.0"
+  },
+  "foods": {
+    "filet-de-poulet": {
+      "water": 75.1,
+      "ciqualCode": 36017,
+      "ciqualName": "Poulet, filet sans peau cru",
+      "confidence": "A"
+    },
+    "blanc-de-dinde": {
+      "water": 74,
+      "ciqualCode": 28964,
+      "ciqualName": "Jambon de dinde ou blanc de dinde en tranche",
+      "confidence": "A"
+    },
+    "steak-hache": {
+      "water": 74,
+      "ciqualCode": 6250,
+      "ciqualName": "Boeuf, steak haché 5% MG cru",
+      "confidence": "A"
+    },
+    "jambon-blanc": {
+      "water": 72.8,
+      "ciqualCode": 28906,
+      "ciqualName": "Jambon cuit, supérieur, découenné dégraissé",
+      "confidence": "A"
+    },
+    "oeufs": {
+      "water": 76.3,
+      "ciqualCode": 22000,
+      "ciqualName": "Oeuf cru",
+      "confidence": "A"
+    },
+    "thon": {
+      "water": 68.5,
+      "ciqualCode": 26181,
+      "ciqualName": "Thon albacore, au naturel, appertisé, égoutté",
+      "confidence": "A"
+    },
+    "saumon": {
+      "water": 67.5,
+      "ciqualCode": 26119,
+      "ciqualName": "Saumon, appertisé, égoutté",
+      "confidence": "D"
+    },
+    "colin": {
+      "water": 81.2,
+      "ciqualCode": 26006,
+      "ciqualName": "Lieu ou colin d'Alaska, cru",
+      "confidence": "A"
+    },
+    "sardines": {
+      "water": 60.5,
+      "ciqualCode": 26034,
+      "ciqualName": "Sardine, à l'huile, appertisée, égouttée",
+      "confidence": "A"
+    },
+    "maquereau": {
+      "water": 64.4,
+      "ciqualCode": 26097,
+      "ciqualName": "Maquereau, filet au vin blanc, appertisé, égoutté",
+      "confidence": "A"
+    },
+    "skyr": {
+      "water": 86.5,
+      "ciqualCode": 19644,
+      "ciqualName": "Fromage blanc, nature, 0% MG",
+      "confidence": "A"
+    },
+    "fromage-blanc": {
+      "water": 84,
+      "ciqualCode": 19646,
+      "ciqualName": "Fromage blanc, nature, 2-3% MG",
+      "confidence": "A"
+    },
+    "petits-suisses": {
+      "water": 81.6,
+      "ciqualCode": 19664,
+      "ciqualName": "Fromage frais type petit suisse, nature, 4% MG environ",
+      "confidence": "A"
+    },
+    "lait": {
+      "water": 89.2,
+      "ciqualCode": 19041,
+      "ciqualName": "Lait demi-écrémé, UHT",
+      "confidence": "A"
+    },
+    "emmental": {
+      "water": 39,
+      "ciqualCode": 12118,
+      "ciqualName": "Emmental ou emmenthal, râpé",
+      "confidence": "A"
+    },
+    "mozzarella": {
+      "water": 62.7,
+      "ciqualCode": 19590,
+      "ciqualName": "Mozzarella au lait de vache",
+      "confidence": "A"
+    },
+    "cacahuetes": {
+      "water": 1.22,
+      "ciqualCode": 15002,
+      "ciqualName": "Cacahuète, grillée, salée",
+      "confidence": "A"
+    },
+    "beurre-de-cacahuete": {
+      "water": 1.23,
+      "ciqualCode": 15202,
+      "ciqualName": "Beurre de cacahuète ou pâte d'arachide",
+      "confidence": "C"
+    },
+    "lentilles": {
+      "water": 9.5,
+      "ciqualCode": 20585,
+      "ciqualName": "Lentille verte, sèche",
+      "confidence": "A"
+    },
+    "pois-chiches": {
+      "water": 7.68,
+      "ciqualCode": 20516,
+      "ciqualName": "Pois chiche, sec",
+      "confidence": "B"
+    },
+    "pois-casses": {
+      "water": 2.36,
+      "ciqualCode": 20515,
+      "ciqualName": "Pois cassé, sec",
+      "confidence": "D"
+    },
+    "haricots-rouges": {
+      "water": 11.8,
+      "ciqualCode": 20525,
+      "ciqualName": "Haricot rouge, sec",
+      "confidence": "C"
+    },
+    "petits-pois": {
+      "water": 80,
+      "ciqualCode": 20084,
+      "ciqualName": "Petits pois, surgelés, crus",
+      "confidence": "C"
+    },
+    "pain-de-mie": {
+      "water": 36.7,
+      "ciqualCode": 7111,
+      "ciqualName": "Pain de mie complet, préemballé",
+      "confidence": "A"
+    },
+    "flocons-avoine": {
+      "water": 11,
+      "ciqualCode": 32140,
+      "ciqualName": "Flocons d'avoine",
+      "confidence": "A"
+    },
+    "pates": {
+      "water": 9.9,
+      "ciqualCode": 9810,
+      "ciqualName": "Pâtes sèches, standard, crues",
+      "confidence": "B"
+    },
+    "riz": {
+      "water": 9.86,
+      "ciqualCode": 9101,
+      "ciqualName": "Riz blanc étuvé, cru",
+      "confidence": "B"
+    },
+    "pain-blanc": {
+      "water": 32.7,
+      "ciqualCode": 7009,
+      "ciqualName": "Pain blanc précuit, à finir de cuire, préemballé",
+      "confidence": "A"
+    },
+    "pain-sans-gluten": {
+      "water": 39.8,
+      "ciqualCode": 7130,
+      "ciqualName": "Pain sans gluten, préemballé",
+      "confidence": "A"
+    }
+  }
+}
