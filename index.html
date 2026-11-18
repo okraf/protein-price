@@ -5,136 +5,178 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Prix des Protéines · Perceval</title>
 <meta name="description" content="Quelle protéine coûte le moins cher ? Classement du prix de 100 g de protéines (poulet, œufs, skyr, cacahuètes...) à partir des prix réels en magasin.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#EFEEEC">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/jost-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-  /* Palette officielle Perceval (github.com/perceval-sh/theme-asciidoc) */
+  /* Charte Perceval (G · Plan) : papier, encre, pourpre et or en accent, Jost et DM Mono auto-hébergées */
+  @font-face { font-family: "Jost"; font-style: normal; font-weight: 100 900; font-display: swap; src: url(assets/fonts/jost-latin.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  @font-face { font-family: "Jost"; font-style: normal; font-weight: 100 900; font-display: swap; src: url(assets/fonts/jost-latin-ext.woff2) format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+  @font-face { font-family: "DM Mono"; font-style: normal; font-weight: 300; font-display: swap; src: url(assets/fonts/dm-mono-300-latin.woff2) format("woff2"); }
+  @font-face { font-family: "DM Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url(assets/fonts/dm-mono-400-latin.woff2) format("woff2"); }
   :root {
-    --bg: #faf9f4;
-    --surface: #ffffff;
-    --border: #ece7d8;
-    --text: #4e4427;
-    --text-muted: #948a6d;
-    --accent: #be9e12;
-    --accent-soft: #f6f5f4;
-    --shadow: 0 1px 3px rgba(78,68,39,0.07), 0 1px 2px rgba(78,68,39,0.04);
-    /* Macronutriments (ordre et teintes validés pour le daltonisme) */
-    --macro-protein: #cf3f3a;
-    --macro-fat: #c9920f;
-    --macro-carbs: #2fa36b;
-    --macro-fiber: #a0619f;
-    --macro-water: #2b8ad6;
-    --macro-rest: #e4dfd0;
+    --papier: #EFEEEC;
+    --blanc: #F8F8F6;
+    --encre: #121014;
+    --pourpre-nuit: #2A1834;
+    --minuit: #142030;
+    --sarcelle: #16302E;
+    --pourpre: #A2457F;
+    --or: #E2BD3C;
+    --gris: #9A9A9A;
+    --gris-clair: #BDBDBD;
+    --ligne: color-mix(in srgb, var(--encre) 22%, transparent);
+    --ligne-douce: color-mix(in srgb, var(--encre) 12%, transparent);
+    --survol: color-mix(in srgb, var(--encre) 4%, var(--blanc));
+    --f-texte: "Jost", "Helvetica Neue", Arial, sans-serif;
+    --f-mono: "DM Mono", Menlo, Consolas, monospace;
+    --croix-or: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M7.5 2h5v5.5H18v5h-5.5V18h-5v-5.5H2v-5h5.5z' fill='%23E2BD3C'/%3E%3C/svg%3E");
+    --repere: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 11'%3E%3Cpath d='M5.5 0v11M0 5.5h11' stroke='%23121014' stroke-opacity='.55'/%3E%3C/svg%3E");
+    /* Macronutriments : couleurs de la palette et leurs teintes, distinctes en clarté */
+    --macro-protein: var(--pourpre);
+    --macro-fat: var(--or);
+    --macro-carbs: color-mix(in srgb, var(--sarcelle) 55%, var(--papier));
+    --macro-fiber: color-mix(in srgb, var(--pourpre) 40%, var(--papier));
+    --macro-water: var(--minuit);
+    --macro-rest: color-mix(in srgb, var(--gris-clair) 50%, var(--papier));
   }
   * { box-sizing: border-box; }
   body {
     margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: "League Spartan", Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    line-height: 1.5;
+    background: var(--papier);
+    color: var(--encre);
+    font-family: var(--f-texte);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
   }
+  @media (min-width: 1024px) { body { font-size: 17px; } }
+  a { color: var(--pourpre); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  a:hover { color: var(--encre); }
+  :focus-visible { outline: 1px solid var(--pourpre); outline-offset: 3px; border-radius: 2px; }
+  code { font-family: var(--f-mono); font-weight: 300; }
   .wrap {
-    max-width: 760px;
+    max-width: 980px;
     margin: 0 auto;
-    padding: 2.5rem 1.25rem 4rem;
+    padding: 56px 16px 48px;
   }
-  header { margin-bottom: 2rem; }
+  @media (min-width: 768px) { .wrap { padding: 88px 32px 56px; } }
+  header { margin-bottom: 48px; }
   h1 {
-    font-size: 1.6rem;
-    margin: 0 0 0.4rem;
-  }
-  .subtitle {
-    color: var(--text-muted);
-    font-size: 0.95rem;
+    font-size: clamp(36px, 8vw, 56px);
+    font-weight: 500;
+    line-height: 1.06;
+    letter-spacing: -0.025em;
     margin: 0;
   }
+  header h1::after {
+    content: "";
+    display: block;
+    width: 72px;
+    height: 1px;
+    background: var(--or);
+    margin-top: 24px;
+  }
+  .subtitle {
+    font-size: 18px;
+    max-width: 640px;
+    margin: 20px 0 0;
+  }
+  /* Carte : blanc cassé, filet 1 px, angles vifs, croix de repérage aux quatre coins */
   .card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 1.5rem;
-    box-shadow: var(--shadow);
-    margin-bottom: 1.5rem;
+    position: relative;
+    background: var(--blanc);
+    border: 1px solid var(--ligne);
+    border-radius: 2px;
+    padding: 24px;
+    margin-bottom: 32px;
   }
+  .card::before {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    pointer-events: none;
+    background: var(--repere) left top / 11px no-repeat, var(--repere) right top / 11px no-repeat, var(--repere) left bottom / 11px no-repeat, var(--repere) right bottom / 11px no-repeat;
+  }
+  @media (min-width: 768px) { .card { padding: 32px; } }
   .card h2 {
-    font-size: 1.05rem;
-    margin: 0 0 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    font-size: 22.7px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin: 0 0 20px;
   }
+  .card h2 .badge { border: 0; padding: 0; margin-left: 8px; font-family: var(--f-mono); font-weight: 300; font-size: 14px; letter-spacing: 0; vertical-align: 2px; }
   .card-meta {
-    color: var(--text-muted);
-    font-size: 0.82rem;
-    margin: -0.6rem 0 0;
+    font-size: 14px;
+    margin: -8px 0 0;
   }
   table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 1rem;
-    font-size: 0.95rem;
+    margin-top: 20px;
+    font-size: 15px;
   }
   th, td {
     text-align: left;
-    padding: 0.55rem 0.4rem;
-    border-bottom: 1px solid var(--border);
+    padding: 12px 6px;
+    border-bottom: 1px solid var(--ligne-douce);
   }
   th {
-    color: var(--text-muted);
-    font-weight: 600;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.3;
     vertical-align: bottom;
+    border-bottom-color: var(--ligne);
   }
   th.num { text-align: right; }
   td.value {
-    font-variant-numeric: tabular-nums;
-    font-weight: 700;
+    font-family: var(--f-mono);
+    font-weight: 400;
     text-align: right;
     white-space: nowrap;
   }
   td.num {
-    font-variant-numeric: tabular-nums;
+    font-family: var(--f-mono);
+    font-weight: 300;
+    font-size: 14px;
     text-align: right;
     white-space: nowrap;
   }
   tr:last-child td { border-bottom: none; }
-  .result-highlight td.value { color: var(--accent); }
 
   /* Classement */
   .rank {
     width: 1.8rem;
-    color: var(--text-muted);
-    font-variant-numeric: tabular-nums;
-    font-weight: 700;
+    font-family: var(--f-mono);
+    font-weight: 300;
+    font-size: 14px;
   }
-  tr.top .rank { color: var(--accent); }
+  tr.top .rank { color: var(--pourpre); font-weight: 400; }
   .board tbody tr { cursor: pointer; }
-  .board tbody tr:hover td { background: var(--accent-soft); }
+  .board tbody tr:hover td { background: var(--survol); }
   .board a.product-link {
-    color: var(--text);
+    color: var(--encre);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
   }
-  .board tbody tr:hover a.product-link { color: var(--accent); }
+  .board tbody tr:hover a.product-link { color: var(--pourpre); }
   .product-sub {
     display: block;
-    color: var(--text-muted);
-    font-size: 0.78rem;
+    font-size: 13px;
     font-weight: 400;
   }
+  /* Capsule d'interface : contour 1 px, angles 2 px */
   .badge {
     display: inline-block;
-    font-size: 0.7rem;
-    font-weight: 600;
-    color: var(--text-muted);
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    padding: 0 0.45rem;
-    margin-left: 0.3rem;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid var(--ligne);
+    border-radius: 2px;
+    padding: 0 6px;
+    margin-left: 6px;
     vertical-align: 1px;
   }
   .board tr.unavailable td { opacity: 0.55; }
@@ -142,71 +184,73 @@
   .ref-picker {
     display: flex;
     align-items: center;
-    gap: 0.6rem;
+    gap: 12px;
     flex-wrap: wrap;
-    margin-top: 1rem;
+    margin-top: 20px;
   }
-  .ref-picker label { font-weight: 600; font-size: 0.9rem; }
+  .ref-picker label { font-weight: 500; font-size: 15px; }
   .ref-picker select {
     font: inherit;
-    font-size: 0.95rem;
-    padding: 0.4rem 0.6rem;
-    border-radius: 8px;
-    border: 1px solid var(--border);
-    background: var(--bg);
-    color: var(--text);
+    font-size: 15px;
+    min-height: 44px;
+    padding: 6px 10px;
+    border-radius: 2px;
+    border: 1px solid var(--ligne);
+    background: var(--papier);
+    color: var(--encre);
     max-width: 100%;
   }
-  .ref-picker select:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .ref-picker select:focus { outline: 1px solid var(--pourpre); outline-offset: 2px; }
   .delta {
     display: inline-block;
-    min-width: 3.6rem;
-    padding: 0.15rem 0.45rem;
-    border-radius: 6px;
+    min-width: 3.8rem;
+    padding: 2px 6px;
+    border-radius: 2px;
     text-align: right;
-    font-variant-numeric: tabular-nums;
-    font-weight: 700;
+    font-family: var(--f-mono);
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--encre);
     white-space: nowrap;
   }
-  .delta.cheaper { color: #02612f; }
-  .delta.pricier { color: #9a3412; }
-  .delta.same { color: var(--text-muted); }
-  .board tr.ref-row td { background: var(--accent-soft); }
+  .board tr.ref-row td { background: color-mix(in srgb, var(--or) 14%, var(--blanc)); }
   .btn-ghost {
     display: inline-flex;
     align-items: center;
-    gap: 0.4rem;
-    background: var(--surface);
-    color: var(--text);
-    border: 1px solid var(--border);
+    gap: 8px;
+    min-height: 44px;
+    background: transparent;
+    color: var(--encre);
+    border: 1px solid var(--encre);
     font: inherit;
-    font-weight: 600;
-    font-size: 0.9rem;
-    border-radius: 8px;
-    padding: 0.5rem 0.9rem;
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: 2px;
+    padding: 8px 16px;
     cursor: pointer;
+    transition: background 0.2s, color 0.2s;
   }
-  .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
-  .btn-ghost[disabled] { cursor: default; color: var(--text-muted); border-color: var(--border); }
-  .actions { display: flex; gap: 0.6rem; flex-wrap: wrap; }
-  /* Nutri-Score : couleurs officielles de l'échelle A à E */
+  .btn-ghost:hover { background: var(--encre); color: var(--papier); }
+  .btn-ghost[disabled] { cursor: default; background: transparent; color: var(--encre); border-color: var(--gris); opacity: 0.7; }
+  .actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  /* Nutri-Score : couleurs officielles de l'échelle A à E (logo tiers, hors charte) */
   .ns {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 1.35rem;
-    height: 1.35rem;
-    border-radius: 4px;
+    width: 22px;
+    height: 22px;
+    border-radius: 2px;
     color: #fff;
-    font-weight: 700;
-    font-size: 0.8rem;
+    font-weight: 500;
+    font-size: 13px;
   }
   .ns-A { background: #038141; }
   .ns-B { background: #85bb2f; }
-  .ns-C { background: #fecb02; color: #4e4427; }
+  .ns-C { background: #fecb02; color: var(--encre); }
   .ns-D { background: #ee8100; }
   .ns-E { background: #e63e11; }
-  .ns-none { background: var(--border); color: var(--text-muted); }
+  .ns-none { background: transparent; border: 1px solid var(--ligne); color: var(--encre); }
   th.center, td.center { text-align: center; }
 
   /* Répartition des macronutriments : barres empilées, segments séparés par 2 px */
@@ -217,9 +261,9 @@
     width: 100%;
   }
   .seg { flex: 1 1 0; min-width: 2px; }
-  .seg:first-child { border-radius: 4px 0 0 4px; }
-  .seg:last-child { border-radius: 0 4px 4px 0; }
-  .seg:only-child { border-radius: 4px; }
+  .seg:first-child { border-radius: 2px 0 0 2px; }
+  .seg:last-child { border-radius: 0 2px 2px 0; }
+  .seg:only-child { border-radius: 2px; }
   .seg-protein, .swatch-protein { background: var(--macro-protein); }
   .seg-fat, .swatch-fat { background: var(--macro-fat); }
   .seg-carbs, .swatch-carbs { background: var(--macro-carbs); }
@@ -228,22 +272,21 @@
   .seg-rest, .swatch-rest { background: var(--macro-rest); }
   .swatch {
     display: inline-block;
-    width: 0.65rem;
-    height: 0.65rem;
-    border-radius: 2px;
-    margin-right: 0.4rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 1px;
+    margin-right: 6px;
     flex: none;
   }
   .kcal-mini {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    margin-top: 0.3rem;
-    color: var(--text-muted);
-    font-size: 0.75rem;
-    font-weight: 400;
+    gap: 8px;
+    margin-top: 4px;
+    font-family: var(--f-mono);
+    font-size: 12px;
+    font-weight: 300;
     white-space: nowrap;
-    font-variant-numeric: tabular-nums;
   }
   .kcal-mini .stack {
     height: 6px;
@@ -255,53 +298,50 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 0.25rem 0.8rem;
-    margin: 0.9rem 0 0;
-    color: var(--text-muted);
-    font-size: 0.8rem;
+    gap: 4px 16px;
+    margin: 16px 0 0;
+    font-size: 14px;
   }
   .macro-legend span { display: inline-flex; align-items: center; }
   .macro-headline {
-    font-size: 1.05rem;
-    margin: 0 0 1rem;
+    font-size: 22.7px;
+    font-weight: 300;
+    line-height: 1.25;
+    margin: 0 0 20px;
   }
-  .macro-headline strong { font-weight: 700; }
+  .macro-headline strong { font-weight: 500; }
   .stack-label {
     display: flex;
     justify-content: space-between;
-    gap: 1rem;
-    font-size: 0.82rem;
-    font-weight: 600;
-    margin: 0.8rem 0 0.25rem;
+    gap: 16px;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 16px 0 6px;
   }
   .stack-label span:last-child {
-    color: var(--text-muted);
-    font-weight: 400;
-    font-variant-numeric: tabular-nums;
+    font-family: var(--f-mono);
+    font-weight: 300;
   }
-  .macro-table { margin-top: 1rem; }
+  .macro-table { margin-top: 20px; }
   .macro-table .name { display: flex; align-items: center; }
 
-  .label-cell {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-  }
-  th .label-cell { justify-content: flex-end; }
+  .label-cell { display: inline; }
+  /* Bouton ⓘ : petite capsule carrée au trait (le cercle est réservé au sceau du logo) */
   .info-btn {
     position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 1.1rem;
-    height: 1.1rem;
-    border-radius: 50%;
-    border: 1px solid var(--border);
-    background: var(--bg);
-    color: var(--text-muted);
-    font-size: 0.68rem;
-    font-style: italic;
-    font-family: Georgia, "Times New Roman", serif;
+    width: 18px;
+    height: 18px;
+    margin-left: 6px;
+    vertical-align: 1px;
+    border-radius: 2px;
+    border: 1px solid var(--ligne);
+    background: transparent;
+    color: var(--encre);
+    font-family: var(--f-mono);
+    font-size: 11px;
     text-transform: none;
     letter-spacing: 0;
     cursor: pointer;
@@ -309,30 +349,29 @@
     padding: 0;
     line-height: 1;
   }
+  .info-btn::after { content: ""; position: absolute; inset: -10px; }
   .info-btn:hover,
   .info-btn:focus-visible,
   .info-btn.open {
-    color: var(--accent);
-    border-color: var(--accent);
+    color: var(--pourpre);
+    border-color: var(--pourpre);
   }
   .info-popover {
     position: absolute;
-    top: 140%;
-    right: -0.5rem;
+    top: 150%;
+    right: -8px;
     transform: translateY(-4px);
     min-width: 13rem;
-    background: var(--surface);
-    color: var(--text);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    box-shadow: var(--shadow);
-    padding: 0.5rem 0.65rem;
-    font-size: 0.78rem;
+    background: var(--blanc);
+    color: var(--encre);
+    border: 1px solid var(--encre);
+    border-radius: 2px;
+    padding: 8px 12px;
+    font-family: var(--f-texte);
+    font-size: 14px;
     font-weight: 400;
-    font-style: normal;
-    font-family: "League Spartan", Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     text-align: left;
-    line-height: 1.4;
+    line-height: 1.45;
     white-space: normal;
     opacity: 0;
     visibility: hidden;
@@ -348,178 +387,173 @@
     transform: translateY(0);
     pointer-events: auto;
   }
-  .info-popover code {
-    color: var(--accent);
-    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  }
 
   /* Fiche produit */
   .back {
-    display: inline-block;
-    color: var(--text-muted);
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    color: var(--encre);
     text-decoration: none;
-    font-size: 0.9rem;
-    margin-bottom: 1.25rem;
+    font-size: 15px;
+    margin-bottom: 16px;
   }
-  .back:hover { color: var(--accent); }
+  .back:hover { color: var(--pourpre); }
   .product-head {
     display: flex;
-    gap: 1.25rem;
+    gap: 24px;
     align-items: flex-start;
   }
   .product-head img {
     width: 140px;
     height: 140px;
     object-fit: contain;
-    border-radius: 10px;
-    border: 1px solid var(--border);
+    border-radius: 2px;
+    border: 1px solid var(--ligne-douce);
     background: #fff;
     flex: none;
   }
   .product-head .brand {
-    color: var(--text-muted);
-    font-weight: 600;
-    font-size: 0.85rem;
+    font-weight: 500;
+    font-size: 14px;
     margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
   }
-  .product-head h1 { margin: 0.1rem 0 0.3rem; }
+  .product-head h1 { font-size: clamp(26px, 5vw, 40px); font-weight: 400; letter-spacing: -0.02em; line-height: 1.15; margin: 6px 0 8px; }
   .product-head .pack {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    margin: 0 0 0.9rem;
+    font-size: 15px;
+    margin: 0 0 16px;
   }
   .btn {
     display: inline-flex;
     align-items: center;
-    gap: 0.4rem;
-    background: var(--accent);
-    color: #fff;
+    gap: 8px;
+    min-height: 44px;
+    background: var(--pourpre-nuit);
+    color: var(--papier);
     text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9rem;
-    border-radius: 8px;
-    padding: 0.5rem 0.9rem;
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: 2px;
+    padding: 8px 16px;
+    transition: background 0.2s;
   }
-  .btn:hover { filter: brightness(0.95); }
+  .btn:hover { background: var(--encre); color: var(--papier); }
+  /* Chiffres clés : registre en lignes séparées par des filets, pas de série de cartes */
   .kpis {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 0.75rem;
+    border-top: 1px solid var(--ligne);
+    border-bottom: 1px solid var(--ligne);
   }
-  .kpi {
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 0.75rem;
-  }
+  .kpi { padding: 16px 16px 16px 0; }
+  .kpi + .kpi { padding-left: 16px; border-left: 1px solid var(--ligne-douce); }
   .kpi .k-label {
-    color: var(--text-muted);
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3;
   }
   .kpi .k-value {
-    font-size: 1.25rem;
-    font-weight: 700;
-    font-variant-numeric: tabular-nums;
+    margin-top: 6px;
+    font-family: var(--f-mono);
+    font-size: 20px;
+    font-weight: 300;
   }
-  .kpi.main .k-value { color: var(--accent); }
+  .kpi.main .k-value { font-weight: 400; color: var(--pourpre); }
   .note {
-    color: var(--text-muted);
-    font-size: 0.82rem;
-    margin: 1rem 0 0;
+    font-size: 14px;
+    margin: 16px 0 0;
   }
   dl.facts { margin: 0; }
   dl.facts dt {
-    font-weight: 600;
-    font-size: 0.9rem;
-    margin-top: 0.9rem;
+    font-weight: 500;
+    font-size: 15px;
+    margin-top: 16px;
   }
   dl.facts dt:first-child { margin-top: 0; }
   dl.facts dd {
-    margin: 0.15rem 0 0;
-    color: var(--text-muted);
-    font-size: 0.9rem;
+    margin: 2px 0 0;
+    font-size: 15px;
     white-space: pre-line;
   }
-  .nutri td.sub { padding-left: 1.2rem; color: var(--text-muted); }
-  .nutri tr.protein td { color: var(--accent); font-weight: 700; }
+  .nutri td.num { font-size: 15px; }
+  .nutri td.sub { padding-left: 24px; }
+  .nutri tr.protein td { font-weight: 500; }
+  .nutri tr.protein td.num { font-weight: 400; color: var(--pourpre); }
 
+  /* Repli « En savoir plus » et calculateur : registre entre deux filets */
   .sources {
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    background: var(--surface);
-    box-shadow: var(--shadow);
-    margin-bottom: 1.5rem;
-    overflow: hidden;
+    border-top: 1px solid var(--ligne);
+    border-bottom: 1px solid var(--ligne);
+    margin-bottom: 32px;
   }
   .sources summary {
     cursor: pointer;
-    padding: 1rem 1.5rem;
-    font-weight: 600;
-    font-size: 0.95rem;
+    min-height: 56px;
+    padding: 12px 0;
+    font-weight: 500;
+    font-size: 17px;
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
   .sources summary::-webkit-details-marker { display: none; }
-  .sources summary::after {
+  .sources summary::after,
+  .calc-toggle::after {
     content: "+";
-    color: var(--accent);
-    font-size: 1.1rem;
-    font-weight: 700;
+    font-family: var(--f-mono);
+    font-weight: 300;
+    font-size: 22px;
+    color: var(--pourpre);
   }
   .sources[open] summary::after { content: "−"; }
   .sources ul {
     margin: 0;
-    padding: 0 1.5rem 1.25rem;
+    padding: 0 0 20px;
     list-style: none;
-    font-size: 0.82rem;
-    color: var(--text-muted);
-    line-height: 1.6;
+    font-size: 15px;
   }
-  .sources li { padding: 0.15rem 0; }
-  .sources a { color: var(--accent); text-decoration: none; }
-  .sources a:hover { text-decoration: underline; }
-  .sources code {
-    color: var(--accent);
-    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  .sources li {
+    position: relative;
+    padding: 4px 0 4px 22px;
+  }
+  .sources li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.85em;
+    width: 9px;
+    height: 9px;
+    background: var(--croix-or) center / contain no-repeat;
   }
   /* Calculateur en rayon : replié par défaut pour laisser la priorité au classement */
   .calc {
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    background: var(--surface);
-    box-shadow: var(--shadow);
-    margin-bottom: 1.5rem;
-    overflow: hidden;
+    border-top: 1px solid var(--ligne);
+    border-bottom: 1px solid var(--ligne);
+    margin-bottom: 40px;
   }
   .calc-toggle {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 16px;
     width: 100%;
-    padding: 1rem 1.5rem;
+    min-height: 56px;
+    padding: 12px 0;
     background: none;
     border: none;
     color: inherit;
     font: inherit;
-    font-weight: 600;
-    font-size: 0.95rem;
+    font-weight: 500;
+    font-size: 17px;
     text-align: left;
     cursor: pointer;
   }
-  .calc-toggle::after {
-    content: "+";
-    color: var(--accent);
-    font-size: 1.1rem;
-    font-weight: 700;
-  }
   .calc-toggle[aria-expanded="true"]::after { content: "−"; }
-  .calc-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; border-radius: 14px; }
   .calc-panel {
     display: grid;
     grid-template-rows: 0fr;
@@ -534,96 +568,104 @@
   }
   /* Visible dès l'ouverture : un champ caché ne peut pas recevoir le focus */
   .calc-panel.open .calc-inner { visibility: visible; transition: visibility 0s; }
-  .calc-body { padding: 0 1.5rem 1.25rem; }
+  .calc-body { padding: 4px 0 24px; }
   .calc-fields {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
+    gap: 16px;
   }
-  .calc-fields label { display: block; font-weight: 600; font-size: 0.9rem; }
+  .calc-fields label { display: block; font-weight: 500; font-size: 15px; }
   .calc-fields small {
     display: block;
-    color: var(--text-muted);
-    font-size: 0.78rem;
+    font-size: 13px;
     font-weight: 400;
   }
   .calc-input {
     display: flex;
     align-items: center;
-    gap: 0.4rem;
-    margin-top: 0.35rem;
-    color: var(--text-muted);
-    font-size: 0.9rem;
+    gap: 8px;
+    margin-top: 6px;
+    font-family: var(--f-mono);
+    font-weight: 300;
+    font-size: 14px;
     white-space: nowrap;
   }
   .calc-input input {
-    font: inherit;
-    font-size: 1rem;
-    color: var(--text);
+    font-family: var(--f-mono);
+    font-weight: 400;
+    font-size: 17px;
+    color: var(--encre);
     width: 100%;
     min-width: 0;
-    padding: 0.5rem 0.6rem;
-    border-radius: 8px;
-    border: 1px solid var(--border);
-    background: var(--bg);
+    min-height: 44px;
+    padding: 6px 10px;
+    border-radius: 2px;
+    border: 1px solid var(--ligne);
+    background: var(--blanc);
   }
-  .calc-input input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
-  .calc-result { margin-top: 1rem; font-size: 0.9rem; }
-  .calc-result .hint { color: var(--text-muted); margin: 0; }
+  .calc-input input:focus { outline: 1px solid var(--pourpre); outline-offset: 2px; border-color: var(--pourpre); }
+  .calc-result { margin-top: 20px; font-size: 15px; }
+  .calc-result .hint { margin: 0; }
   .calc-price {
-    color: var(--accent);
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-family: var(--f-mono);
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 1.2;
     margin: 0;
   }
-  .calc-price small { color: var(--text-muted); font-size: 0.85rem; font-weight: 400; }
-  .calc-place { margin: 0.2rem 0 0; }
-  .calc-ref { margin: 0.5rem 0 0; color: var(--text-muted); }
+  .calc-price small { font-family: var(--f-texte); font-size: 15px; font-weight: 400; }
+  .calc-place { margin: 4px 0 0; }
+  .calc-ref { margin: 8px 0 0; }
   @media (prefers-reduced-motion: reduce) {
-    .calc-panel, .calc-inner { transition: none; }
+    .calc-panel, .calc-inner, .info-popover, .btn, .btn-ghost { transition: none; }
   }
 
   footer {
-    color: var(--text-muted);
-    font-size: 0.8rem;
-    margin-top: 2rem;
-    text-align: center;
+    font-size: 14px;
+    margin-top: 48px;
   }
-  footer .disclaimer { margin: 0 0 1rem; }
+  footer .disclaimer { margin: 0 0 24px; }
   .report {
-    display: inline-block;
-    color: var(--accent);
-    font-weight: 600;
-    text-decoration: none;
-    margin-bottom: 1rem;
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    font-weight: 500;
+    font-size: 15px;
+    margin-bottom: 8px;
   }
-  .report:hover { text-decoration: underline; }
   footer .meta {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 0.4rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--border);
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--ligne);
   }
-  footer a {
-    color: var(--text-muted);
+  footer .logo { display: flex; align-items: center; gap: 16px; color: var(--encre); text-decoration: none; }
+  footer .logo img { height: 24px; width: auto; display: block; }
+  footer .meta > a:not(.logo) {
+    color: var(--encre);
     display: inline-flex;
     align-items: center;
-    gap: 0.35rem;
+    gap: 8px;
+    min-height: 44px;
     text-decoration: none;
+    font-family: var(--f-mono);
+    font-weight: 300;
+    font-size: 13px;
   }
-  footer a:hover { color: var(--accent); }
-  footer a svg { width: 1rem; height: 1rem; fill: currentColor; }
+  footer .meta > a:not(.logo):hover { color: var(--pourpre); }
+  footer a svg { width: 16px; height: 16px; fill: currentColor; }
 
   @media (max-width: 640px) {
-    .card { padding: 1.1rem; }
-    .calc-toggle { padding: 1rem 1.1rem; }
-    .calc-body { padding: 0 1.1rem 1.1rem; }
+    .card { padding: 18px; }
     .hide-sm { display: none; }
-    table { font-size: 0.88rem; }
-    th, td { padding: 0.5rem 0.25rem; }
+    table { font-size: 14px; }
+    th, td { padding: 10px 4px; }
     .kpis { grid-template-columns: repeat(2, 1fr); }
+    .kpi:nth-child(3) { padding-left: 0; border-left: 0; }
+    .kpi:nth-child(n+3) { border-top: 1px solid var(--ligne-douce); }
     .product-head { flex-direction: column; }
     .product-head img { width: 120px; height: 120px; }
   }
@@ -634,10 +676,10 @@
   <main id="app"><p class="subtitle">Chargement…</p></main>
 
   <footer>
-    <a class="report" id="report-link" href="https://github.com/okraf/protein-price/issues/new" target="_blank" rel="noopener">Manque d'info ou erreur ? Signale-le ↗</a>
+    <a class="report" id="report-link" href="https://github.com/okraf/protein-price/issues/new" target="_blank" rel="noopener">Manque d'info ou erreur ? Signale-le</a>
     <p class="disclaimer">Prix relevés sur le site du magasin, susceptibles de changer. Comparatif à visée pédagogique : le prix ne dit rien de la qualité nutritionnelle globale d'un aliment.</p>
     <div class="meta">
-      <span>© 2026 Perceval</span>
+      <a class="logo" href="https://perceval.sh" target="_blank" rel="noopener"><img src="assets/perceval-logo-horizontal.svg" alt="Perceval" width="140" height="24"><span>© 2026</span></a>
       <a href="https://github.com/okraf/protein-price" target="_blank" rel="noopener">
         <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
         <span>github.com/okraf/protein-price</span>
@@ -761,13 +803,13 @@
     if (pct === 0) return '<span class="delta same">0 %</span>';
     const cls = pct < 0 ? "cheaper" : "pricier";
     const label = pct < 0 ? "moins cher" : "plus cher";
-    // Fond vert (moins cher) ou rouge (plus cher), d'autant plus soutenu que l'écart est grand :
-    // intensité maximale vers 3,4 fois moins cher ou plus cher, texte blanc sur les fonds les plus foncés.
+    // Fond sarcelle (moins cher) ou pourpre (plus cher), d'autant plus soutenu que l'écart est grand :
+    // intensité maximale vers 3,4 fois moins cher ou plus cher, texte encre lisible sur toutes les teintes.
     const strength = Math.min(Math.abs(Math.log2(a / b)) / 1.75, 1);
-    const rgb = pct < 0 ? "3, 129, 65" : "220, 50, 20";
-    const alpha = 0.15 + 0.5 * strength;
-    const fg = alpha > 0.6 ? "color: #fff;" : "";
-    return `<span class="delta ${cls}" style="background: rgba(${rgb}, ${alpha.toFixed(2)}); ${fg}" title="${Math.abs(pct)} % ${label} que ${esc(ref.category)}">${pct < 0 ? "−" : "+"}${Math.abs(pct)} %</span>`;
+    const t = 0.12 + 0.43 * strength;
+    const base = pct < 0 ? [22, 48, 46] : [162, 69, 127]; // sarcelle nuit ou pourpre, mêlé au blanc cassé
+    const bg = `rgb(${base.map((c, i) => Math.round(c * t + [248, 248, 246][i] * (1 - t))).join(", ")})`;
+    return `<span class="delta ${cls}" style="background: ${bg}" title="${Math.abs(pct)} % ${label} que ${esc(ref.category)}">${pct < 0 ? "−" : "+"}${Math.abs(pct)} %</span>`;
   }
 
   function ranked() {
