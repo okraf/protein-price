@@ -34,6 +34,8 @@ Le script attend 20 à 40 s entre deux fiches pour rester à un rythme raisonnab
 ## Ajouter un produit
 Ajouter une entrée dans `data/catalog.json` (`id`, `category`, `source`, `url` de la fiche ; `store` pour un produit relevé dans un autre magasin que celui de l'enseigne), puis `node scripts/update.mjs --only <id>`. Ajouter sa teneur en eau dans `data/composition.json` (sinon la fiche indique qu'elle manque).
 
+`category` est le nom affiché partout (classement, sélecteur « Comparer à », fiche) : le garder unique. Plusieurs produits du même aliment : `<Aliment> <marque> (<format>)`, par exemple `Skyr Yoplait (8 × 100 g)`.
+
 ## Ajouter une enseigne
 Créer `sources/<enseigne>.mjs` (exports `id`, `label`, `homepage`, `selectStore`, `fetchProduct`), l'ajouter à `sources/index.mjs` et déclarer son magasin dans `stores` de `data/catalog.json`.
 
