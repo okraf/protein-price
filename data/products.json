@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T17:03:07.464Z",
+  "generatedAt": "2026-11-23T22:51:18.854Z",
   "sources": {
     "intermarche": {
       "label": "Intermarché",
@@ -1102,7 +1102,7 @@
     },
     {
       "id": "skyr",
-      "category": "Skyr",
+      "category": "Skyr Pâturages (850 g)",
       "source": "intermarche",
       "url": "https://www.intermarche.com/produit/fromage-frais-skyr-nature/3250393447358",
       "name": "Fromage frais Skyr nature",
@@ -1217,6 +1217,407 @@
         }
       ],
       "fetchedAt": "2026-11-03T14:13:14.238Z"
+    },
+    {
+      "id": "skyr-yoplait-450",
+      "category": "Skyr Yoplait (450 g)",
+      "source": "intermarche",
+      "url": "https://www.intermarche.com/produit/skyr-nature/3329770084056",
+      "name": "Skyr nature",
+      "brand": "Yoplait",
+      "image": "https://cdn.intermarche.com/fr/Content/images/pim/03329770084056/d23d45875de14ce896fdf72164379db3.png",
+      "packaging": "le pot de 450g",
+      "price": 2.25,
+      "unitPrice": 5,
+      "unit": "kg",
+      "pricePerKg": 5,
+      "netWeightG": 450,
+      "available": true,
+      "nutriScore": "A",
+      "store": {
+        "name": "Super Begard",
+        "city": "Begard",
+        "postalCode": "22140"
+      },
+      "estimate": null,
+      "nutrition": {
+        "energyKcal": 56,
+        "fat": 0.5,
+        "saturatedFat": 0.1,
+        "carbs": 3.6,
+        "sugars": 3.6,
+        "fiber": null,
+        "protein": 9.3,
+        "salt": 0.14
+      },
+      "nutritionTable": [
+        {
+          "label": "Energie",
+          "value": "238.0 kj (56.0 kcal)"
+        },
+        {
+          "label": "Matière Grasse",
+          "value": "0.5"
+        },
+        {
+          "label": "Dont acide gras polyinsaturé",
+          "value": "0.1"
+        },
+        {
+          "label": "Glucides",
+          "value": "3.6"
+        },
+        {
+          "label": "Dont sucre",
+          "value": "3.6"
+        },
+        {
+          "label": "Protéines",
+          "value": "9.3"
+        },
+        {
+          "label": "Sel",
+          "value": "0.14"
+        }
+      ],
+      "ingredients": "LAIT écrémé - LAIT concentré écrémé - Ferments lactiques (LAIT). LAIT D'ORIGINE FRANCE",
+      "allergens": "lait (Presence)",
+      "sections": [
+        {
+          "title": "Caractéristiques",
+          "items": [
+            {
+              "label": "Conservation",
+              "value": "Conservation à +6°c maxi"
+            }
+          ]
+        },
+        {
+          "title": "En savoir plus",
+          "items": [
+            {
+              "label": "Dénomination légale de vente",
+              "value": "Spécialité laitière nature"
+            },
+            {
+              "label": "Détails du produit",
+              "value": "Provenance des ingrédients : France"
+            },
+            {
+              "label": "Informations fabricant",
+              "value": "Yoplait France - TSA 40100 92649 Boulogne Billancourt Cedex"
+            }
+          ]
+        }
+      ],
+      "fetchedAt": "2026-11-23T22:50:39.123Z"
+    },
+    {
+      "id": "skyr-yoplait-850",
+      "category": "Skyr Yoplait (850 g)",
+      "source": "intermarche",
+      "url": "https://www.intermarche.com/produit/skyr-nature-0%25mg/3329770077003",
+      "name": "Skyr nature 0%mg",
+      "brand": "Yoplait",
+      "image": "https://cdn.intermarche.com/fr/Content/images/pim/03329770077003/4bc0d41c4a104798a7df24ef36e55ac2.png",
+      "packaging": "le pot de 850g",
+      "price": 3.07,
+      "unitPrice": 3.61,
+      "unit": "kg",
+      "pricePerKg": 3.61,
+      "netWeightG": 850,
+      "available": true,
+      "nutriScore": "A",
+      "store": {
+        "name": "Super Begard",
+        "city": "Begard",
+        "postalCode": "22140"
+      },
+      "estimate": null,
+      "nutrition": {
+        "energyKcal": 56,
+        "fat": 0.5,
+        "saturatedFat": 0.1,
+        "carbs": 3.6,
+        "sugars": 3.6,
+        "fiber": null,
+        "protein": 9.3,
+        "salt": 0.14
+      },
+      "nutritionTable": [
+        {
+          "label": "Energie",
+          "value": "238.0 kj (56.0 kcal)"
+        },
+        {
+          "label": "Matière Grasse",
+          "value": "0.5"
+        },
+        {
+          "label": "Dont acide gras saturé",
+          "value": "0.1"
+        },
+        {
+          "label": "Dont acide gras polyinsaturé",
+          "value": "0.1"
+        },
+        {
+          "label": "Glucides",
+          "value": "3.6"
+        },
+        {
+          "label": "Dont sucre",
+          "value": "3.6"
+        },
+        {
+          "label": "Protéines",
+          "value": "9.3"
+        },
+        {
+          "label": "Sel",
+          "value": "0.14"
+        }
+      ],
+      "ingredients": "LAIT écrémé - LAIT concentré écrémé - Ferments lactiques (LAIT). LAIT D'ORIGINE FRANCE.",
+      "allergens": "lait (Presence)",
+      "sections": [
+        {
+          "title": "Caractéristiques",
+          "items": [
+            {
+              "label": "Conservation",
+              "value": "Conservation entre 0°c et +6°c max."
+            }
+          ]
+        },
+        {
+          "title": "En savoir plus",
+          "items": [
+            {
+              "label": "Dénomination légale de vente",
+              "value": "Spécialité laitière nature"
+            },
+            {
+              "label": "Détails du produit",
+              "value": "Provenance des ingrédients : France"
+            },
+            {
+              "label": "Informations fabricant",
+              "value": "Yoplait France - TSA 40100 92649 Boulogne Billancourt Cedex"
+            }
+          ]
+        }
+      ],
+      "fetchedAt": "2026-11-23T22:49:06.662Z"
+    },
+    {
+      "id": "skyr-yoplait-8x100",
+      "category": "Skyr Yoplait (8 × 100 g)",
+      "source": "intermarche",
+      "url": "https://www.intermarche.com/produit/skyr-0%25-de-matieres-grasses/3329770082342",
+      "name": "Skyr 0% de matières grasses",
+      "brand": "Yoplait",
+      "image": "https://cdn.intermarche.com/fr/Content/images/pim/03329770082342/adeb3dffeccb4573b538995a962aa26a.png",
+      "packaging": "les 8 pots de 100g - 800g",
+      "price": 3.49,
+      "unitPrice": 4.36,
+      "unit": "kg",
+      "pricePerKg": 4.36,
+      "netWeightG": 800,
+      "available": true,
+      "nutriScore": "A",
+      "store": {
+        "name": "Super Begard",
+        "city": "Begard",
+        "postalCode": "22140"
+      },
+      "estimate": null,
+      "nutrition": {
+        "energyKcal": 56,
+        "fat": 0.5,
+        "saturatedFat": 0.1,
+        "carbs": 3.6,
+        "sugars": 3.6,
+        "fiber": null,
+        "protein": 9.3,
+        "salt": 0.14
+      },
+      "nutritionTable": [
+        {
+          "label": "Energie",
+          "value": "238.0 kj (56.0 kcal)"
+        },
+        {
+          "label": "Matière Grasse",
+          "value": "0.5"
+        },
+        {
+          "label": "Dont acide gras polyinsaturé",
+          "value": "0.1"
+        },
+        {
+          "label": "Glucides",
+          "value": "3.6"
+        },
+        {
+          "label": "Dont sucre",
+          "value": "3.6"
+        },
+        {
+          "label": "Protéines",
+          "value": "9.3"
+        },
+        {
+          "label": "Sel",
+          "value": "0.14"
+        }
+      ],
+      "ingredients": "LAIT écrémé - LAIT concentré écrémé - Ferments lactiques (LAIT). LAIT D'ORIGINE FRANCE.",
+      "allergens": "lait (Presence)",
+      "sections": [
+        {
+          "title": "Caractéristiques",
+          "items": [
+            {
+              "label": "Conservation",
+              "value": "Conservation entre 0°c et +6°c max."
+            }
+          ]
+        },
+        {
+          "title": "En savoir plus",
+          "items": [
+            {
+              "label": "Dénomination légale de vente",
+              "value": "Spécialité laitière nature"
+            },
+            {
+              "label": "Détails du produit",
+              "value": "Provenance des ingrédients : France"
+            },
+            {
+              "label": "Informations fabricant",
+              "value": "Yoplait France - TSA 40100 92649 Boulogne Billancourt Cedex"
+            },
+            {
+              "label": "Renseignements pratiques",
+              "value": "Prêt à l’emploi"
+            }
+          ]
+        }
+      ],
+      "fetchedAt": "2026-11-23T22:49:38.081Z"
+    },
+    {
+      "id": "skyr-paturages-4x100",
+      "category": "Skyr Pâturages (4 × 100 g)",
+      "source": "intermarche",
+      "url": "https://www.intermarche.com/produit/skyr-nature-riche-en-proteines-sans-matieres-grasses/3250393048029",
+      "name": "Skyr nature riche en protéines sans matières grasses",
+      "brand": "Pâturages, une marque Intermarché",
+      "image": "https://cdn.intermarche.com/fr/Content/images/pim/03250393048029/bf77ca08ed7e4852a78ac78e3941e846.png",
+      "packaging": "4 pots de 100g - 400 g",
+      "price": 1.72,
+      "unitPrice": 4.3,
+      "unit": "kg",
+      "pricePerKg": 4.3,
+      "netWeightG": 400,
+      "available": true,
+      "nutriScore": "A",
+      "store": {
+        "name": "Super Begard",
+        "city": "Begard",
+        "postalCode": "22140"
+      },
+      "estimate": null,
+      "nutrition": {
+        "energyKcal": 53,
+        "fat": 0.5,
+        "saturatedFat": 0.1,
+        "carbs": 4.4,
+        "sugars": 3.6,
+        "fiber": 0.5,
+        "protein": 8.6,
+        "salt": 0.09
+      },
+      "nutritionTable": [
+        {
+          "label": "Energie",
+          "value": "225.0 kj (53.0 kcal)"
+        },
+        {
+          "label": "Matière Grasse",
+          "value": "<0,5g"
+        },
+        {
+          "label": "Dont acide gras saturé",
+          "value": "<0,1g"
+        },
+        {
+          "label": "Glucides",
+          "value": "4,4g"
+        },
+        {
+          "label": "Dont sucre",
+          "value": "3,6g"
+        },
+        {
+          "label": "Protéines",
+          "value": "8,6g"
+        },
+        {
+          "label": "Sel",
+          "value": "0,09g"
+        },
+        {
+          "label": "Fibres Alimentaires",
+          "value": "<0,5g"
+        }
+      ],
+      "ingredients": "Ingredients: LAIT ÉCRÉMÉ pasteurisé (origine : France), ferments lactiques (dont LAIT).",
+      "allergens": "LAIT",
+      "sections": [
+        {
+          "title": "Caractéristiques",
+          "items": [
+            {
+              "label": "Conservation",
+              "value": "À conserver entre 0 °C et +6 °C."
+            }
+          ]
+        },
+        {
+          "title": "En savoir plus",
+          "items": [
+            {
+              "label": "Dénomination légale de vente",
+              "value": "Spécialité laitière nature"
+            },
+            {
+              "label": "Avantages",
+              "value": "Riche en protéines, sans matières grasses, le Skyr est élaboré avec du lait français. Ferme et onctueux, il se démarque par son goût unique et naturel, tout en séduisant par ses qualités nutritionnelles."
+            },
+            {
+              "label": "Détails du produit",
+              "value": "Provenance des ingrédients : Lait écrémé pasteurisé origine France # Lait français"
+            },
+            {
+              "label": "Informations fabricant",
+              "value": "ITM AI - 24 rue Auguste Chabrières - 75015 Paris - France - PÂTURAGES 0 805 101 115 - Service & Appel gratuits - www.intermarche.com"
+            }
+          ]
+        },
+        {
+          "title": "Autres informations légales",
+          "items": [
+            {
+              "label": "Mentions obligatoires complémentaires :",
+              "value": "A conserver entre 0 et 6°C max ; Ces 4 pots ne peuvent être vendus séparément. Suggestion de présentation. Contient plus de 85% d'humidite."
+            }
+          ]
+        }
+      ],
+      "fetchedAt": "2026-11-23T22:50:04.720Z"
     },
     {
       "id": "fromage-blanc",
